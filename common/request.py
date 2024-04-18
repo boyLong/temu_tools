@@ -5,6 +5,7 @@ import requests_go
 import aiohttp
 from common.config import ja3_configs
 from common.logger import logger
+from async_retrying import retry as async_retry
 
 class Request:
 
@@ -25,7 +26,7 @@ class Request:
                 "user-agent": self.__ja3_config.get("user_agent"),
             }
         return headers
-    @retry(stop_max_attempt_number=1)
+    @async_retry()
     def get(self, *args,**kwargs):
         kwargs["tls_config"]=self.tls_config
         return self.session.get(verify=False,*args,**kwargs)
@@ -36,7 +37,7 @@ class Request:
     def get_ua(self):
         return self.__ja3_config.get("user_agent")
 
-    @retry(stop_max_attempt_number=1)
+    @async_retry()
     def post(self, *args, **kwargs):
         kwargs["tls_config"] = self.tls_config
         return self.session.post(*args, **kwargs)
