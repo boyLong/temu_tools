@@ -47,12 +47,13 @@ import requests
 headers =  {
     'accept': 'application/json, text/plain, */*',
     'accept-language': 'zh-CN,zh;q=0.9',
+    'anti-content': '0aqAfqnUDjhyy9Ex-XLXGgYvDmdKwt8rJxJa14t_l11pWl2k0gyYwP3N_zR8luYMdcmXt4XpPZvIvHvH_XzaCm-aCEUsMEzyC1fVTBirapSAWpNiGbrz1zZW7W7z1xdQMOZ--veBS1fcpB_oVxlHHB4s7YXwL6ZX5nZfutMI8LvvzlcbU9-GtcuihORHqvk4ykGqJwoQZzMfRpXNjq6lZ3VDHTH0YQqksxPdDhI8mlnQAObcJaDt5AWnLIRNmBhRNjup9UZ0ZEzwn_2M1y528B41dmxHmMYuDJJExnR4suNvzVbtDhqndapytTB2ndGMUzqMPsM9d0TC9uCti5U94xOHCNkAeLq4YeHm8v_r25E2Ov8XRV86SldfoqmHsgZibgWDy-eZ_xHonH2GNfxzQ9aU7zjFbcouxvmeDUaruBSFTk0iVHeZuCiEKjw8vbXUKmpKYiRRialiavaJMRA-QXHbVMpeqPHF23hH7_V83CT3sIPPKEn67pJFAc6WMEgWAOqbM7ViQ0HmnCNrqoDUjKOmRRpicrMF8RYI37WHS8ZBsT1rtSa',
     'cache-control': 'no-cache',
     'content-type': 'application/json;charset=UTF-8',
-    'cookie': 'region=210; language=en; currency=GBP; api_uid=CnAyEWYg1kKEywBiGvRDAg==; timezone=Asia%2FShanghai; _bee=F7FEoQEcMSvcVKoFbGYG72j6YHHR5aoS; njrpl=F7FEoQEcMSvcVKoFbGYG72j6YHHR5aoS; dilx=ZLrDVaSuquFfN6NMAqfAr; hfsc=L3yLe40y4T772p7NfA==; _nano_fp=XpmaXqTxl09YnpdxX9_nebSDmifXjV9xNgn1Yt4P',
+    'cookie': 'region=210; language=en; currency=GBP; api_uid=CnD0C2Yg9M0jBQBbHRLxAg==; timezone=Asia%2FShanghai; _nano_fp=XpmaXqTqnpCjX5dJlT_K~odmh8DeLcwKv_kUg7Zf; _bee=DmahSfCRsFGVFK3DD1ohgxnRFi5QJaoR; njrpl=DmahSfCRsFGVFK3DD1ohgxnRFi5QJaoR; dilx=I5iZ2GMpxNvMrPLPIYedF; hfsc=L3yLe40z7Db+0ZXOeg==; verifyAuthToken=IZZCHJmJve5rYl_Rj4IG4Q99875784e8de293e4',
     'origin': 'https://www.temu.com',
     'pragma': 'no-cache',
-    'referer': 'https://www.temu.com/bgn_verification.html?VerifyAuthToken=kWP3ftRdMebf5ckWmR5g0g4a45d3daf475d1416&from=https%3A%2F%2Fwww.temu.com%2Fwomens-jumpsuits-o3-1035.html&refer_page_name=category&refer_page_id=10012_1713428042277_9cjddn6u4i&refer_page_sn=10012&_x_sessn_id=70vtmnguyy',
+    'referer': 'https://www.temu.com/bgn_verification.html?VerifyAuthToken=IZZCHJmJve5rYl_Rj4IG4Q99875784e8de293e4&from=https%3A%2F%2Fwww.temu.com%2Fuk%2Fundine-smart-home-m-634418212426071.html%3Frefer_page_el_sn%3D201825%26refer_page_name%3Dhome%26refer_page_id%3D10005_1713435875332_jqtdssrrfg%26refer_page_sn%3D10005&_x_sessn_id=blcb4dl28o&refer_page_name=mall&refer_page_id=10040_1713435950578_2la17zr4t8&refer_page_sn=10040',
     'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
@@ -60,9 +61,11 @@ headers =  {
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-    'verifyauthtoken': 'kWP3ftRdMebf5ckWmR5g0g4a45d3daf475d1416',
+    'verifyauthtoken': 'IZZCHJmJve5rYl_Rj4IG4Q99875784e8de293e4',
 }
+# res = requests.post("http://127.0.0.1:20001/captcha",
+#               json={"headers": headers})
 
-res = requests.post("http://127.0.0.1:20001/captcha",
+res = requests.post("http://172.24.16.124:20001/captcha",
               json={"headers": headers})
 print(res.text)

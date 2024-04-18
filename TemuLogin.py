@@ -313,7 +313,7 @@ class TemuBase:
                 'referer': f'https://www.temu.com/bgn_verification.html?VerifyAuthToken={verify_auth_token}&from='
                            f'{quote_plus(self.location)}&type=iframe&iframeMsgId={get_id(21)}'
             })
-            vc = VerifyCaptcha(self.session.get_headers(), self.session, self.country)
+            vc = VerifyCaptcha(self.session.get_headers(), self.session)
             res = await vc.start()
             self.session.update_headers({
                 'referer': self.location,
