@@ -6,10 +6,10 @@ from PIL import Image
 import io
 
 model_path = os.path.dirname(__file__)
-model_cls = YOLO(os.path.join(model_path,r"bt\class.pt"))
-model_0 = YOLO(os.path.join(model_path,r"bt\0.pt"))
-model_1 = YOLO(os.path.join(model_path,r"bt\1.onnx"), task="detect")
-model_rota = YOLO(os.path.join(model_path,r"bt\rota.pt"), task="detect")
+model_cls = YOLO(os.path.join(model_path, "bt", "class.pt"))
+model_0 = YOLO(os.path.join(model_path, "bt", r"0.pt"))
+model_1 = YOLO(os.path.join(model_path, "bt", r"1.onnx"), task="detect")
+model_rota = YOLO(os.path.join(model_path, "bt", r"rota.pt"), task="detect")
 
 class Predict(object):
     def __init__(self, img, model_cls=1):
