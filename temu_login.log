@@ -1,0 +1,31 @@
+2024-04-18 14:35:30 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-18 14:35:30 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-18 14:35:31 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-18 14:35:31 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-18 15:23:02 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-18 15:23:02 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-18 15:23:03 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-18 15:23:04 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-18 15:23:44 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-18 15:23:44 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-18 16:14:47 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-18 16:14:47 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-18 16:14:48 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-18 16:14:48 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-18 16:14:49 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-18 16:14:49 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-18 16:14:54 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,,重新去获取验证吗
+2024-04-18 16:14:54 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-18 16:14:54 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-18 16:14:55 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-18 16:14:55 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-18 16:14:58 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-18 16:14:58 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-18 16:14:58 | ERROR | verify_captcha | verify_captcha.py | 识别坐标错误,再次识别,剩余9
+2024-04-18 16:14:58 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-18 16:14:58 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-18 16:15:00 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-18 16:15:00 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-18 16:15:01 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-18 16:15:01 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-18 16:15:01 | INFO | verify_captcha | verify_captcha.py | 验证识别通过

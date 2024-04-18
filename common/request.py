@@ -26,7 +26,7 @@ class Request:
                 "user-agent": self.__ja3_config.get("user_agent"),
             }
         return headers
-    @async_retry()
+    @retry()
     def get(self, *args,**kwargs):
         kwargs["tls_config"]=self.tls_config
         return self.session.get(verify=False,*args,**kwargs)
@@ -37,11 +37,10 @@ class Request:
     def get_ua(self):
         return self.__ja3_config.get("user_agent")
 
-    @async_retry()
+    @retry()
     def post(self, *args, **kwargs):
         kwargs["tls_config"] = self.tls_config
         return self.session.post(*args, **kwargs)
-
 
 class AsyncRequest:
     def __init__(self, proxy=None, headers=None):
@@ -68,6 +67,7 @@ class AsyncRequest:
 
     def up_server_time(self, server_time=None):
         self.anti.up_server_time(server_time)
+
     def update_cookie(self, cookie):
         if isinstance(cookie, dict):
             self.session.cookies.update(cookie)
@@ -79,7 +79,7 @@ class AsyncRequest:
                 cookie_dict[k] = v
             self.session.cookies.update(cookie_dict)
 
-    @retry(stop_max_attempt_number=2)
+    @async_retry()
     async def get(self, *args,**kwargs):
         url = kwargs.get("url")
         if url:
@@ -91,7 +91,7 @@ class AsyncRequest:
             kwargs["proxies"] = self.proxies
         return await self.session.get(verify=False, *args,**kwargs)
 
-    @retry(stop_max_attempt_number=5)
+    @async_retry()
     async def post(self, *args, **kwargs):
         # kwargs["tls_config"] = self.tls_config
 

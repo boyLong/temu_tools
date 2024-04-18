@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json({limit: '10mb',extended: true}));
 app.use(express.json())
 
-
 app.post('/anti', async (req, res) => {
     console.log(req.body)
     var client = req.body.client
@@ -21,7 +20,6 @@ app.post('/anti', async (req, res) => {
     var track = req.body.track
     var location = req.body.location
     var screen = req.body.screen
-
     var ServerTime = req.body.ServerTime
     var UpdateServerTime = req.body.UpdateServerTime
     var UpdateFirstServerTime = req.body.UpdateFirstServerTime || + new Date();
@@ -35,19 +33,28 @@ app.post('/anti', async (req, res) => {
     var lt_c = req.body.lt_c
     var gt_c = req.body.gt_c
     var $ = req.body._
-    var result = anti(client,client2,track,location,screen,ServerTime,UpdateServerTime,UpdateFirstServerTime,UserAgent,nano,referrer,pdd_user_id,api_uid,pdd_vds,count,lt_c,gt_c,$)
-    console.log(result)
-    res.json({"code":0,"msg":"成功",'data':result})
+    try{
 
+        var result = anti(client,client2,track,location,screen,ServerTime,UpdateServerTime,UpdateFirstServerTime,UserAgent,nano,referrer,pdd_user_id,api_uid,pdd_vds,count,lt_c,gt_c,$)
+        res.json({"code":0,"msg":"成功",'data':result})
+    }catch {
+        res.json({"code":-1,"msg":"失败",'data':""})
+    }
 })
 
 app.post('/device', async (req, res) => {
-    console.log("a4a4a4a4a4a4")
     var hi = req.body.device
-     res.json({"code":0,"msg":"成功",'data':a4({
-        },hi)})
+    try {
+        res.json({
+            "code": 0, "msg": "成功", 'data': a4({}, hi)
+        })
+    } catch {
+         res.json({
+                    "code": -1, "msg": "失败", 'data': ""
+            })
+    }
+})
 
-     })
 
 app.get('/nano', async (req, res) => {
     u = function (t, n, r) {
@@ -86,39 +93,46 @@ app.get('/nano', async (req, res) => {
             s = u(String(d), 3, "0");
         return encode["encode"]("" + o + s)["replace"](/=/g, "") + "_" + c;
     }
-    res.json({"code":0,"msg":"成功",'data': p()})
-    })
 
-function get_res(data,init){
-
-    function p(e, t, n) {
-        return t && n ? aes.encrypt(e, c["parse"](t), {
-            iv: c.parse(n)
-        })["toString"]() : e;
+    try {
+        res.json({"code":0,"msg":"成功",'data': p()})
+    }catch {
+        res.json({"code": -1,"msg":"失败",'data': -1})
     }
-    var ase_key = get_aes_key(init)
-    return p(d.gzip(JSON["stringify"](data), {
-        "to": "string"
-    }), ase_key.aes_key, ase_key.aes_iv);
+})
 
-}
 
 app.post("/captcha_encrypt",async (req,res)=>{
-
-    var data = captcha_encrypt(req.body.data,req.body.init)
-    res.json({
-        "data": data,
-        "ok":true
-    })}
+    try{
+        var data = captcha_encrypt(req.body.data,req.body.init)
+        res.json({
+            "data": data,
+            "ok":true
+        })
+    }catch{
+        res.json({
+            "data": "",
+            "ok": false
+        })
+    }
+}
 )
 
 app.post("/crc32",async (req,res)=>{
 
     var data = encode.crc32(req.body.data,)
-    res.json({
-        "data": data,
-        "ok":true
-    })}
+    try {
+        res.json({
+            "data": data,
+            "ok":true
+        })
+     }catch {
+            res.json({
+                "data": "",
+                "ok": false
+            })
+        }
+    }
 )
 
 

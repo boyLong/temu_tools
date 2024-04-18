@@ -338,8 +338,8 @@ class VerifyCaptcha(object):
             "ts": self.init_info["server_time"],
             "t0": int(time.time() * 1000),
             "tp": 1,
-            "ua": self.headers["user-agent"],
-            "rf": self.headers["referer"],
+            "ua": self.headers.get("user-agent") or self.headers.get("User-Agent"),
+            "rf": self.headers.get("Referer") or self.headers.get("referer"),
             "hl": "000000000001010",
             "sc": screen,
             "ihs": 1,
@@ -519,8 +519,8 @@ class VerifyCaptcha(object):
             "t1": self.t1,
             "t2": int(time.time() * 1000),
             "tp": 1,
-            "ua": self.headers["user-agent"],
-            "rf": self.headers["referer"],
+            "ua": self.headers.get("user-agent") or self.headers.get("User-Agent"),
+            "rf": self.headers.get("Referer") or self.headers.get("referer"),
             "platform": 1,
             "hl": "000000000001010",
             "sc": screen,
@@ -563,7 +563,6 @@ class VerifyCaptcha(object):
                 return False
             else:
                 raise Exception("验证码次数全部用完")
-        return
 
     async def verify_click(self, box_mid_xys):
         del_list = []
@@ -614,8 +613,8 @@ class VerifyCaptcha(object):
             "t1": self.t1,
             "t2": int(time.time() * 1000),
             "tp": 1,
-            "ua": self.headers["user-agent"],
-            "rf": self.headers["referer"],
+            "ua": self.headers.get("user-agent") or self.headers.get("User-Agent"),
+            "rf": self.headers.get("Referer") or self.headers.get("referer"),
             "platform": 1,
             "hl": "000000000001010",
             "sc": screen,

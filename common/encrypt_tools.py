@@ -3,6 +3,7 @@ import random
 import requests
 import re
 import httpx
+from common.config import server_config
 client_tools = httpx.AsyncClient()
 import ctypes
 
@@ -324,10 +325,8 @@ async def get_a4(device):
     )
     return res.json()
 
-
 async def identity(data):
-
-    resp = await client_tools.post("http://127.0.0.1:8000/identity", json=data)
+    resp = await client_tools.post(f"http://127.0.0.1:{server_config['captcha_port']}/identity", json=data)
     return resp.json()
 
 async def captcha_encrypt(data, init_info):
