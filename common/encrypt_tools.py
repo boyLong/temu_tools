@@ -6,11 +6,17 @@ import httpx
 from common.config import server_config
 client_tools = httpx.AsyncClient()
 import ctypes
+import secrets
 
 
 def unsinged_right_shift(x, y):
     x,y = ctypes.c_uint32(x).value,y % 32
     return ctypes.c_uint32(x >> y).value
+
+
+def get_random(e=21):
+    chars = "0123456789abcdefghijklmnopqrstuvwxyz"
+    return "".join(secrets.choice(chars) for _ in range(e))
 
 
 class Anti(object):
