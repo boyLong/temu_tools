@@ -186,10 +186,10 @@ class AsyncAnti(object):
             "?"
         ]
         cookie = cookie or headers.get("cookie") or headers.get("Cookie")
-        nano = re.findall('_nano_fp=(.*?);',cookie) or ['']
+        nano = re.findall('_nano_fp=(.*?);',cookie)  or re.findall("_nano_fp=(.*?)$",cookie) or ['']
         self.nano = nano[0]
         self.location = self.headers.get("referer",'https://www.temu.com')
-        api_uid = re.findall('api_uid=(.*?); ',cookie) or ['']
+        api_uid = re.findall('api_uid=(.*?);',cookie) or re.findall('api_uid=(.*?)$',cookie) or ['']
         self.api_uid = api_uid[0]
         self.up_server_time()
 

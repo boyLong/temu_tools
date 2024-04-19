@@ -100,8 +100,9 @@ class Semantic:
             self.text_obj.point["category"] = info[0][0]
             return self.text_obj
 
-
-        raise TypeError("为适配的文本")
+        with open("未适配的文本.txt", "a", encoding="utf-8") as f:
+            f.write(self.text)
+        raise TypeError("未适配的文本")
 
 
 class Identity:

@@ -1,50 +1,47 @@
 import asyncio
 import random
-from retrying import retry
 import requests_go
 import aiohttp
 from common.config import ja3_configs
 from common.logger import logger
-from async_retrying import retry as async_retry
+import stamina
+import json
+from requests_go.tls_client.exceptions import TLSClientExeption,RequestException
+from requests.exceptions import (
+    ConnectionError,
+    ConnectTimeout,
+    InvalidHeader,
+    InvalidProxyURL,
+    InvalidSchema,
+    InvalidURL,
+    ProxyError,
+    ReadTimeout,
+    RetryError,
+    SSLError,
 
-class Request:
+)
 
-    def __init__(self, proxy=None, headers=None):
-        self.__ja3_config = random.choice(ja3_configs)
-        self.tls_config = requests_go.tls_config.to_tls_config(self.__ja3_config)
-        self.tls_config.ja3 = requests_go.tls_config.JA3Random(self.tls_config.ja3)
-        self.session = requests_go.session()
-        self.session.verify = False
-        self.headers = headers
-        self.anti = None
-        if proxy is not None:
-            self.session.proxies = {"http":proxy, "https": proxy}
+retry_on = (Exception,
+            ConnectionError,
+            ConnectTimeout,
+            InvalidHeader,
+            InvalidProxyURL,
+            InvalidSchema,
+            InvalidURL,
+            ProxyError,
+            ReadTimeout,
+            RetryError,
+            SSLError,
+            json.decoder.JSONDecodeError,
+            TLSClientExeption,
+            RequestException
 
-    def headers(self, headers=None):
-        if headers is not None:
-            headers = {
-                "user-agent": self.__ja3_config.get("user_agent"),
-            }
-        return headers
-    @retry()
-    def get(self, *args,**kwargs):
-        kwargs["tls_config"]=self.tls_config
-        return self.session.get(verify=False,*args,**kwargs)
-
-    def get_cookie(self):
-        return self.session.cookies.get_dict()
-
-    def get_ua(self):
-        return self.__ja3_config.get("user_agent")
-
-    @retry()
-    def post(self, *args, **kwargs):
-        kwargs["tls_config"] = self.tls_config
-        return self.session.post(*args, **kwargs)
+            )
 
 class AsyncRequest:
-    def __init__(self, proxy=None, headers=None):
+    def __init__(self, proxy=None, headers=None, if_ja3=True):
         self.__ja3_config = random.choice(ja3_configs)
+        self.if_ja3 = if_ja3
         self.tls_config = requests_go.tls_config.to_tls_config(self.__ja3_config)
         self.tls_config.ja3 = requests_go.tls_config.JA3Random(self.tls_config.ja3)
         self.session = requests_go.async_session()
@@ -69,6 +66,8 @@ class AsyncRequest:
         self.anti.up_server_time(server_time)
 
     def update_cookie(self, cookie):
+        if not cookie:
+            return
         if isinstance(cookie, dict):
             self.session.cookies.update(cookie)
             return
@@ -79,22 +78,44 @@ class AsyncRequest:
                 cookie_dict[k] = v
             self.session.cookies.update(cookie_dict)
 
-    @async_retry()
+    @stamina.retry(on=retry_on, attempts=3, timeout=10)
     async def get(self, *args,**kwargs):
+        if self.if_ja3:
+            kwargs["tls_config"] = self.tls_config
         url = kwargs.get("url")
         if url:
             logger.info(f"get: {url}")
         else:
             logger.info(f"get: {args[0]}")
-        # kwargs["tls_config"] = self.tls_config
         if self.proxies:
             kwargs["proxies"] = self.proxies
-        return await self.session.get(verify=False, *args,**kwargs)
+        anti = kwargs.pop("anti", {})
+        if anti:
+            if anti is True:
+                anti = {}
+            headers = kwargs.get("headers", {})
+            anti_content = await self.anti.get_anti(**anti)
+            headers["anti-content"] = anti_content
+            kwargs["headers"] = headers
+        verify = kwargs.pop("verify", None)
+        resp = await self.session.get(verify=False, *args,**kwargs)
 
-    @async_retry()
+        if verify:
+            verify_res = await verify(resp)
+            if isinstance(verify_res, requests_go.Response):
+                return verify_res
+            elif verify_res is True:
+                if anti:
+                    kwargs["anti"] = anti
+                resp = await self.post(*args, **kwargs)
+            else:
+                raise Exception(f"verify failed:")
+        return resp
+
+    @stamina.retry(on=retry_on, attempts=3, timeout=10)
     async def post(self, *args, **kwargs):
-        # kwargs["tls_config"] = self.tls_config
-
+        if self.if_ja3:
+            kwargs["tls_config"] = self.tls_config
         url = kwargs.get("url")
         if url:
             logger.info(f"post: {url}")
@@ -104,6 +125,8 @@ class AsyncRequest:
             kwargs["proxies"] = self.proxies
         anti = kwargs.pop("anti", {})
         if anti:
+            if anti is True:
+                anti = {}
             headers = kwargs.get("headers", {})
             anti_content = await self.anti.get_anti(**anti)
             headers["anti-content"] = anti_content
@@ -111,12 +134,18 @@ class AsyncRequest:
 
         verify = kwargs.pop("verify", None)
         resp = await self.session.post(verify=False, *args,**kwargs)
+
         if verify:
             verify_res = await verify(resp)
-            if verify_res:
+            if isinstance(verify_res, requests_go.Response):
+                return verify_res
+            elif verify_res is True:
                 if anti:
                     kwargs["anti"] = anti
                 resp = await self.post(*args, **kwargs)
+                return resp
+            else:
+                raise Exception(f"verify failed:")
 
         return resp
 
@@ -172,11 +201,11 @@ class AsyncRequestTest:
                 cookie_dict[k] = v
             self.session.cookie_jar.update_cookies(cookie_dict)
 
-    @retry(stop_max_attempt_number=2)
+    @stamina.retry(on=retry_on, attempts=3, timeout=10)
     async def get(self, *args,**kwargs):
         return await self.session.get(verify=False,proxy=self.proxy, *args,**kwargs)
 
-    @retry(stop_max_attempt_number=2)
+    @stamina.retry(on=retry_on, attempts=3, timeout=10)
     async def post(self, *args, **kwargs):
         anti = kwargs.pop("anti", {})
         if anti:
@@ -189,6 +218,7 @@ class AsyncRequestTest:
         resp = await self.session.post(verify=False, *args,**kwargs)
         if verify:
             verify_res = await verify(resp)
+
             if verify_res:
                 if anti:
                     kwargs["anti"] = anti

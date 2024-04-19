@@ -63,7 +63,6 @@ class TemuBase:
 
     async def index(self, href="https://www.temu.com/login.html?login_scene=8"):
         resp = await self.session.get(href)
-
         self.session.update_headers({
             "referer": href,
         })
@@ -277,6 +276,7 @@ class TemuBase:
     async def start(self):
         logger.info("访问首页")
         await self.index()
+
         logger.info("访问a4")
         await self.a4()
         logger.info("更新时间")
@@ -319,7 +319,7 @@ class TemuBase:
                 'referer': self.location,
             })
             return res
-        return True
+        return response
     async def register(self):
         url = "https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered"
         login_name = get_username()
@@ -391,7 +391,14 @@ class TemuBase:
             await self.gif([login_env])
             print(resp.text)
             print(self.session.get_headers())
-            await self.account_risk_test()
+            res = await self.account_risk_test()
+            if res:
+                print(self.session.get_headers())
+                with open("username.txt", 'a') as w:
+                    w.write(f"{login_name}---------{password}"+'\n')
+            else:
+                with open("username_Low.txt", 'a') as w:
+                    w.write(f"{login_name}---------{password}"+'\n')
         else:
             logger.info(f'{login_name}登录失败')
 
@@ -411,10 +418,12 @@ class TemuBase:
         url = 'https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all'
 
         data = {"scene":"opt_list_all","list_id": get_id(6)}
-        resp = await self.session.post(url, anti={"event":True}, verify=self.verify ,json=data)
-        print(resp.text)
 
-        print(self.session.get_headers())
+        resp = await self.session.post(url, anti={"event":True}, verify=self.verify ,json=data)
+        if resp.json()["success"]:
+            logger.info(f'账号风控验证成功')
+            return True
+
 if __name__ == '__main__':
     headers = {
         'accept': 'application/json, text/plain, */*',

@@ -1,4 +1,5 @@
 # coding:utf-8
+import os.path
 import subprocess
 from functools import partial
 from py_mini_racer import py_mini_racer
@@ -106,9 +107,10 @@ class VerifyCaptcha(object):
 
     async def save_img(self, filename, img):
         try:
-            async with aiofiles.open(filename, mode="wb") as f:
+            async with aiofiles.open(os.path.join("img", filename), mode="wb") as f:
                 await f.write(img)
-        except:
+        except Exception:
+            logger.error("错误图片报错失败")
             pass
 
     def eval_js(self):

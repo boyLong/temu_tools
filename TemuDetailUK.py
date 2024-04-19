@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 import uuid
-
-from urllib.parse import quote_plus, urlparse, parse_qs, urlencode
+from urllib.parse import quote_plus
 import secrets
 import time
 import random
@@ -11,13 +10,13 @@ import requests
 from common.logger import logger
 
 from common.verify_captcha import VerifyCaptcha
-from common.encrypt_tools import AsyncAnti, get_nano, hash_o
+from common.encrypt_tools import AsyncAnti, get_nano,hash_o
 from common.device_generation import DeviceGeneration
 from common.request import AsyncRequest
 
 
 def get_username():
-    return f"{get_id(random.randint(10, 20))}@gmail.com"
+    return f"{get_id(random.randint(10,20))}@gmail.com"
 
 
 def get_password():
@@ -31,23 +30,21 @@ def get_id(e=21):
 
 class TemuDetail:
     def __init__(
-            self,
-            href="https://www.temu.com/",
-            # proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
-            proxy=None,
-            headers=None,
+        self,
+        href="https://www.temu.com/plus-size-mens-shock-absorption-blade-type-shoes-breathable-lace-up-non-slip-shoes-for-jogging-walking-g-601099523731529.html",
+        proxy=None,
+        headers=None,
     ):
         self.anti = None
         self.session = AsyncRequest(proxy=proxy, headers=headers)
         self.device = DeviceGeneration(self.session.get_headers())
         self._session_id = get_id(10)
-        self.page_id = f"10005_{int(time.time() * 1000)}_{get_id(10)}"
-
         self.__event = {}
         self.__metrics_counter__ = 0
         self.country = "US"
         self.__location = href
-
+        goods_id = re.findall(f"g-(\d+)\.html", self.__location) or ['601099523731529']
+        self.goods_id = goods_id[0]
         self.__url = {
             "US": {
                 "gif": "https://us.thtk.temu.com/c/th.gif"
@@ -66,25 +63,33 @@ class TemuDetail:
                                       lt_c=[230, 9, 217, 13],
                                       gt_c=[167, 184, 169, 116],
                                       _=[
-                                            "T",
-                                            "*",
-                                            "ì",
-                                            "ª"
-                                        ])
+                                          "T",
+                                          "*",
+                                          "ì",
+                                          "ª"
+                                      ])
 
         self.location = href
         self.device.reload(resp.text)
-        return resp.text
 
     async def get_nano(self):
+        self.session.anti = AsyncAnti(headers=self.session.get_headers(),
+                             lt_c=[230, 9, 217, 13],
+                             gt_c=[167, 184, 169, 116],
+                             _=[
+                                "T",
+                                "*",
+                                "ì",
+                                "ª"
+                            ])
         if self.session.get_cookie("_nano_fp"):
             return self.session.get_cookie("_nano_fp")
         nano = await get_nano()
         self.session.update_cookie({"_nano_fp": nano})
         return nano
 
-    def get_event(self, name):
-        count = self.__event.get(name, 1)
+    def get_event(self,name):
+        count = self.__event.get(name,1)
         self.__event[name] = count + 1
         return count
 
@@ -94,14 +99,45 @@ class TemuDetail:
         language = self.session.get_cookie("language", "en")
         bg_ud = self.session.get_cookie("_bee")
         nano = await self.get_nano()
+        page_id = f"10032_{int(time.time()*1000)}_{get_id(10)}"
         width = self.device.screen[0]
         height = self.device.screen[1]
         req_event = []
-
+        if event_list is None:
+            event_list = [
+                {
+                    "goods_id": str(self.goods_id),
+                    "main_goods_id": str(self.goods_id),
+                    "page_sn": "10032",
+                    "page_url": self.__location,
+                    "refer_url": "",
+                    "op": "pv",
+                    "event": "page_show",
+                },
+                {
+                    "goods_id": str(self.goods_id),
+                    "main_goods_id": str(self.goods_id),
+                    "page_sn": "10032",
+                    "page_el_sn": "225383",
+                    "is_show": "0",
+                    "ndisp_rsn": "1",
+                    "op": "impr",
+                },
+                {
+                    "goods_id": str(self.goods_id),
+                    "main_goods_id": str(self.goods_id),
+                    "page_sn": "10032",
+                    "is_back": "1",
+                    "op": "impr",
+                    "page_el_sn": "205915",
+                    "goods_added_status": "0",
+                    "is_sold_out": "1",
+                }
+                ]
         if self.session.get_cookie("_bee"):
 
             cookie = (f'api_uid={self.session.get_cookie("api_uid")}; _bee={self.session.get_cookie("_bee")};'
-                      f' njrpl={self.session.get_cookie("njrpl")}; dilx={self.session.get_cookie("dilx")}; hfsc={self.session.get_cookie("hfsc")}')
+               f' njrpl={self.session.get_cookie("njrpl")}; dilx={self.session.get_cookie("dilx")}; hfsc={self.session.get_cookie("hfsc")}')
         else:
             cookie = f'api_uid={self.session.get_cookie("api_uid")}'
         for event in event_list:
@@ -109,15 +145,15 @@ class TemuDetail:
             req_time = str(time.time() * 1000)
             dcf = hash_o(f"{req_time}{event}{event_count}")
             data = {
-                "page_sn": "10005",
-                "page_id": self.page_id,
+                "page_sn": "10013",
+                "page_id": page_id,
                 "cli_timezone": "Asia/Shanghai",
                 "cli_region": region,
                 "cli_currency": currency,
                 "cli_language": language,
                 "_x_sessn_id": self._session_id,
                 "time": req_time,
-                "log_id": f"{req_time}{get_id(16)}",
+                "log_id":  f"{req_time}{get_id(16)}",
                 "user_id": "",
                 "uin": "",
                 "app_id": "",
@@ -158,7 +194,7 @@ class TemuDetail:
         self.__server_time = {
             "ServerTime": server_time.json()["server_time"],
             "UpdateServerTime": UpdateServerTime,
-            "UpdateFirstServerTime": UpdateServerTime - random.randint(50, 120)
+            "UpdateFirstServerTime":  UpdateServerTime - random.randint(50, 120)
         }
         self.session.up_server_time(self.__server_time)
 
@@ -166,121 +202,56 @@ class TemuDetail:
         await self.get_nano()
         await self.server_time()
 
-        a3_list =[
-            self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
-            self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
-            self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
-        ]
-        await asyncio.gather(*a3_list)
+        await self.session.get( "https://www.temu.com/api/phantom/dm/wl/cg")
+        await self.session.get( "https://www.temu.com/api/phantom/xg/pfb/a3")
+        await self.session.get( "https://www.temu.com/api/phantom/xg/pfb/b")
         a4 = await self.device.a4()
         await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
+        await self.session.get( "https://www.temu.com/api/phantom/xg/pfb/l1")
 
     async def start(self):
-
-
-        text = await self.index(self.__location)
-        try:
-            pageListId = re.findall('"pageListId":"(.*?)"', text)[1]
-            self.home_page_list_id = pageListId
-        except:
-            logger.error(f'获取pageListId失败, 设备权重过低,不在继续')
-            return {"code": 500, "msg": '获取pageListId失败, 设备权重过低,不在继续'}
-
+        await self.index(self.__location)
         await self.gif(
-            event_list=[
+        event_list = [
                 {
-                    "page_url": "https://www.temu.com/",
+                    "goods_id": str(self.goods_id),
+                    "main_goods_id": str(self.goods_id),
+                    "page_sn": "10032",
+                    "page_url": self.__location,
                     "refer_url": "",
                     "op": "pv",
                     "event": "page_show",
                 },
                 {
-
-                    "hit": "0",
+                    "goods_id": str(self.goods_id),
+                    "main_goods_id": str(self.goods_id),
+                    "page_sn": "10032",
                     "page_el_sn": "225383",
-                    "is_show": "1",
-                    "ndisp_rsn": "",
+                    "is_show": "0",
+                    "ndisp_rsn": "1",
                     "op": "impr",
                 },
                 {
-                    "hit": "0",
-                    "page_el_sn": "225216",
+                    "goods_id": str(self.goods_id),
+                    "main_goods_id": str(self.goods_id),
+                    "page_sn": "10032",
+                    "is_back": "1",
                     "op": "impr",
-                },{
-                    "hit": "0",
-                    "page_el_sn": "228053",
-                    "promo_atmos": "0",
-                    "op": "impr",
+                    "page_el_sn": "205915",
+                    "goods_added_status": "0",
+                    "is_sold_out": "1",
                 }
-            ])
+                ])
+
         await self.a4()
+        self.anti.up_server_time(self.__server_time)
 
         logger.info(f'开始验证')
-        url = 'https://www.temu.com/api/alexa/homepage/goods_list'
-        list_id = get_id(21)
-        params = (
-            ('extend_fields', '{}'),
-            ('offset', '0'),
-            ('count', '120'),
-            ('list_id', list_id),
-            ('opt_id', '25'),
-            ('listId', list_id),
-            ('scene', 'home'),
-            ('page_list_id', pageListId),
-        )
-        resp = await self.session.get(url, anti={"event": True}, params=params, verify=self.verify)
-        res_data = resp.json()
-        if not res_data.get('success') or res_data.get('error_code') != 1000000:
-            print(res_data)
-            logger.error(f'获取home_goods_list失败,不在继续')
-            return {"code": 500, "msg": '获取home_goods_list失败,不在继续'}
-        logger.info(f"选择一部分商品进行gif提交")
-        idx = 1
-        env_list = []
-        for good in res_data.get('result')["home_goods_list"][:5]:
-            good_data = good["data"]
-            env_list.append({
-                    "hit": "0",
-                    "login_scene": "202",
-                    "p_rec": json.dumps(good_data["p_rec"],separators=(',', ':')),
-                    "idx": str(idx),
-                    "g_idx": str(idx),
-                    "op": "impr",
-                    "page_el_sn": "200024",
-                    "show_currency": good_data["p_rec"]["show_currency"],
-                    "show_price":  good_data["p_rec"]["show_price"],
-                    "show_sales": good_data["p_rec"]["show_sales"],
-                    "show_skc": "0",
-                    "tag_list": "just bought",
-                    "goods_id": good_data["p_rec"]["g"],
-                    "page_list_id":pageListId,
-            })
+        url = 'https://www.temu.com/api/poppy/v1/title_bar_list?scene=home_title_bar_list'
+        data = {"scene":"home_title_bar_list","offset":0,"pageSize":0,"pageSn":10032,"listId":uuid.uuid4().hex}
+        await self.session.post(url, json=data,verify=self.verify)
 
-        await self.gif(event_list=env_list)
-        spec_ids = ''
-        good_id = '601099518641848'
-        for good in res_data.get('result')["home_goods_list"]:
-            if good["data"].get("sold_quantity_percent"):
-                spec_ids = good["data"].get("spec_ids", '')
-                good_id = good["data"].get("goods_id")
-                break
-        data = {"page_sn": 10005, "_oak_sku_count": 1, "_oak_show_sale_price_suffix": 1,
-         "_oak_show_leaf_category_low_price_tag": "1", "_oak_stage": len(spec_ids.split(",")), "single_sku_ignore_panel": 0,
-         "goods_id": good_id, "_oak_spec_ids": spec_ids, "_oak_page_source": 102,
-         "request_type": 0}
-        resp = await self.session.post("https://www.temu.com/api/oak/integration/sku",
-                                anti={
-                                    "event":True,
-                                },verify=self.verify,json=data)
-        if resp.status_code == 200 and resp.json()["success"]:
-            logger.info(f'skuheaders激活成功')
-
-
-            print(self.session.get_headers())
-        else:
-            print(resp.json())
-        # return self.session.get_headers()
+        return self.session.get_headers()
 
     async def verify(self, response):
 
@@ -302,24 +273,11 @@ class TemuDetail:
 
             vc = VerifyCaptcha(self.session.get_headers(), self.session, )
             res = await vc.start()
-
-            url_info = urlparse(self.__location)
-            query = parse_qs(url_info.query)
-            new_query = {}
-
-            for k, v in query.items():
-                new_query[k] = v[0] if v else ''
-            new_query["_x_sessn_id"] = self._session_id
-            new_query["refer_page_name"] = "bgn_verification"
-            new_query["refer_page_sn"] = self.page_id
-            new_query["refer_page_sn"] = "10005"
-
-            self.__location = url_info._replace(query=urlencode(new_query)).geturl()
             self.session.update_headers({
                 'referer': self.__location,
             })
             return res
-        return response
+        return True
 
 
 if __name__ == '__main__':
@@ -336,15 +294,11 @@ if __name__ == '__main__':
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
-
     }
     import asyncio
-
-    t = TemuDetail(href="https://www.temu.com/", headers=headers)
+    t = TemuDetail(href="https://www.temu.com/plus-size-feather-print-ruched-tank-top-casual-square-neck-sleeveless-top-for-summer-womens-plus-size-clothing-g-601099543413804.html?is_back=1",headers=headers)
 
     import asyncio
-
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     loop.run_until_complete(t.start())
