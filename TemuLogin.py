@@ -394,10 +394,10 @@ class TemuBase:
             res = await self.account_risk_test()
             if res:
                 print(self.session.get_headers())
-                with open("username.txt", 'a') as w:
+                with open("username_us.txt", 'a') as w:
                     w.write(f"{login_name}---------{password}"+'\n')
             else:
-                with open("username_Low.txt", 'a') as w:
+                with open("username_us_low.txt", 'a') as w:
                     w.write(f"{login_name}---------{password}"+'\n')
         else:
             logger.info(f'{login_name}登录失败')

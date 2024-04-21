@@ -42,7 +42,8 @@ class TemuBase:
         self,
         # proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
         # proxy="http://127.0.0.1:8888",
-            proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
+        proxy=None,
+        #     proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
             headers=None,
     ):
         self.session = AsyncRequest(proxy=proxy, headers=headers)
@@ -333,6 +334,7 @@ class TemuBase:
             "login_name": login_name,
             "support_mobile": True,
             "components_version": "0.9.7",
+            "login_scene":8
         }
 
         resp = await self.session.post(url, anti={"event":True},  verify=self.verify, json=data)

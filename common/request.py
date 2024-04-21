@@ -82,11 +82,10 @@ class AsyncRequest:
     async def get(self, *args,**kwargs):
         if self.if_ja3:
             kwargs["tls_config"] = self.tls_config
-        url = kwargs.get("url")
-        if url:
-            logger.info(f"get: {url}")
-        else:
-            logger.info(f"get: {args[0]}")
+        url = kwargs.get("url") or args[0]
+
+        logger.info(f"get: {url}")
+
         if self.proxies:
             kwargs["proxies"] = self.proxies
         anti = kwargs.pop("anti", {})
@@ -98,7 +97,16 @@ class AsyncRequest:
             headers["anti-content"] = anti_content
             kwargs["headers"] = headers
         verify = kwargs.pop("verify", None)
-        resp = await self.session.get(verify=False, *args,**kwargs)
+        retry_count = 1
+        while retry_count < 5:
+            try:
+                resp = await self.session.get(verify=False, *args,**kwargs)
+                break
+            except Exception as e:
+                logger.error(f"get error: {e}")
+                retry_count += 1
+        else:
+            raise Exception(f"get failed: {url}")
 
         if verify:
             verify_res = await verify(resp)
@@ -116,11 +124,9 @@ class AsyncRequest:
     async def post(self, *args, **kwargs):
         if self.if_ja3:
             kwargs["tls_config"] = self.tls_config
-        url = kwargs.get("url")
-        if url:
-            logger.info(f"post: {url}")
-        else:
-            logger.info(f"post: {args[0]}")
+        url = kwargs.get("url") or args[0]
+        logger.info(f"post: {url}")
+
         if self.proxies:
             kwargs["proxies"] = self.proxies
         anti = kwargs.pop("anti", {})
@@ -133,7 +139,16 @@ class AsyncRequest:
             kwargs["headers"] = headers
 
         verify = kwargs.pop("verify", None)
-        resp = await self.session.post(verify=False, *args,**kwargs)
+        retry_count = 1
+        while retry_count < 5:
+            try:
+                resp = await self.session.post(verify=False, *args,**kwargs)
+                break
+            except Exception as e:
+                logger.error(f"post error: {e}")
+                retry_count += 1
+        else:
+            raise Exception(f"post failed: {url}")
 
         if verify:
             verify_res = await verify(resp)

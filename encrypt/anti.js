@@ -168,7 +168,7 @@ function anti(client,client2,track,location,screen,ServerTime,UpdateServerTime,U
             0,
             0,
             0,
-            null,
+            0,
             0,
             0,
             0,

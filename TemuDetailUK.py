@@ -244,7 +244,7 @@ class TemuDetail:
                 ])
 
         await self.a4()
-        self.anti.up_server_time(self.__server_time)
+        self.session.up_server_time(self.__server_time)
 
         logger.info(f'开始验证')
         url = 'https://www.temu.com/api/poppy/v1/title_bar_list?scene=home_title_bar_list'
