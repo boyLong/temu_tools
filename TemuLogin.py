@@ -238,13 +238,16 @@ class TemuLogin:
                 "cookie": cookie
 
             }
-            req_event.append(self.session.post(self.__url.get(self.country).get('gif'),
+            await self.session.post(self.__url.get(self.country).get('gif'),
                                                headers=headers,
-                                               data=data))
-        try:
-            await asyncio.gather(*req_event)
-        except:
-            logger.error("gif err")
+                                               data=data)
+        #     req_event.append(self.session.post(self.__url.get(self.country).get('gif'),
+        #                                        headers=headers,
+        #                                        data=data))
+        # try:
+        #     await asyncio.gather(*req_event)
+        # except:
+        #     logger.error("gif err")
 
     async def server_time(self):
         UpdateServerTime = int(time.time() * 1000)
@@ -258,15 +261,22 @@ class TemuLogin:
         self.session.up_server_time(self.__server_time)
     async def a4(self):
         await self.server_time()
-        a_list =[
-            self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
-            self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
-            self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
-        ]
-        try:
-            await asyncio.gather(*a_list)
-        except:
-            pass
+
+        for i in ['https://www.temu.com/api/phantom/dm/wl/cg',
+                  "https://www.temu.com/api/phantom/xg/pfb/a3",
+                  "https://www.temu.com/api/phantom/xg/pfb/b"
+
+                  ]:
+            await self.session.get(i)
+        # a_list =[
+        #     self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
+        #     self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
+        #     self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
+        # ]
+        # try:
+        #     await asyncio.gather(*a_list)
+        # except:
+        #     pass
         a4 = await self.device.a4()
         resp = await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
         await self.session.get( "https://www.temu.com/api/phantom/xg/pfb/l1")
@@ -399,7 +409,7 @@ class TemuLogin:
             else:
                 with open("username_us_low.txt", 'a') as w:
                     w.write(f"{login_name}---------{password}"+'\n')
-
+            print(self.session.get_headers())
             return self.session.get_headers()
         else:
             logger.info(f'{login_name}登录失败')
@@ -443,7 +453,13 @@ if __name__ == '__main__':
         "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
     }
 
-    t = TemuLogin(headers=headers)
+
+    def get_random(e=21):
+        chars = "0123456789abcdefghijklmnopqrstuvwxyz"
+        return "".join(secrets.choice(chars) for _ in range(e))
+    user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
+    proxy = f'http://{user}:databurning@43.128.74.58:30111'
+    t = TemuLogin(headers=headers, proxy=proxy)
 
     import asyncio
     loop = asyncio.new_event_loop()
