@@ -51,6 +51,6 @@ async def login():
             else:
                 return {"code": 500, "data": ""}
         res = await get_cookie()
-        return "ok"
+        return res
     except Exception as e:
         return {"code": 500, "data": str(e)}
