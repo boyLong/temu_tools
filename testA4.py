@@ -208,7 +208,6 @@ async def get_verify(headers):
 
 
 import json
-import execjs
 from common.encrypt_tools import AsyncAnti, get_nano, hash_o
 from curl_cffi import requests
 
@@ -222,7 +221,7 @@ async def get_a4_uk_run(**kwargs):
     cookie_dilx = res.json()["result"]["b"]
     cookie_hfsc = res.json()["result"]["g"]
     ua = haus
-    ua['cookie'] = f'region=210; language=en; currency=GBP; api_uid={api_uid}; timezone=Asia%2FShanghai; webp=1; _bee={cookie_bee}; njrpl={cookie_bee}; dilx={cookie_dilx}; hfsc={cookie_hfsc}',
+    ua['cookie'] = f'region=210; language=en; currency=GBP; api_uid={api_uid}; timezone=Asia%2FShanghai; webp=1; _bee={cookie_bee}; njrpl={cookie_bee}; dilx={cookie_dilx}; hfsc={cookie_hfsc}'
 
     headers = {
         "accept": "application/json, text/plain, */*",
@@ -244,6 +243,7 @@ async def get_a4_uk_run(**kwargs):
         "sec-fetch-site": "same-origin",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
     }
+    print(json.dumps(ua))
     Content1 = AsyncAnti(headers=headers,
                          lt_c=[230, 9, 217, 13],
                          gt_c=[167, 184, 169, 116],
@@ -261,7 +261,7 @@ async def get_a4_uk_run(**kwargs):
             "_oak_show_sale_price_suffix": 1, "_oak_show_leaf_category_low_price_tag": "1", "_oak_stage": 4,
             "single_sku_ignore_panel": 0, "goods_id": 601099527341757, "_oak_spec_ids": "", "_oak_page_source": 102,
             "request_type": 0}
-
+    print(json.dumps(ua))
     res = requests.post(url=uul, headers=ua, json=data, proxies=get_proxies(), impersonate="chrome110")
     print(res.text)
     if 'verify_auth_token' in res.json():

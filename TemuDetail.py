@@ -33,8 +33,8 @@ class TemuDetail:
     def __init__(
             self,
             href="https://www.temu.com/",
-            # proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
-            proxy=None,
+            proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
+            # proxy=None,
             headers=None,
     ):
         self.anti = None

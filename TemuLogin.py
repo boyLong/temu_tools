@@ -37,7 +37,7 @@ def get_id(e=21):
     return "".join(secrets.choice(chars) for _ in range(e))
 
 
-class TemuBase:
+class TemuLogin:
     def __init__(
         self,
         # proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
@@ -282,7 +282,7 @@ class TemuBase:
         logger.info("更新时间")
 
         logger.info(f'开始注册')
-        await  self.index()
+        await self.index()
         await self.gif([
             {
                 "login_scene": "8",
@@ -294,7 +294,7 @@ class TemuBase:
                 "op": "click",
         }])
 
-        await self.register()
+        return await self.register()
 
     async def verify(self, response):
 
@@ -399,6 +399,8 @@ class TemuBase:
             else:
                 with open("username_us_low.txt", 'a') as w:
                     w.write(f"{login_name}---------{password}"+'\n')
+
+            return self.session.get_headers()
         else:
             logger.info(f'{login_name}登录失败')
 
@@ -441,7 +443,7 @@ if __name__ == '__main__':
         "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
     }
 
-    t = TemuBase(headers=headers)
+    t = TemuLogin(headers=headers)
 
     import asyncio
     loop = asyncio.new_event_loop()
