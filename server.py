@@ -31,7 +31,7 @@ async def identity(item: HeaderItem):
 
 
 @app.get("/ck")
-async def ck(cookie_str: str|None = "timezone=Asia%2FShanghai; region=210; language=en; currency=GBP; webp=1"):
+async def ck(cookie_str: str ="timezone=Asia%2FShanghai; region=210; language=en; currency=GBP; webp=1"):
     try:
         async def get_cookie():
             headers = {
@@ -67,7 +67,7 @@ async def ck(cookie_str: str|None = "timezone=Asia%2FShanghai; region=210; langu
 
 
 @app.get("/login_ck")
-async def login(cookie_str: str|None = "timezone=Asia%2FShanghai; region=211; language=en; currency=USD; webp=1"):
+async def login(cookie_str: str  = "timezone=Asia%2FShanghai; region=211; language=en; currency=USD; webp=1"):
     try:
         async def get_cookie():
             headers = {
