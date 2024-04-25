@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
-import uuid
-
+import asyncio
 from urllib.parse import quote_plus, urlparse, parse_qs, urlencode
 import secrets
 import time
@@ -11,10 +10,10 @@ import requests
 from common.logger import logger
 
 from common.verify_captcha import VerifyCaptcha
-from common.encrypt_tools import AsyncAnti, get_nano, hash_o
+from common.encrypt_tools import AsyncAnti, get_nano, hash_o,get_random
 from common.device_generation import DeviceGeneration
 from common.request import AsyncRequest
-from common.config import get_gif_url,get_dr
+from common.config import get_gif_url, get_dr
 
 def get_username():
     return f"{get_id(random.randint(10, 20))}@gmail.com"
@@ -33,8 +32,8 @@ class TemuDetail:
     def __init__(
             self,
             href="https://www.temu.com/",
-            proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
-            # proxy=None,
+            # proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
+            proxy=None,
             headers=None,
     ):
         self.anti = None
@@ -144,7 +143,7 @@ class TemuDetail:
             req_event.append(self.session.post(get_gif_url(region),
                                                headers=headers,
                                                data=data))
-
+        await asyncio.gather(*req_event)
     async def server_time(self):
         UpdateServerTime = int(time.time() * 1000)
         server_time = await self.session.get("https://www.temu.com/api/server/_stm")
@@ -160,9 +159,10 @@ class TemuDetail:
         await self.get_nano()
         await self.server_time()
 
-        await self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
+        await asyncio.gather(*[self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
+            self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
+            self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")])
+
         a4 = await self.device.a4()
         await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
         await self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
@@ -174,14 +174,14 @@ class TemuDetail:
 
         text = await self.index(self.__location)
         try:
-            pageListId = re.findall('"pageListId":"(.*?)"', text)[1]
-            self.home_page_list_id = pageListId
             raw_data = re.findall("window\.rawData=(.*?\});", text)[0]
             raw_data = json.loads(raw_data)
+            pageListId =  raw_data['store']['pageListId']
+            self.home_page_list_id = raw_data['store']['pageListId']
         except:
             logger.error(f'获取首页raw_data失败, 设备权重过低,不在继续')
-            return {"code": 500, "msg": '获取首页raw_data失败, 设备权重过低,不在继续'}
-
+            return False
+        await self.a4()
         await self.gif(
             event_list=[
                 {
@@ -191,30 +191,42 @@ class TemuDetail:
                     "event": "page_show",
                 },
                 {
-
                     "hit": "0",
                     "page_el_sn": "225383",
-                    "is_show": "1",
-                    "ndisp_rsn": "",
+                    "is_show": "0",
+                    "ndisp_rsn": "1",
                     "op": "impr",
                 },
                 {
                     "hit": "0",
-                    "page_el_sn": "225216",
-                    "op": "impr",
-                },{
-                    "hit": "0",
                     "page_el_sn": "228053",
                     "promo_atmos": "0",
                     "op": "impr",
+                },
+                {
+                    "hit": "0",
+                    "page_el_sn": "200370",
+                    "op": "impr",
                 }
             ])
-        await self.a4()
+
+        event_list = []
+        for i in raw_data["store"]["layoutData"]["headerData"]["titleBarList"]:
+            event_list.append(
+                {
+                    "page_el_sn": i["pageElSn"],
+                    "p_rec":i["pRec"],
+                    "source": i["landingSource"],
+                    "tab_id": i["id"],
+                    "op": "impr",
+                }
+            )
+        await self.gif(event_list)
 
         logger.info(f'开始验证')
         await self.session.get('https://www.temu.com/api/adx/cm/ttc?scene=1&type=0')
         url = 'https://www.temu.com/api/alexa/homepage/goods_list'
-        list_id = get_id(21)
+        list_id = raw_data['store']['recGoodsListId']
         params = (
             ('extend_fields', '{}'),
             ('offset', '0'),
@@ -225,17 +237,21 @@ class TemuDetail:
             ('scene', 'home'),
             ('page_list_id', pageListId),
         )
-        resp = await self.session.get(url, anti={"event": True}, params=params, verify=self.verify)
+        resp = await self.session.get(url, anti={"event": False}, params=params, verify=self.verify)
 
 
         res_data = resp.json()
         if not res_data.get('success') or res_data.get('error_code') != 1000000:
-            print(res_data)
             logger.error(f'获取home_goods_list失败,不在继续')
-            return {"code": 500, "msg": '获取home_goods_list失败,不在继续'}
+            return False
         resp = await self.session.post("https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all",
-                             json={"scene":"opt_list_all","list_id":get_id(6)})
-        print(resp.json)
+                                       anti={"event": False},
+                                       verify=self.verify,
+                                        json={"scene":"opt_list_all","list_id":get_id(6)})
+        if resp.status_code != 200 or not resp.json().get("success"):
+            return False
+
+        return self.session.get_headers()
         logger.info(f"选择一部分商品进行gif提交")
         idx = 1
         env_list = []
@@ -259,6 +275,8 @@ class TemuDetail:
             })
 
         await self.gif(event_list=env_list)
+
+        logger.info("校验sku接口")
         spec_ids = ''
         good_id = '601099518641848'
         for good in res_data.get('result')["home_goods_list"]:
@@ -329,7 +347,7 @@ if __name__ == '__main__':
         'accept-language': 'zh-CN,zh;q=0.9',
         'cache-control': 'no-cache',
         'content-type': 'application/json;charset=UTF-8',
-        'referer': "https://www.temu.com",
+        'referer': "https://www.google.com/",
         'pragma': 'no-cache',
         'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
         'sec-ch-ua-mobile': '?0',
@@ -340,11 +358,12 @@ if __name__ == '__main__':
         "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
 
     }
-    import asyncio
+    user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
+    proxy = f'http://{user}:databurning@43.128.74.58:30111'
+    t = TemuDetail(href="https://www.temu.com/", headers=headers,
+                   proxy=None)
 
-    t = TemuDetail(href="https://www.temu.com/", headers=headers)
 
-    import asyncio
 
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
