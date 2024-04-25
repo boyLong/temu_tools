@@ -13,8 +13,7 @@ class HeaderItem(BaseModel):
     headers: dict
 
 
-class CookieStr(BaseModel):
-    cookie: str |None = "timezone=Asia%2FShanghai; region=210; language=en; currency=GBP; webp=1"
+
 
 @app.post("/captcha")
 async def identity(item: HeaderItem):
