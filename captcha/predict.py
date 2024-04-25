@@ -12,7 +12,7 @@ model_1 = YOLO(os.path.join(model_path, "bt", r"1.onnx"), task="detect")
 model_rota = YOLO(os.path.join(model_path, "bt", r"rota.pt"), task="detect")
 
 class Predict(object):
-    def __init__(self, img, model_cls=1):
+    def __init__(self, img, model_cls=None):
         self.img = self.read_img(img)
 
         if model_cls is None:

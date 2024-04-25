@@ -125,7 +125,7 @@ class AsyncRequest:
         if self.if_ja3:
             kwargs["tls_config"] = self.tls_config
         url = kwargs.get("url") or args[0]
-        logger.info(f"post: {url}")
+        logger.info(f"post: {url} data: {kwargs.get('data') or kwargs.get('json')}")
 
         if self.proxies:
             kwargs["proxies"] = self.proxies
@@ -184,79 +184,35 @@ class AsyncRequest:
                 self.anti.headers.update(headers)
 
 
-class AsyncRequestTest:
-    def __init__(self, proxy=None, headers=None):
+class Request(object):
+    def __init__(self, proxy=None, headers=None, if_ja3=True):
         self.__ja3_config = random.choice(ja3_configs)
-
-        self.session = aiohttp.ClientSession()
+        self.if_ja3 = if_ja3
+        self.tls_config = requests_go.tls_config.to_tls_config(self.__ja3_config)
+        self.tls_config.ja3 = requests_go.tls_config.JA3Random(self.tls_config.ja3)
         self.user_agent = self.__ja3_config.get("user_agent")
+        self.session = requests_go.Session()
         self.anti = None
-        self.proxy = proxy
+        self.cookies = {}
+        if proxy:
+            self.proxies = {"http": proxy, "https": proxy}
+        else:
+            self.proxies = None
         if headers:
             self.user_agent = headers.get("User-Agent") or headers.get("user-agent")
             if not self.user_agent:
                 self.user_agent = self.__ja3_config["user_agent"]
                 headers["User-Agent"] = self.user_agent
-            cookies = headers.get("Cookie") or headers.get("cookie")
+            cookies = headers.pop("Cookie", '') or headers.pop("cookie", '')
             self.update_cookie(cookies)
-            self.session.headers.update(headers)
         else:
             self.user_agent = self.__ja3_config["user_agent"]
 
-    def up_server_time(self, server_time=None):
-        self.anti.up_server_time(server_time)
-    def update_cookie(self, cookie):
-        if isinstance(cookie, dict):
-            self.session.cookie_jar.update_cookies(cookie)
-            return
-        elif isinstance(cookie, str):
-            cookie_dict = {}
-            for c in cookie.split("; "):
-                k, v = c.split("=")[0], "".join(c.split("=")[1:])
-                cookie_dict[k] = v
-            self.session.cookie_jar.update_cookies(cookie_dict)
+    def update_cookie(self, cookies):
+        self.cookies.update(cookies)
 
-    @stamina.retry(on=retry_on, attempts=3, timeout=10)
-    async def get(self, *args,**kwargs):
-        return await self.session.get(verify=False,proxy=self.proxy, *args,**kwargs)
 
-    @stamina.retry(on=retry_on, attempts=3, timeout=10)
-    async def post(self, *args, **kwargs):
-        anti = kwargs.pop("anti", {})
-        if anti:
-            headers = kwargs.get("headers", {})
-            anti_content = await self.anti.get_anti(**anti)
-            headers["anti-content"] = anti_content
-            kwargs["headers"] = headers
 
-        verify = kwargs.pop("verify", None)
-        resp = await self.session.post(verify=False, *args,**kwargs)
-        if verify:
-            verify_res = await verify(resp)
-
-            if verify_res:
-                if anti:
-                    kwargs["anti"] = anti
-                resp = await self.post(*args, **kwargs)
-
-        return resp
-
-    def get_cookie(self, name=None, default=""):
-        if name:
-            return self.session.cookies.get(name, default)
-        return self.session.cookies.get_dict()
-
-    def get_ua(self):
-        return self.user_agent
-
-    def get_headers(self):
-        headers = self.session.headers.copy()
-        headers["Cookie"] = "; ".join([f"{k}={v}" for k,v in self.get_cookie().items()])
-        return headers
-
-    def update_headers(self, headers):
-        if isinstance(headers, dict):
-            self.session.headers.update(headers)
 
 if __name__ == '__main__':
     pass

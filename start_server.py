@@ -5,6 +5,7 @@ import subprocess
 from server import app
 from common.config import server_config
 
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 print(os.path.dirname(os.path.abspath(__file__)))
 subprocess.Popen("node encrypt/temu_api.js", shell=True)

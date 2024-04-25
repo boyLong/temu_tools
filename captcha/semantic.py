@@ -11,6 +11,7 @@ from captcha.predict import Predict
 import requests
 from collections import Counter
 
+
 class TextObj:
     unique = None  # 是否唯一
     point = {}  # { "color": "红", "type": "字",""}  # 数字|字母|几何体
@@ -330,7 +331,6 @@ class Identity:
         cv2.imwrite(self.tmp_img, cropped_image)
 
         color = get_color(self.tmp_img)
-        print(color,coordinate["label_name"])
         os.remove(self.tmp_img)
         return color
 

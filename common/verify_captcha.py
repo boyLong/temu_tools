@@ -11,15 +11,16 @@ null = None
 import re
 import time
 import numpy as np
-
+import secrets
 import base64
 import cv2
 import random
 from common.request import AsyncRequest
 from common.cBezier import bezierTrajectory
 from common.track import GTrace
-from common.encrypt_tools import AsyncAnti,captcha_encrypt,identity
+from common.encrypt_tools import AsyncAnti,captcha_encrypt,identity,hash_o
 from common.logger import logger
+from common.config import get_gif_url
 import io
 
 verify_count = {
@@ -31,6 +32,9 @@ verify_count = {
 
 bt = bezierTrajectory()
 
+def get_id(e=21):
+    chars = "0123456789abcdefghijklmnopqrstuvwxyz"
+    return "".join(secrets.choice(chars) for _ in range(e))
 
 class VerifyCaptcha(object):
     def __init__(self,headers, session=None, proxy=None, ):
@@ -40,10 +44,25 @@ class VerifyCaptcha(object):
         if not self.VerifyAuthToken:
             raise "没有VerifyCaptcha"
         cookie = headers.get("cookie") or headers.get("Cookie")
-        referer = headers.get("referer") or headers.get("Referer",'https://www.temu.com')
-        if 'bgn_verification' not in referer:
-            self.headers["referer"] = (f"https://www.temu.com/bgn_verification.html?VerifyAuthToken={self.VerifyAuthToken}&"
-                                   f"from={parse.quote_plus(referer)}")
+
+        if 'bgn_verification' not in headers.get("referer", headers.get("Referer", '')) :
+
+            if headers.get("referer"):
+                referer = headers.get("referer")
+                self.headers["referer"] = (
+                    f"https://www.temu.com/bgn_verification.html?VerifyAuthToken={self.VerifyAuthToken}&"
+                    f"from={parse.quote_plus(referer)}")
+            elif headers.get("Referer"):
+                referer = headers.get("Referer")
+                self.headers["Referer"] = (
+                    f"https://www.temu.com/bgn_verification.html?VerifyAuthToken={self.VerifyAuthToken}&"
+                    f"from={parse.quote_plus(referer)}")
+            else:
+                referer = "https://www.temu.com"
+
+            self.base_referer = referer
+        else:
+            self.base_referer = headers.get("referer", headers.get("Referer", ''))
 
         try:
             nano = re.findall("_nano_fp=(.*?);", cookie) or re.findall("_nano_fp=(.*?)$",cookie) or ['']
@@ -54,6 +73,26 @@ class VerifyCaptcha(object):
             api_uid = re.findall("api_uid=(.*?);", cookie) or re.findall("api_uid=(.*?)$",cookie) or ['']
         except:
             api_uid = [""]
+
+        try:
+            _bee = re.findall("_bee=(.*?);", cookie) or re.findall("_bee=(.*?)$", cookie) or ['']
+            njrpl = re.findall("njrpl=(.*?);", cookie) or re.findall("njrpl=(.*?)$", cookie) or ['']
+            dilx = re.findall("dilx=(.*?);", cookie) or re.findall("dilx=(.*?)$", cookie) or ['']
+            hfsc = re.findall("hfsc=(.*?);", cookie) or re.findall("hfsc=(.*?)$", cookie) or ['']
+            self.region = re.findall("region=(.*?);", cookie) or re.findall("region=(.*?)$", cookie) or ['']
+            self.region = self.region[0]
+            self.currency = re.findall("currency=(.*?);", cookie) or re.findall("currency=(.*?)$", cookie) or ['']
+            self.currency = self.currency[0]
+            self.language = re.findall("language=(.*?);", cookie) or re.findall("language=(.*?)$", cookie) or ['']
+            self.language = self.language[0]
+            self.gif_cookie = f'api_uid={api_uid[0]}; _bee={_bee[0]}; njrpl={njrpl[0]}; dilx={dilx[0]}; hfsc={hfsc[0]}'
+            self._bee = _bee[0]
+        except:
+            self.gif_cookie = ""
+            self.region = "211"
+            self.currency = "USD"
+            self.language = "en"
+        self.gif_url = get_gif_url(self.region)
         self.api_uid = api_uid[0]
         self.anti_count = 1
         self.ServerTime = None
@@ -77,7 +116,115 @@ class VerifyCaptcha(object):
         self.ctx = py_mini_racer.MiniRacer()
         self.eval_js()
 
+    async def get_gif(self):
+
+        query = parse.urlparse(self.base_referer).query
+        info = parse.parse_qs(query)
+        page_id = f"10017_{int(time.time() * 1000)}_{get_id(10)}"
+        _x_sessn_id = info.get("_x_sessn_id")
+        if not _x_sessn_id:
+            _x_sessn_id = get_id(10)
+        else:
+            _x_sessn_id = _x_sessn_id[0]
+        req_time = str(int(time.time() * 1000))
+
+        dcf = hash_o(f"{req_time}pv1")
+        data = {
+            "page_sn": "10017",
+            "page_id": page_id,
+            "cli_timezone": "Asia/Shanghai",
+            "cli_region": self.region,
+            "cli_currency": self.currency,
+            "cli_language": self.language,
+            "_x_sessn_id": _x_sessn_id,
+            "time": req_time,
+            "log_id": f"{req_time}{get_id(16)}",
+            "user_id": "",
+            "uin": "",
+            "app_id": "",
+            "screen_width": "1980",
+            "screen_height": "1080",
+            "dpr": "1",
+            "app_version": "",
+            "platform": "browser",
+            "plat_type": "pc",
+            "cookie_fp": self.nano,
+            "storage_fp": self.nano,
+            "dcf": f".1.{dcf}",
+            "bg_id": self._bee,
+            "os_language": "zh-CN",
+            "_ck_h_sequ": "0",
+            "support_beacon": "1"
+        }
+        data["page_url"] = self.headers.get("referer")
+        data["refer_url"] = ""
+        if info.get("refer_page_name"):
+            data["refer_page_name"] = info.get("refer_page_name")[0]
+        if info.get("refer_page_id"):
+            data["refer_page_id"] = info.get("refer_page_id")[0]
+        if info.get("refer_page_sn"):
+            data["refer_page_sn"] = info.get("refer_page_sn")[0]
+        data.update(
+            {
+                "op": "pv",
+                "event": "page_show",
+            }
+        )
+        headers = {
+            'accept': '*/*',
+            'content-type': 'text/plain;charset=UTF-8',
+            'origin': 'https://www.temu.com',
+            'referer': 'https://www.temu.com/',
+            "cookie": self.gif_cookie
+        }
+        await self.session.post(self.gif_url,
+                                headers=headers,
+                                data=data)
+        dcf = hash_o(f"{req_time}impr1")
+
+        data = {
+            "page_sn": "10017",
+            "page_id": page_id,
+            "cli_timezone": "Asia/Shanghai",
+            "cli_region": self.region,
+            "cli_currency": self.currency,
+            "cli_language": self.language,
+            "_x_sessn_id": _x_sessn_id,
+            "page_el_sn": "225383",
+            "is_show": "0",
+            "ndisp_rsn": "1",
+            "op": "impr",
+            "time": req_time,
+            "log_id": f"{req_time}{get_id(16)}",
+            "user_id": "",
+            "uin": "",
+            "app_id": "",
+            "screen_width": "1980",
+            "screen_height": "1080",
+            "dpr": "1",
+            "app_version": "",
+            "platform": "browser",
+            "plat_type": "pc",
+            "cookie_fp": self.nano,
+            "storage_fp": self.nano,
+            "dcf": f".1.{dcf}",
+            "bg_id": self._bee,
+            "os_language": "zh-CN",
+            "_ck_h_sequ": "1",
+            "support_beacon": "1"
+        }
+        if info.get("refer_page_name"):
+            data["refer_page_name"] = info.get("refer_page_name")[0]
+        if info.get("refer_page_id"):
+            data["refer_page_id"] = info.get("refer_page_id")[0]
+        if info.get("refer_page_sn"):
+            data["refer_page_sn"] = info.get("refer_page_sn")[0]
+        await self.session.post(self.gif_url,
+                                headers=headers,
+                                data=data)
     async def get_init(self):
+
+        # await self.session.
         url = "https://www.temu.com/api/phantom/vc_pre_ck"
         data = {
             "sdk_type": 1,
@@ -316,6 +463,9 @@ class VerifyCaptcha(object):
 
     async def start(self):
         logger.info("验证码识别开始")
+        print()
+        await self.session.get(self.headers.get("referer"))
+        await self.get_gif()
         self.init_info = await self.get_init()
         verify_count["count"] += 1
         while 1:
@@ -670,24 +820,24 @@ class VerifyCaptcha(object):
 if __name__ == '__main__':
 
     vc = VerifyCaptcha(
-    headers = {
-
-            'accept': 'application/json, text/plain, */*',
-            'accept-language': 'zh-CN,zh;q=0.9',
-            'cache-control': 'no-cache',
-            'content-type': 'application/json;charset=UTF-8',
-            'cookie': 'region=211; language=en; currency=USD; api_uid=Cm1oe2YeYcaKxACFCWpNAg==; timezone=Asia%2FShanghai; webp=1; _nano_fp=XpmaXqPjnqgYlpXbX9_BYH1IlDUaig1Kg9yU_ip9; _bee=36RsqWuN2idD0KyXL2GShemBUbQ1hap6; njrpl=36RsqWuN2idD0KyXL2GShemBUbQ1hap6; dilx=WrORHApaa4d7yqFSOWAuk; hfsc=L3yLe4s27j/825XJfw==; _ttc=3.JLmG1wP3bB6k.1744803151',
-            'origin': 'https://www.temu.com',
-            'pragma': 'no-cache',
-            'referer': 'https://www.temu.com/bgn_verification.html?VerifyAuthToken=rhXJu_lLlWymgJqzqHpSfQaa33e49d700d05384&from=https%3A%2F%2Fwww.temu.com%2Fwomens-jumpsuits-o3-1035.html&refer_page_name=category&refer_page_id=10012_1713267346658_9bc9j2ns19&refer_page_sn=10012&_x_sessn_id=nol4j2afk6',
-            'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Windows"',
-            'sec-fetch-dest': 'empty',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-site': 'same-origin',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-            'verifyauthtoken': 'rhXJu_lLlWymgJqzqHpSfQaa33e49d700d05384',
+        headers = {
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'zh-CN,zh;q=0.9',
+        'cache-control': 'no-cache',
+        'content-type': 'application/json;charset=UTF-8',
+        'cookie': 'region=211; language=en; currency=USD; api_uid=Cm3GdmYnd0WIgAB6WiKZAg==; timezone=Asia%2FShanghai; webp=1; _nano_fp=XpmaXqCjX5TJX5dono_kATLOtjFRvA5REZ9uhvzn; verifyAuthToken=c_lCBSF3lk082wqRUpZIQAb89db9f7f3ad8bb7a; _bee=KDJSXxjhneGpiuav2XnvERGNV88x4ap4; njrpl=KDJSXxjhneGpiuav2XnvERGNV88x4ap4; dilx=vSMbbXCXMx1UJRmWNQu3o; hfsc=L3yLe4E26zr/1JLMeg==; _ttc=3.Db7RTXGcLAD5.1745398601; __cf_bm=FrynRVbHAj0DUO6MYLbe5Wu5bp.fpLqGmSxXAQA4078-1713868323-1.0.1.1-LmbBdZQd8A_SmKbg.Y85dQ8yOU4D_NmJmDJWttV3Tnb3qXD0BSCeJm7O5.VuyMOipVFnUMe3m8hBn.xyNzXXOw; _device_tag=CgI2WRIIWG9MU3RkbnkaMP7pL4O3ohBSVBCt4m5P9TUh/U1xPkfh3ibmTl7hcVHXk64ZYogVSw6JgFF0lRzKnjAC; AccessToken=PKDXDERQTWZ23JULJIQ2WVZFGKXBIEAV3AIRBEAH7VER6YWHQDLA0110d3abd149; user_uin=BCU7UQQ6GNND54L6ZYUWVF5HF2LH3P5JKPQTZAQ7; isLogin=1713868346759; _u_pa=%7B%22nrpt_211%22%3A0%7D',
+        'origin': 'https://www.temu.com',
+        'pragma': 'no-cache',
+        'priority': 'u=1, i',
+        'referer': 'https://www.temu.com/bgn_verification.html?VerifyAuthToken=CSCt_IoKnzhw0pTRLe7sEw6afd0a826084ff9aa&from=https%3A%2F%2Fwww.temu.com%2F%3Frefer_page_name%3Dhome%26refer_page_id%3D10005_1713868333971_l291e9hyae%26refer_page_sn%3D10005&_x_sessn_id=k7ii9dznnb&refer_page_name=home&refer_page_id=10005_1713868358392_9v9sq5oiu9&refer_page_sn=10005',
+        'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'verifyauthtoken': 'CSCt_IoKnzhw0pTRLe7sEw6afd0a826084ff9aa',
         }
 
     )

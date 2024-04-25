@@ -4,7 +4,9 @@ import requests
 import re
 import httpx
 from common.config import server_config
-client_tools = httpx.AsyncClient()
+from requests_go import async_session
+import aiohttp
+client_tools = async_session()
 import ctypes
 import secrets
 
@@ -329,6 +331,7 @@ async def get_a4(device):
     res = await client_tools.post(
         "http://127.0.0.1:8980/device", json={"device": device}
     )
+
     return res.json()
 
 async def identity(data):

@@ -3,7 +3,7 @@
 import secrets
 import time
 import random
-import asyncio
+import json
 import hashlib
 import hmac
 from common.logger import logger
@@ -13,9 +13,7 @@ from common.verify_captcha import VerifyCaptcha
 from common.encrypt_tools import AsyncAnti, get_nano,hash_o
 from common.device_generation import DeviceGeneration
 from common.request import AsyncRequest
-from common.config import get_dr, get_gif_url
-from common.redis_handler import redis_Handler
-
+from urllib.parse import quote_plus
 
 def encrypt(text, pubkey):
     public_key = f"""-----BEGIN PUBLIC KEY-----
@@ -42,20 +40,28 @@ def get_id(e=21):
 class TemuLogin:
     def __init__(
         self,
+        # proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
         proxy="http://127.0.0.1:8888",
-        headers=None,
+            # proxy='http://look1234-zone-custom-region-hk:look1234@47.236.40.83:8088',
+
+            headers=None,
     ):
-        self.session = AsyncRequest(proxy=proxy, headers=headers)
+        self.session = AsyncRequest(proxy=proxy, headers=headers,if_ja3=False)
         self.device = DeviceGeneration(self.session.get_headers())
         self._session_id = get_id(10)
-        self.page_id = f"10013_{int(time.time()*1000)}_{get_id(10)}"
+        self.page_id = f"10005_{int(time.time()*1000)}_{get_id(10)}"
         self.__event = {}
         self.__metrics_counter__ = 0
+        self.country = "US"
+        self.__url = {
+            "US": {
+                "gif": "https://us.thtk.temu.com/c/th.gif"
+            }
+        }
         self.__server_time = {}
         self.location = "https://www.temu.com"
-        self.enter_time = time.time()
 
-    async def index(self,href):
+    async def index(self, href="https://www.temu.com/login.html?login_scene=8"):
         resp = await self.session.get(href)
         self.session.update_headers({
             "referer": href,
@@ -86,7 +92,7 @@ class TemuLogin:
         self.__event[name] = count + 1
         return count
 
-    async def gif(self, event_list):
+    async def gif(self, event_list=None):
         logger.info("gif日志提交")
         region = self.session.get_cookie("region", "211")
         currency = self.session.get_cookie("currency", "USD")
@@ -97,90 +103,9 @@ class TemuLogin:
         height = self.device.screen[1]
         cookie = (f'api_uid={self.session.get_cookie("api_uid")}; _bee={self.session.get_cookie("_bee")};'
                   f' njrpl={self.session.get_cookie("njrpl")}; dilx={self.session.get_cookie("dilx")}; hfsc={self.session.get_cookie("hfsc")}')
-        event_req = []
-        for event in event_list:
-            event_count = self.get_event(event["op"])
-            req_time = str(int(time.time() * 1000))
-            dcf = hash_o(f"{req_time}{event['op']}{event_count}")
-            data = {
-                "page_sn": "10013",
-                "page_id": self.page_id,
-                "cli_timezone": "Asia/Shanghai",
-                "cli_region": region,
-                "cli_currency": currency,
-                "cli_language": language,
-                "_x_sessn_id": self._session_id,
-                "time": req_time,
-                "log_id":   f"{req_time}{get_id(16)}",
-                "user_id": "",
-                "uin": "",
-                "app_id": "",
-                "screen_width": height,
-                "screen_height": width,
-                "dpr": "1",
-                "app_version": "",
-                "platform": "browser",
-                "plat_type": "pc",
-                "cookie_fp": nano,
-                "storage_fp": nano,
-                "dcf": f".{event_count}.{dcf}",
-                "bg_id": bg_ud,
-                "os_language": self.device.languages[0],
-                "_ck_h_sequ": str(self.__metrics_counter__),
-                "support_beacon": "1"
-            }
-            self.__metrics_counter__ += 1
-
-            data.update(event)
-            headers = {
-                'accept': '*/*',
-                'content-type': 'text/plain;charset=UTF-8',
-                'origin': 'https://www.temu.com',
-                'referer': 'https://www.temu.com/',
-                "cookie": cookie
-            }
-            event_req.append(self.session.post(get_gif_url(region),
-                                               headers=headers,
-                                               data=data))
-        await asyncio.gather(*event_req)
-
-    async def server_time(self):
-        logger.info("更新时间")
-        UpdateServerTime = int(time.time() * 1000)
-        server_time = await self.session.get("https://www.temu.com/api/server/_stm")
-
-
-        self.__server_time = {
-            "ServerTime": server_time.json()["server_time"],
-            "UpdateServerTime": UpdateServerTime,
-            "UpdateFirstServerTime":  UpdateServerTime - random.randint(50, 120)
-        }
-        self.session.up_server_time(self.__server_time)
-        logger.info("更新完成")
-    async def a4(self):
-        await self.server_time()
-
-        # await self.session.get("https://www.temu.com/api/phantom/dm/wl/cg")
-        # await self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3")
-        # await self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
-
-        await asyncio.gather(*[
-            self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
-            self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
-            self.session.get("https://www.temu.com/api/phantom/xg/pfb/b"),
-        ])
-
-        a4 = await self.device.a4()
-        await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
-
-    async def start(self):
-        logger.info("访问首页")
-        await self.index(href="https://www.temu.com/login.html?login_scene=8")
-        self.enter_time = int(time.time()*1000)
-        logger.info("访问a4")
-        await self.a4()
-        event_list = [
+        req_event = []
+        if event_list is None:
+            event_list = [
             {
                 "page_url": "https://www.temu.com/login.html?login_scene=8",
                 "refer_url": "",
@@ -270,9 +195,104 @@ class TemuLogin:
 
 
         ]
+        for event in event_list:
+            event_count = self.get_event(event["op"])
+            req_time = str(time.time() * 1000)
+            dcf = hash_o(f"{req_time}{event}{event_count}")
+            data = {
+                "page_sn": "10013",
+                "page_id": self.page_id,
+                "cli_timezone": "Asia/Shanghai",
+                "cli_region": region,
+                "cli_currency": currency,
+                "cli_language": language,
+                "_x_sessn_id": self._session_id,
+
+                "time": req_time,
+                "log_id":   f"{req_time}{get_id(16)}",
+                "user_id": "",
+                "uin": "",
+                "app_id": "",
+                "screen_width": height,
+                "screen_height": width,
+                "dpr": "1",
+                "app_version": "",
+                "platform": "browser",
+                "plat_type": "pc",
+                "cookie_fp": nano,
+                "storage_fp": nano,
+                "dcf": f".{event_count}.{dcf}",
+                "bg_id": bg_ud,
+                "os_language": self.device.languages[0],
+                "_ck_h_sequ": str(self.__metrics_counter__),
+                "support_beacon": "1"
+            }
+            self.__metrics_counter__ += 1
+
+            data.update(event)
+            headers = {
+                'accept': '*/*',
+                'content-type': 'text/plain;charset=UTF-8',
+                'origin': 'https://www.temu.com',
+                'referer': 'https://www.temu.com/',
+                "cookie": cookie
+
+            }
+            await self.session.post(self.__url.get(self.country).get('gif'),
+                                               headers=headers,
+                                               data=data)
+        #     req_event.append(self.session.post(self.__url.get(self.country).get('gif'),
+        #                                        headers=headers,
+        #                                        data=data))
+        # try:
+        #     await asyncio.gather(*req_event)
+        # except:
+        #     logger.error("gif err")
+
+    async def server_time(self):
+        UpdateServerTime = int(time.time() * 1000)
+        server_time = await self.session.get("https://www.temu.com/api/server/_stm")
+
+        self.__server_time = {
+            "ServerTime": server_time.json()["server_time"],
+            "UpdateServerTime": UpdateServerTime,
+            "UpdateFirstServerTime":  UpdateServerTime - random.randint(50, 120)
+        }
+        self.session.up_server_time(self.__server_time)
+    async def a4(self):
+        await self.server_time()
+
+        for i in ['https://www.temu.com/api/phantom/dm/wl/cg',
+                  "https://www.temu.com/api/phantom/xg/pfb/a3",
+                  "https://www.temu.com/api/phantom/xg/pfb/b"
+
+                  ]:
+            await self.session.get(i)
+        # a_list =[
+        #     self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
+        #     self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
+        #     self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
+        # ]
+        # try:
+        #     await asyncio.gather(*a_list)
+        # except:
+        #     pass
+        a4 = await self.device.a4()
+        resp = await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
+        await self.session.get( "https://www.temu.com/api/phantom/xg/pfb/l1")
+        await self.gif()
         await self.session.get('https://www.temu.com/api/adx/cm/ttc?scene=1&type=0')
-        await self.gif(event_list)
+
+    async def start(self):
+        logger.info("访问首页")
+        await self.index()
+
+        logger.info("访问a4")
+        await self.a4()
+        logger.info("更新时间")
+
         logger.info(f'开始注册')
+        await self.index()
         await self.gif([
             {
                 "login_scene": "8",
@@ -300,7 +320,8 @@ class TemuLogin:
             })
 
             self.session.update_headers({
-
+                'referer': f'https://www.temu.com/bgn_verification.html?VerifyAuthToken={verify_auth_token}&from='
+                           f'{quote_plus(self.location)}&type=iframe&iframeMsgId={get_id(21)}'
             })
             vc = VerifyCaptcha(self.session.get_headers(), self.session)
             res = await vc.start()
@@ -310,7 +331,6 @@ class TemuLogin:
             return res
         return response
     async def register(self):
-
         url = "https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered"
         login_name = get_username()
 
@@ -319,7 +339,6 @@ class TemuLogin:
             "login_name": login_name,
             "support_mobile": True,
             "components_version": "0.8.0",
-            "login_scene": 8
         }
 
         resp = await self.session.post(url, anti={"event":True},  verify=self.verify, json=data)
@@ -343,13 +362,12 @@ class TemuLogin:
         info = ":".join(
             [l, str(pub_info["server_time"]), pub_info["nonce"], pub_info["salt"]]
         )
-        region = self.session.get_cookie("region")
 
         data = {
-            "frontend_dr": get_dr(region),
+            "frontend_dr": "eu",
             "login_type": 1,
             "login_app_id": 203,
-            "login_scene": 8,
+            "login_scene": 602,
             "sign": pub_info["sign"],
             "key_version": 57,
             "email": login_name,
@@ -358,7 +376,7 @@ class TemuLogin:
             "stay_signed_in": False,
             "login_source": 0,
             "password_level": 4,
-            "components_version": "0.9.8",
+            "components_version": "0.9.7",
         }
         resp = await self.session.post("https://www.temu.com/api/bg/sigerus/auth/login?is_back=1",
                           anti={
@@ -366,7 +384,7 @@ class TemuLogin:
                                 "element": "submit-button"
                             },
                           json=data
-                      )
+                          )
         result = resp.json()
         if resp.status_code == 200 and result["success"] and result["error_code"] == 1000000:
             logger.info(f'{login_name}登录成功')
@@ -381,47 +399,39 @@ class TemuLogin:
                 "login_type": "1",
             }
             await self.gif([login_env])
-
-
-            await self.session.get("https://www.temu.com/api/adx/cm/ttc?scene=1&type=1")
+            print(resp.text)
+            print(self.session.get_headers())
             res = await self.account_risk_test()
             if res:
-                await redis_Handler.add(f"temu_account_{region}",  f"{login_name}--------{password}")
-
+                print(self.session.get_headers())
+                with open("username_us.txt", 'a') as w:
+                    w.write(f"{login_name}---------{password}"+'\n')
             else:
-                await redis_Handler.add(f"temu_account_low_{region}", f"{login_name}--------{password}")
+                with open("username_us_low.txt", 'a') as w:
+                    w.write(f"{login_name}---------{password}"+'\n')
+            print(self.session.get_headers())
             return self.session.get_headers()
         else:
             logger.info(f'{login_name}登录失败')
 
     async def account_risk_test(self):
         logger.info(f'开始验证账号风控')
-        url = f"https://www.temu.com/?refer_page_name=login&refer_page_id={self.page_id}&refer_page_sn=10013&_x_sessn_id={self._session_id}"
-        await self.index(url)
+        await self.index(f"https://www.temu.com/?refer_page_name=login&refer_page_id={self.page_id}&refer_page_sn=1"
+                   f"0013&_x_sessn_id={self._session_id}")
+
+        await self.session.post("https://www.temu.com/api/jade/hobbiton/conversion/user_privacy_setting")
+        # resp = await self.session.post("https://www.temu.com/api/bg-barbera-api/user/short/profile",json={})
+        # print(resp.json())
+        resp = await self.session.post("https://www.temu.com/api/bg/bg-uranus-api/uranus_cart/merge",json={})
+        print(resp.json())
+
         await self.a4()
-        event = [
-            {
-                "login_scene": "8",
-                "page_url": url,
-                "refer_url": "https://www.temu.com/login.html?login_scene=8",
-                "op": "epv",
-                "sub_op": "leave",
-                "enter_time": self.enter_time,
-                "close_time": int(time.time()*1000),
-            },
-            {
-                "page_url": url,
-                "refer_url": "https://www.temu.com/login.html?login_scene=8",
-                "op": "epv",
-                "sub_op": "leave",
-                "enter_time": self.enter_time,
-            }
-        ]
-        await self.gif(event)
+
         url = 'https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all'
+
         data = {"scene":"opt_list_all","list_id": get_id(6)}
 
-        resp = await self.session.post(url, anti={"event": True}, verify=self.verify,json=data)
+        resp = await self.session.post(url, anti={"event":True}, verify=self.verify ,json=data)
         if resp.json()["success"]:
             logger.info(f'账号风控验证成功')
             return True
@@ -440,7 +450,7 @@ if __name__ == '__main__':
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        "cookie": "timezone=Asia%2FShanghai; region=210; language=en; currency=GBP; webp=1"
+        "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
     }
 
 
@@ -449,7 +459,7 @@ if __name__ == '__main__':
         return "".join(secrets.choice(chars) for _ in range(e))
     user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
     proxy = f'http://{user}:databurning@43.128.74.58:30111'
-    t = TemuLogin(headers=headers,proxy=None )
+    t = TemuLogin(headers=headers, )
 
     import asyncio
     loop = asyncio.new_event_loop()

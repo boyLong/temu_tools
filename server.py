@@ -1,15 +1,20 @@
+import json
+
 from common.verify_captcha import VerifyCaptcha
 from common.encrypt_tools import get_random
-from fastapi.concurrency import run_in_threadpool
 
 from fastapi import FastAPI
 from pydantic import BaseModel
 from TemuLogin import TemuLogin
 app = FastAPI()
 
+
 class HeaderItem(BaseModel):
     headers: dict
 
+
+class CookieStr(BaseModel):
+    cookie: str
 @app.post("/captcha")
 async def identity(item: HeaderItem):
     try:
@@ -23,8 +28,9 @@ async def identity(item: HeaderItem):
     except Exception as e:
         return {"code": 500, "data": str(e)}
 
+
 @app.get("/login_ck")
-async def login():
+async def login(cookie_str: str):
     try:
         async def get_cookie():
             headers = {
@@ -40,8 +46,10 @@ async def login():
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
+                "cookie": cookie_str
             }
+            print(cookie_str)
+            print(json.dumps(headers))
             user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
             proxy = f'http://{user}:databurning@43.128.74.58:30111'
             tl = TemuLogin(headers=headers,proxy=proxy)

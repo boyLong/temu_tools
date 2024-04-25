@@ -14,7 +14,7 @@ from common.verify_captcha import VerifyCaptcha
 from common.encrypt_tools import AsyncAnti, get_nano, hash_o
 from common.device_generation import DeviceGeneration
 from common.request import AsyncRequest
-from common.config import get_gif_url,get_dr
+
 
 def get_username():
     return f"{get_id(random.randint(10, 20))}@gmail.com"
@@ -42,12 +42,9 @@ class TemuDetail:
         self.device = DeviceGeneration(self.session.get_headers())
         self._session_id = get_id(10)
         self.page_id = f"10005_{int(time.time() * 1000)}_{get_id(10)}"
-
         self.__event = {}
         self.__metrics_counter__ = 0
         self.__location = href
-
-
         self.__server_time = {}
 
     async def index(self, href):
@@ -101,8 +98,8 @@ class TemuDetail:
             cookie = f'api_uid={self.session.get_cookie("api_uid")}'
         for event in event_list:
             event_count = self.get_event(event["op"])
-            req_time = str(time.time() * 1000)
-            dcf = hash_o(f"{req_time}{event}{event_count}")
+            req_time = str(int(time.time() * 1000))
+            dcf = hash_o(f"{req_time}{event['op']}{event_count}")
             data = {
                 "page_sn": "10005",
                 "page_id": self.page_id,
@@ -141,9 +138,9 @@ class TemuDetail:
                 "cookie": cookie
 
             }
-            req_event.append(self.session.post(get_gif_url(region),
+            await  self.session.post(self.g,
                                                headers=headers,
-                                               data=data))
+                                               data=data)
 
     async def server_time(self):
         UpdateServerTime = int(time.time() * 1000)
@@ -160,15 +157,16 @@ class TemuDetail:
         await self.get_nano()
         await self.server_time()
 
-        await self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
+        a3_list =[
+            self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
+            self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
+            self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
+        ]
+        await asyncio.gather(*a3_list)
         a4 = await self.device.a4()
         await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
         await self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
 
-    async def front_err(self):
-        pass
     async def start(self):
 
 
@@ -176,17 +174,15 @@ class TemuDetail:
         try:
             pageListId = re.findall('"pageListId":"(.*?)"', text)[1]
             self.home_page_list_id = pageListId
-            raw_data = re.findall("window\.rawData=(.*?\});", text)[0]
-            raw_data = json.loads(raw_data)
         except:
-            logger.error(f'获取首页raw_data失败, 设备权重过低,不在继续')
-            return {"code": 500, "msg": '获取首页raw_data失败, 设备权重过低,不在继续'}
+            logger.error(f'获取pageListId失败, 设备权重过低,不在继续')
+            return {"code": 500, "msg": '获取pageListId失败, 设备权重过低,不在继续'}
 
         await self.gif(
             event_list=[
                 {
                     "page_url": "https://www.temu.com/",
-                    "refer_url": "https://www.google.com/",
+                    "refer_url": "",
                     "op": "pv",
                     "event": "page_show",
                 },
@@ -226,16 +222,11 @@ class TemuDetail:
             ('page_list_id', pageListId),
         )
         resp = await self.session.get(url, anti={"event": True}, params=params, verify=self.verify)
-
-
         res_data = resp.json()
         if not res_data.get('success') or res_data.get('error_code') != 1000000:
             print(res_data)
             logger.error(f'获取home_goods_list失败,不在继续')
             return {"code": 500, "msg": '获取home_goods_list失败,不在继续'}
-        resp = await self.session.post("https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all",
-                             json={"scene":"opt_list_all","list_id":get_id(6)})
-        print(resp.json)
         logger.info(f"选择一部分商品进行gif提交")
         idx = 1
         env_list = []
@@ -325,20 +316,20 @@ class TemuDetail:
 
 if __name__ == '__main__':
     headers = {
-        'accept': 'application/json, text/plain, */*',
-        'accept-language': 'zh-CN,zh;q=0.9',
-        'cache-control': 'no-cache',
-        'content-type': 'application/json;charset=UTF-8',
-        'referer': "https://www.temu.com",
-        'pragma': 'no-cache',
-        'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
+        'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Windows"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
-
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'service-worker-navigation-preload': '2',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'referer': 'https://www.google.com/',
+        'accept-language': 'zh-CN,zh;q=0.9',
+        'priority': 'u=0, i',
     }
     import asyncio
 
