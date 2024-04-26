@@ -179,8 +179,7 @@ class TemuDetail:
             pageListId =  raw_data['store']['pageListId']
             self.home_page_list_id = raw_data['store']['pageListId']
         except:
-            logger.error(f'获取首页raw_data失败, 设备权重过低,不在继续')
-            return False
+            raise Exception('获取首页raw_data失败, 设备权重过低,不在继续')
         await self.a4()
         await self.gif(
             event_list=[
@@ -242,16 +241,16 @@ class TemuDetail:
 
         res_data = resp.json()
         if not res_data.get('success') or res_data.get('error_code') != 1000000:
-            logger.error(f'获取home_goods_list失败,不在继续')
-            return False
+            raise Exception('获取home_goods_list失败,不在继续')
+
         resp = await self.session.post("https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all",
                                        anti={"event": False},
                                        verify=self.verify,
                                         json={"scene":"opt_list_all","list_id":get_id(6)})
         if resp.status_code != 200 or not resp.json().get("success"):
-            return False
+            raise Exception('获取opt_list失败,不在继续')
 
-        return self.session.get_headers()
+
         logger.info(f"选择一部分商品进行gif提交")
         idx = 1
         env_list = []
@@ -275,7 +274,7 @@ class TemuDetail:
             })
 
         await self.gif(event_list=env_list)
-
+        return self.session.get_headers()
         logger.info("校验sku接口")
         spec_ids = ''
         good_id = '601099518641848'

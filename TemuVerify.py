@@ -62,26 +62,3 @@
 # # }
 # #
 # # '''
-from fastapi import FastAPI
-import asyncio
-
-app = FastAPI()
-
-async def async_task_1():
-    await asyncio.sleep(1)
-    return "Task 1 done"
-
-async def async_task_2():
-    await asyncio.sleep(2)
-    return "Task 2 done"
-
-@app.get("/")
-async def root():
-    task1 = async_task_1()
-    task2 = async_task_2()
-    results = await asyncio.gather(task1, task2)
-    return {"results": results}
-
-if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)

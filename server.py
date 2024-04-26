@@ -52,7 +52,7 @@ async def ck(cookie_str: str ="timezone=Asia%2FShanghai; region=210; language=en
             print(cookie_str)
             proxy = f'http://{user}:databurning@43.128.74.58:30111'
             print(proxy)
-            tl = TemuDetail(headers=headers,proxy=proxy)
+            tl = TemuDetail(headers=headers,proxy=None)
             res = await tl.start()
             if res:
                 return {"code": 200, "data": res}
