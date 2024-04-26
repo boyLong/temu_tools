@@ -156,8 +156,7 @@ class TemuDetail:
         self.session.up_server_time(self.__server_time)
 
     async def a4(self):
-        await self.get_nano()
-        await self.server_time()
+        await asyncio.gather(*[self.get_nano(), self.server_time()])
 
         await asyncio.gather(*[self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
             self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
@@ -165,7 +164,7 @@ class TemuDetail:
 
         a4 = await self.device.a4()
         await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
+        # await self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
 
     async def front_err(self):
         pass
