@@ -176,7 +176,7 @@ class TemuDetail:
         try:
             raw_data = re.findall("window\.rawData=(.*?\});", text)[0]
             raw_data = json.loads(raw_data)
-            pageListId =  raw_data['store']['pageListId']
+            pageListId = raw_data['store']['pageListId']
             self.home_page_list_id = raw_data['store']['pageListId']
         except:
             raise Exception('获取首页raw_data失败, 设备权重过低,不在继续')
@@ -329,7 +329,7 @@ class TemuDetail:
                 new_query[k] = v[0] if v else ''
             new_query["_x_sessn_id"] = self._session_id
             new_query["refer_page_name"] = "bgn_verification"
-            new_query["refer_page_sn"] = self.page_id
+            new_query["refer_page_id"] = self.page_id
             new_query["refer_page_sn"] = "10005"
 
             self.__location = url_info._replace(query=urlencode(new_query)).geturl()

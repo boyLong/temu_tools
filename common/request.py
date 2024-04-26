@@ -41,6 +41,7 @@ retry_on = (Exception,
 class AsyncRequest:
     def __init__(self, proxy=None, headers=None, if_ja3=True):
         self.__ja3_config = random.choice(ja3_configs)
+
         self.if_ja3 = if_ja3
         self.tls_config = requests_go.tls_config.to_tls_config(self.__ja3_config)
         self.tls_config.ja3 = requests_go.tls_config.JA3Random(self.tls_config.ja3)
@@ -61,6 +62,7 @@ class AsyncRequest:
             self.session.headers.update(headers)
         else:
             self.user_agent = self.__ja3_config["user_agent"]
+        logger.info(proxy)
 
     def up_server_time(self, server_time=None):
         self.anti.up_server_time(server_time)

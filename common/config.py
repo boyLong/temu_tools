@@ -2098,7 +2098,7 @@ ja3_configs = [
 
 server_config = {
     "captcha_port": 18999,
-    "server_port": 20001
+    "server_port": 30200
 }
 
 
