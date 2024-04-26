@@ -127,7 +127,6 @@ class AsyncRequest:
         if self.if_ja3:
             kwargs["tls_config"] = self.tls_config
         url = kwargs.get("url") or args[0]
-        logger.info(f"post: {url} data: {kwargs.get('data') or kwargs.get('json')}")
 
         if self.proxies:
             kwargs["proxies"] = self.proxies

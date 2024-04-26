@@ -14,7 +14,7 @@ app.use(bodyParser.json({limit: '10mb',extended: true}));
 app.use(express.json())
 
 app.post('/anti', async (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     var client = req.body.client
     var client2 = req.body.client2 || {}
     var track = req.body.track
