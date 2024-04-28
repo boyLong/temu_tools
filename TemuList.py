@@ -6,7 +6,7 @@ import secrets
 import time
 import random
 import json
-from common.proxy import get_proxy
+import requests
 from common.logger import logger
 
 from common.verify_captcha import VerifyCaptcha
@@ -28,7 +28,7 @@ def get_id(e=21):
     return "".join(secrets.choice(chars) for _ in range(e))
 
 
-class TemuDetail:
+class TemuList:
     def __init__(
             self,
             href="https://www.temu.com/",
@@ -39,13 +39,17 @@ class TemuDetail:
         self.device = DeviceGeneration(self.session.get_headers())
         self._session_id = get_id(10)
         self.page_id = f"10005_{int(time.time() * 1000)}_{get_id(10)}"
+
         self.__event = {}
         self.__metrics_counter__ = 0
         self.__location = href
+
+
         self.__server_time = {}
 
     async def index(self, href):
         resp = await self.session.get(href)
+
         self.session.update_headers({
             "referer": href,
         })
@@ -152,9 +156,9 @@ class TemuDetail:
     async def a4(self):
         await asyncio.gather(*[self.get_nano(), self.server_time()])
 
-        # await asyncio.gather(*[self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
-        #     self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
-        #     self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")])
+        await asyncio.gather(*[self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
+            self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
+            self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")])
 
         a4 = await self.device.a4()
         await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
@@ -267,66 +271,30 @@ class TemuDetail:
             })
 
         await self.gif(event_list=env_list)
+        return self.session.get_headers()
+        logger.info("校验sku接口")
+        spec_ids = ''
+        good_id = '601099518641848'
+        for good in res_data.get('result')["home_goods_list"]:
+            if good["data"].get("sold_quantity_percent"):
+                spec_ids = good["data"].get("spec_ids", '')
+                good_id = good["data"].get("goods_id")
+                break
+        data = {"page_sn": 10005, "_oak_sku_count": 1, "_oak_show_sale_price_suffix": 1,
+         "_oak_show_leaf_category_low_price_tag": "1", "_oak_stage": len(spec_ids.split(",")), "single_sku_ignore_panel": 0,
+         "goods_id": good_id, "_oak_spec_ids": spec_ids, "_oak_page_source": 102,
+         "request_type": 0}
+        resp = await self.session.post("https://www.temu.com/api/oak/integration/sku",
+                                anti={
+                                    "event":True,
+                                },verify=self.verify,json=data)
+        if resp.status_code == 200 and resp.json()["success"]:
+            logger.info(f'skuheaders激活成功')
 
-        seo_link_url = res_data.get('result')["home_goods_list"][0]["data"]["seo_link_url"]
-        info = urlparse(seo_link_url)
-        query = parse_qs(info.query)
-        path = info.path
-        query = parse_qs(urlparse(seo_link_url).query)
 
-        new_query = {
-
-        }
-        for k, v in query.items():
-            new_query[k] = v[0]
-        new_query.update({
-            "refer_page_sn":"10005",
-            "refer_page_el_sn": "200024",
-            "refer_page_name": "home",
-            "refer_page_id": self.page_id,
-            "_x_sessn_id": self._session_id
-
-        })
-        logger.info(f"校验商品接口")
-        href = "https://www.temu.com"+path+"?"+urlencode(new_query)
-        html = await self.index(href=href)
-        try:
-            raw_data = re.findall("window\.rawData=(.*?\});", html)[0]
-            raw_data = json.loads(raw_data)
-            if raw_data["store"].get("error"):
-                logger.info(f'校验商品接口出现验证吗')
-                if raw_data["store"]["error"]["errorCode"] == 54001:
-                    verify_auth_token = raw_data["store"]["error"]["errorCode"]
-                    self.session.update_headers({
-                        "verifyauthtoken": verify_auth_token
-                    })
-                    self.session.update_cookie({
-                        "verifyAuthToken": verify_auth_token
-                    })
-
-                    self.session.update_headers({
-                        'referer': f'https://www.temu.com/uk/bgn_verification.html?VerifyAuthToken={verify_auth_token}&from='
-                                   f'{quote_plus(self.__location)}&type=iframe&iframeMsgId={get_id(21)}'
-                    })
-                    vc = VerifyCaptcha(self.session.get_headers(), self.session, )
-                    res = await vc.start()
-                    self.session.update_headers({
-                        "referer": self.__location,
-                    })
-                    if res:
-                        return self.session.get_headers()
-                    else:
-                        raise Exception('校验商品接口验证码失败')
-
-                else:
-                    raise Exception(f'校验商品风控失败->{raw_data["store"]["error"]["errorCode"]}')
-            else:
-                if raw_data["store"].get('goods',{}).get("sideSalesTip",''):
-                    return self.session.get_headers()
-                pass
-        except:
-            raise Exception('校验商品接口失败')
-        print(html)
+            print(self.session.get_headers())
+        else:
+            print(resp.json())
         # return self.session.get_headers()
 
     async def verify(self, response):
@@ -383,11 +351,12 @@ if __name__ == '__main__':
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        "cookie": "timezone=Asia%2FShanghai; currency=GBP; language=en; region=210; webp=1"
+        "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
+
     }
 
-    t = TemuDetail(href="https://www.temu.com/", headers=headers,
-                   )
+    t = TemuList(href="https://www.temu.com/", headers=headers,
+            )
 
 
 

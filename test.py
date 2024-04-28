@@ -38,7 +38,7 @@ async def test():
         'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Windows"', 'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin',
         'verifyauthtoken': '_xj765jhYzGek-KFSzF7yQ3b3e74cad82758b01',
-        'Cookie': 'timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1; _nano_fp=Xpman09Yn0gqlpXonT_G2V8RTDSA7_ZxwVWa5DtA; verifyAuthToken=_xj765jhYzGek-KFSzF7yQ3b3e74cad82758b01; api_uid=CmyaqmYqPOohQwBnwUu4Ag==; __cf_bm=GTl1tAR5ZI26G2gap6jI7hWvYv97l0hNaxmD3VkGZDQ-1714044138-1.0.1.1-AwREXQ94SaKQwjJf9BBW8COA1R3beZSL2gIqxVFbVi5v0udNv7hwJcCXAI8VFLvFWjRffiS_gKlfIAcFF5eUjQ; _bee=JxvccLV0gWb1At5qcat2g7Nt4mm8vapk; njrpl=JxvccLV0gWb1At5qcat2g7Nt4mm8vapk; dilx=RTdtJeEWHI2RYbjG7WDC_; hfsc=L3yLfIk07T/90pbEeA==; _ttc=3.C7rMR3LZr0RT.1745580159'}
+        'Cookie': 'timezone=Asia%2FShanghai currency=USD; language=en; region=211; webp=1; _nano_fp=Xpman09Yn0gqlpXonT_G2V8RTDSA7_ZxwVWa5DtA; verifyAuthToken=_xj765jhYzGek-KFSzF7yQ3b3e74cad82758b01; api_uid=CmyaqmYqPOohQwBnwUu4Ag==; __cf_bm=GTl1tAR5ZI26G2gap6jI7hWvYv97l0hNaxmD3VkGZDQ-1714044138-1.0.1.1-AwREXQ94SaKQwjJf9BBW8COA1R3beZSL2gIqxVFbVi5v0udNv7hwJcCXAI8VFLvFWjRffiS_gKlfIAcFF5eUjQ; _bee=JxvccLV0gWb1At5qcat2g7Nt4mm8vapk; njrpl=JxvccLV0gWb1At5qcat2g7Nt4mm8vapk; dilx=RTdtJeEWHI2RYbjG7WDC_; hfsc=L3yLfIk07T/90pbEeA==; _ttc=3.C7rMR3LZr0RT.1745580159'}
     headers =  {
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
         "Accept-Encoding": "gzip, deflate, zstd",
@@ -58,6 +58,21 @@ async def test():
         "verifyauthtoken": "WbxruoQtIC1v3NI2pJmZ7Qa84bfc761eb1909eb",
         "cookie": "timezone=Asia/Shanghai; currency=USD; language=en; region=211; webp=1; _nano_fp=Xpman09yXqPjnqdxXC_2rIgikmTUMTlwAmEJoOCw; verifyAuthToken=WbxruoQtIC1v3NI2pJmZ7Qa84bfc761eb1909eb; api_uid=CmyaqmYqYJE0VABvx94XAg==; __cf_bm=zVgAc9wbIdZ326Tsqg2sjwA3FBOrZvTSek2QDzOV3Is-1714053265-1.0.1.1-Ofci.E2rP.jldFdFhnY6d6mL3iZHrNiCJeMYI9hby603Y7wRDVVA1MZvBVDHYBNiOuyZVLGjXP1OMtAFfVCSkQ; _bee=TfLCZdeOhx7vyd1GuoMLnITroidbOapi; njrpl=TfLCZdeOhx7vyd1GuoMLnITroidbOapi; dilx=hCp9ygAuIvzQ7Hvn8b9zE; hfsc=L3yLfIk16jz+2pDNeQ==; _ttc=3.ueX45yx6fLPk.1745589276"
     }
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate", "accept": "application/json, text/plain, */*", "Connection": "keep-alive",
+        "accept-language": "zh-CN,zh;q=0.9", "cache-control": "no-cache",
+        "content-type": "application/json;charset=UTF-8",
+        "referer": "https://www.temu.com/jiameng-pets-m-222447459331.html?_x_sessn_id=dv0ig9wcau&refer_page_name=bgn_verification&refer_page_id=10005_1714272491046_ur4fxu87mg&refer_page_sn=10005",
+        "pragma": "no-cache",
+        "sec-ch-ua": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+        "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"Windows\"", "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin",
+        "verifyauthtoken": "4TSxHKN5HliYH7WgAlqHnQ197d687051b20b5df",
+        "Cookie": "timezone=Asia/Shanghai; region=211; language=en; currency=USD; webp=1; _nano_fp=Xpman0P8X5Tbn0TbXT_RdxDbSnR8rZaIBUIiweg2; verifyAuthToken=4TSxHKN5HliYH7WgAlqHnQ197d687051b20b5df; api_uid=Cm1olmYtuOspkQBpEVQzAg==; __cf_bm=EcUyIqVFh1kfZfV3_Yx6zNV_EMCEL.7kTCiY87mkctU-1714272492-1.0.1.1-Ff_HEeSDHAfBBSKV1zl4K6aBbA1.Ggoz3Wr.ID9hgQgOapwvfnKJUSZIS2Ny_FhNBgVxbaL2plNlzrXUHndUGQ; _bee=G0bPuo7KbYjaFu2J3ZLvEffyrNPwiapz; njrpl=G0bPuo7KbYjaFu2J3ZLvEffyrNPwiapz; dilx=V8tLhqpbSEJtEhoQvyjBu; hfsc=L3yLfIs36zrx2pLOcQ==; _ttc=3.wkEv5ggPtTMU.1745808507"}
+
+
     ar = AsyncRequest(headers=headers,proxy=None)
     ar.anti = AsyncAnti(headers=ar.get_headers(),
                                       lt_c=[71, 97, 12, 171],
@@ -80,8 +95,7 @@ async def test():
                          "event":True
                        },
                         json=data)
-    response = await ar.get('https://www.temu.com/1pc-sofa-slipcover-pet-dog-friendly-sofa-cover-fuzzy-non-slip-sofa-slipcover-breathable-sofa-slipcover-for-bedroom-office-living-room-decor-home-decor-g-601099522176120.html?_x_sessn_id=lziax6paba&refer_page_name=home&refer_page_sn=10005',
-              )
+
     print(response.text)
 
 if __name__ == '__main__':

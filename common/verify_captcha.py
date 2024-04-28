@@ -37,7 +37,7 @@ def get_id(e=21):
     return "".join(secrets.choice(chars) for _ in range(e))
 
 class VerifyCaptcha(object):
-    def __init__(self,headers, session=None, proxy=None, ):
+    def __init__(self,headers, session=None, proxy=True, ):
 
         self.headers = headers.copy()
         self.VerifyAuthToken = headers.get("Verifyauthtoken") or headers.get("verifyauthtoken")

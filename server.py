@@ -5,7 +5,7 @@ from common.encrypt_tools import get_random
 from fastapi import FastAPI
 from pydantic import BaseModel
 from TemuLogin import TemuLogin
-from TemuDetail import TemuDetail
+from TemuList import TemuList
 from common.proxy import get_proxy
 app = FastAPI()
 
@@ -47,7 +47,7 @@ async def ck(cookie_str: str ="timezone=Asia%2FShanghai; region=210; language=en
                 'sec-fetch-site': 'same-origin',
                 "cookie": cookie_str
             }
-            tl = TemuDetail(headers=headers,proxy=get_proxy())
+            tl = TemuList(headers=headers,proxy=get_proxy())
             res = await tl.start()
             if res:
                 return {"code": 200, "data": res}

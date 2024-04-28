@@ -1,7 +1,7 @@
 import asyncio
 import random
 import requests_go
-import aiohttp
+from common.proxy import get_proxy
 from common.config import ja3_configs
 from common.logger import logger
 import stamina
@@ -39,9 +39,9 @@ retry_on = (Exception,
             )
 
 class AsyncRequest:
-    def __init__(self, proxy=None, headers=None, if_ja3=True):
+    def __init__(self, proxy=True, headers=None, if_ja3=True,timeout=10):
         self.__ja3_config = random.choice(ja3_configs)
-
+        self.timeout = timeout
         self.if_ja3 = if_ja3
         self.tls_config = requests_go.tls_config.to_tls_config(self.__ja3_config)
         self.tls_config.ja3 = requests_go.tls_config.JA3Random(self.tls_config.ja3)
@@ -49,7 +49,7 @@ class AsyncRequest:
         self.user_agent = self.__ja3_config.get("user_agent")
         self.anti = None
         if proxy:
-            self.proxies = {"http": proxy, "https": proxy}
+            self.proxies = get_proxy()
         else:
             self.proxies = None
         if headers:
@@ -80,14 +80,12 @@ class AsyncRequest:
                 cookie_dict[k] = v
             self.session.cookies.update(cookie_dict)
 
-    @stamina.retry(on=retry_on, attempts=3, timeout=10)
+    @stamina.retry(on=retry_on, attempts=3, timeout=30)
     async def get(self, *args,**kwargs):
         if self.if_ja3:
             kwargs["tls_config"] = self.tls_config
         url = kwargs.get("url") or args[0]
-
         logger.info(f"get: {url}")
-
         if self.proxies:
             kwargs["proxies"] = self.proxies
         anti = kwargs.pop("anti", {})
@@ -102,13 +100,15 @@ class AsyncRequest:
         retry_count = 1
         while retry_count < 5:
             try:
-                resp = await self.session.get(verify=False, *args,**kwargs)
+                resp = await self.session.get(verify=False,timeout=self.timeout, *args,**kwargs)
                 break
             except Exception as e:
                 logger.error(f"get error: {e}")
+                self.proxies = get_proxy()
+                kwargs["proxies"] = self.proxies
                 retry_count += 1
         else:
-            raise Exception(f"get failed: {url}")
+            raise Exception(f"get failed: {url} proxy{self.proxies}")
 
         if verify:
             verify_res = await verify(resp)
@@ -122,12 +122,12 @@ class AsyncRequest:
                 raise Exception(f"verify failed:")
         return resp
 
-    @stamina.retry(on=retry_on, attempts=3, timeout=10)
+    @stamina.retry(on=retry_on, attempts=3, timeout=30)
     async def post(self, *args, **kwargs):
         if self.if_ja3:
             kwargs["tls_config"] = self.tls_config
         url = kwargs.get("url") or args[0]
-
+        logger.info(f"post: {url}")
         if self.proxies:
             kwargs["proxies"] = self.proxies
         anti = kwargs.pop("anti", {})
@@ -143,10 +143,11 @@ class AsyncRequest:
         retry_count = 1
         while retry_count < 5:
             try:
-                resp = await self.session.post(verify=False, *args,**kwargs)
+                resp = await self.session.post(verify=False,timeout=self.timeout, *args,**kwargs)
                 break
             except Exception as e:
-                logger.error(f"post error: {e}")
+                self.proxies = get_proxy()
+                kwargs["proxies"] = self.proxies
                 retry_count += 1
         else:
             raise Exception(f"post failed: {url}")

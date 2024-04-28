@@ -42,10 +42,9 @@ def get_id(e=21):
 class TemuLogin:
     def __init__(
         self,
-        proxy="http://127.0.0.1:8888",
         headers=None,
     ):
-        self.session = AsyncRequest(proxy=proxy, headers=headers)
+        self.session = AsyncRequest(proxy=True, headers=headers)
         self.device = DeviceGeneration(self.session.get_headers())
         self._session_id = get_id(10)
         self.page_id = f"10013_{int(time.time()*1000)}_{get_id(10)}"
@@ -444,12 +443,8 @@ if __name__ == '__main__':
     }
 
 
-    def get_random(e=21):
-        chars = "0123456789abcdefghijklmnopqrstuvwxyz"
-        return "".join(secrets.choice(chars) for _ in range(e))
-    user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
-    proxy = f'http://{user}:databurning@43.128.74.58:30111'
-    t = TemuLogin(headers=headers,proxy=None )
+
+    t = TemuLogin(headers=headers  )
 
     import asyncio
     loop = asyncio.new_event_loop()

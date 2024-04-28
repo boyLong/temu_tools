@@ -36,6 +36,7 @@ def get_proxy(l=None):
         proxy = f'http://{user}:databurning@pr.roxlabs.cn:4600'
     elif l == 3:
         proxy = f"http://127.0.0.1:8888"
-
-
-    return proxy
+    else:
+        user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
+        proxy = f'http://{user}:databurning@pr.roxlabs.cn:4600'
+    return {"http": proxy, "https": proxy,"ftp": proxy}
