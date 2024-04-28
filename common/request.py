@@ -62,7 +62,6 @@ class AsyncRequest:
             self.session.headers.update(headers)
         else:
             self.user_agent = self.__ja3_config["user_agent"]
-        logger.info(proxy)
 
     def up_server_time(self, server_time=None):
         self.anti.up_server_time(server_time)

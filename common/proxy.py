@@ -1,6 +1,6 @@
 from common.encrypt_tools import get_random
 import socket
-
+from common.logger import logger
 
 def extract_ip():
     st = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -39,4 +39,5 @@ def get_proxy(l=None):
     else:
         user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
         proxy = f'http://{user}:databurning@pr.roxlabs.cn:4600'
+    logger.info("Proxy is " + proxy)
     return {"http": proxy, "https": proxy,"ftp": proxy}

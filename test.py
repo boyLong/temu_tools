@@ -71,6 +71,23 @@ async def test():
         "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin",
         "verifyauthtoken": "4TSxHKN5HliYH7WgAlqHnQ197d687051b20b5df",
         "Cookie": "timezone=Asia/Shanghai; region=211; language=en; currency=USD; webp=1; _nano_fp=Xpman0P8X5Tbn0TbXT_RdxDbSnR8rZaIBUIiweg2; verifyAuthToken=4TSxHKN5HliYH7WgAlqHnQ197d687051b20b5df; api_uid=Cm1olmYtuOspkQBpEVQzAg==; __cf_bm=EcUyIqVFh1kfZfV3_Yx6zNV_EMCEL.7kTCiY87mkctU-1714272492-1.0.1.1-Ff_HEeSDHAfBBSKV1zl4K6aBbA1.Ggoz3Wr.ID9hgQgOapwvfnKJUSZIS2Ny_FhNBgVxbaL2plNlzrXUHndUGQ; _bee=G0bPuo7KbYjaFu2J3ZLvEffyrNPwiapz; njrpl=G0bPuo7KbYjaFu2J3ZLvEffyrNPwiapz; dilx=V8tLhqpbSEJtEhoQvyjBu; hfsc=L3yLfIs36zrx2pLOcQ==; _ttc=3.wkEv5ggPtTMU.1745808507"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate, zstd", "accept": "application/json, text/plain, */*",
+        "Connection": "keep-alive", "accept-language": "zh-CN,zh;q=0.9", "cache-control": "no-cache",
+        "content-type": "application/json;charset=UTF-8",
+        "referer": "https://www.temu.com/jiameng-pets-m-222447459331.html?_x_sessn_id=r49k6drbnx&refer_page_name=bgn_verification&refer_page_id=10005_1714293278332_tx6m6sgzzn&refer_page_sn=10005",
+        "pragma": "no-cache",
+        "sec-ch-ua": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+        "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"Windows\"", "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin",
+        "verifyauthtoken": "SY3kUX2Z-lg-gsWHmw7-lweb2d7a751e12dde9d",
+        "Cookie": "timezone=Asia%2FShanghai; region=211; language=en; currency=USD; webp=1; _nano_fp=Xpman0PbXqPJXqPjnC_A_I5QJ1XCsT7ol6u32_o7; verifyAuthToken=SY3kUX2Z-lg-gsWHmw7-lweb2d7a751e12dde9d; api_uid=Cm0wb2YuCiAAzQBgFhPhAg==; __cf_bm=cn88zPxJuaLMqm_hd6CS96C2pEBBS7TkUqOKZ_m19kE-1714293280-1.0.1.1-_Mya0FIJ6JgD5GORc3YNr79dAjU27rddGVH5og_fMbkmkrDotmH6w_Rzpvfg3wzWwT6P9G52aQnxjOtA8q0low; _bee=TslkS4CQUfqPis1UlpYbmqgtKzhACapG; njrpl=TslkS4CQUfqPis1UlpYbmqgtKzhACapG; dilx=WzuiW5Wg7eAqJZwfQaHOB; hfsc=L3yLfIs56jzw25HIeQ==; _ttc=3.d5D8wBVdJ6yK.1745829298"
+
+    }
+
+
+
 
 
     ar = AsyncRequest(headers=headers,proxy=None)

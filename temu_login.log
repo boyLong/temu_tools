@@ -3540,3 +3540,91 @@
 2024-04-28 15:23:48 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
 2024-04-28 15:24:30 | INFO | request | request.py | True
 2024-04-28 15:24:30 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:26:37 | INFO | request | request.py | True
+2024-04-28 16:26:37 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:26:47 | INFO | request | request.py | True
+2024-04-28 16:26:47 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:29:31 | INFO | request | request.py | True
+2024-04-28 16:29:31 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:29:41 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: net/http: request canceled (Client.Timeout or context cancellation while reading body)"}
+2024-04-28 16:29:48 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-28 16:29:51 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-28 16:29:54 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:29:54 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:29:54 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:29:54 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:29:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:29:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:29:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:29:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:30:01 | INFO | temu | temu.py | 开始验证
+2024-04-28 16:30:01 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-28 16:30:04 | INFO | request | request.py | get: https://www.temu.com/api/alexa/homepage/goods_list
+2024-04-28 16:30:09 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-28 16:30:12 | INFO | temu | temu.py | 接口出现验证码,开始验证 token:6SIweqcEQW3jo8cHjkK_lgeb00a58278d89e8af
+2024-04-28 16:30:12 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-28 16:30:12 | INFO | request | request.py | get: https://www.temu.com/uk/bgn_verification.html?VerifyAuthToken=6SIweqcEQW3jo8cHjkK_lgeb00a58278d89e8af&from=https%3A%2F%2Fwww.temu.com%2F&type=iframe&iframeMsgId=1kx20z1uujfihdsbjtj8r
+2024-04-28 16:30:16 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:30:19 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:30:22 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-28 16:30:25 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-28 16:30:25 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-28 16:30:29 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-28 16:30:29 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-28 16:30:33 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-28 16:30:33 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-28 16:30:36 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-28 16:30:36 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-28 16:31:06 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-28 16:33:52 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-28 16:34:06 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:34:06 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:07 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:07 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:08 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:09 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:34:09 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:10 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:10 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:11 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:12 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:34:12 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:13 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:13 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:14 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-04-28 16:34:29 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:34:38 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-28 16:34:43 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-28 16:34:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-28 16:34:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-28 16:34:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-28 16:34:46 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-28 16:34:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-28 16:34:49 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:49 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:49 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:49 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:53 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:53 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:53 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:53 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:34:56 | INFO | temu | temu.py | 开始验证
+2024-04-28 16:34:56 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-28 16:34:59 | INFO | request | request.py | get: https://www.temu.com/api/alexa/homepage/goods_list
+2024-04-28 16:35:03 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-28 16:35:06 | INFO | temu | temu.py | 接口出现验证码,开始验证 token:SY3kUX2Z-lg-gsWHmw7-lweb2d7a751e12dde9d
+2024-04-28 16:35:06 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-28 16:35:06 | INFO | request | request.py | get: https://www.temu.com/uk/bgn_verification.html?VerifyAuthToken=SY3kUX2Z-lg-gsWHmw7-lweb2d7a751e12dde9d&from=https%3A%2F%2Fwww.temu.com%2F&type=iframe&iframeMsgId=rzxxsq3ybsx89z4oj4q3l
+2024-04-28 16:35:09 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:35:12 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-28 16:35:16 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-28 16:35:18 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-28 16:35:18 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-28 16:35:22 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-28 16:35:22 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-28 16:35:23 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-28 16:35:23 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-28 16:35:25 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-28 16:35:25 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-28 16:36:10 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-28 16:36:21 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
