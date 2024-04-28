@@ -1,5 +1,5 @@
 # 定义需要检查的进程列表
-processes=("captcha.api:app" "encrypt/temu_api.js" "start_server.py","temu/bin/python")
+processes=("captcha.api:app" "encrypt/temu_api.js" "start_server.py" "temu/bin/python")
 
 # 循环检查并杀死进程
 for process in "${processes[@]}"; do
