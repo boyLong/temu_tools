@@ -296,7 +296,7 @@ class Temu:
         logger.info(f"校验商品接口")
         href = "https://www.temu.com"+path+"?"+urlencode(new_query)
         if not self.detail:
-            return self.session.get_headers(),href
+            return self.session.get_headers(),href,self.session.proxies
 
         await self.gif(event_list=env_list)
         html = await self.index(href=href)
@@ -324,14 +324,14 @@ class Temu:
                         "referer": self.__location,
                     })
                     if res:
-                        return self.session.get_headers(),href
+                        return self.session.get_headers(),href,self.session.proxies
                     else:
                         raise Exception('校验商品接口验证码失败')
                 else:
                     raise Exception(f'校验商品风控失败->{raw_data["store"]["error"]["errorCode"]}')
             else:
                 if raw_data["store"].get('goods',{}).get("sideSalesTip",''):
-                    return self.session.get_headers(),href
+                    return self.session.get_headers(),href,self.session.proxies
                 else:
                     raise Exception('校验商品出现风控了')
         except:
@@ -395,7 +395,7 @@ if __name__ == '__main__':
         "cookie": "timezone=Asia%2FShanghai; currency=GBP; language=en; region=210; webp=1"
     }
 
-    t = TemuDetail(href="https://www.temu.com/", headers=headers,
+    t = Temu(href="https://www.temu.com/", headers=headers,
                    )
 
 

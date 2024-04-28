@@ -177,7 +177,7 @@ class VerifyCaptcha(object):
             'referer': 'https://www.temu.com/',
             "cookie": self.gif_cookie
         }
-        await self.session.post(self.gif_url,
+        gif1 = self.session.post(self.gif_url,
                                 headers=headers,
                                 data=data)
         dcf = hash_o(f"{req_time}impr1")
@@ -219,9 +219,12 @@ class VerifyCaptcha(object):
             data["refer_page_id"] = info.get("refer_page_id")[0]
         if info.get("refer_page_sn"):
             data["refer_page_sn"] = info.get("refer_page_sn")[0]
-        await self.session.post(self.gif_url,
+        gif2= self.session.post(self.gif_url,
                                 headers=headers,
                                 data=data)
+
+        await asyncio.gather(gif1, gif2)
+
     async def get_init(self):
 
         # await self.session.
@@ -602,6 +605,7 @@ class VerifyCaptcha(object):
                 logger.error(f"验证吗识别报错,{e},重新去获取验证吗")
                 await self.save_img(filename,base64.b64decode(image))
                 return False
+            logger.info(f"识别完成")
             res = await self.verify_click(c["data"])
             return res
         else:

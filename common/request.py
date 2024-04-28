@@ -40,9 +40,10 @@ retry_on = (Exception,
 
 class AsyncRequest:
     def __init__(self, proxy=True, headers=None, if_ja3=True,timeout=10):
-        self.__ja3_config = random.choice(ja3_configs)
+
         self.timeout = timeout
         self.if_ja3 = if_ja3
+        self.__ja3_config = random.choice(ja3_configs)
         self.tls_config = requests_go.tls_config.to_tls_config(self.__ja3_config)
         self.tls_config.ja3 = requests_go.tls_config.JA3Random(self.tls_config.ja3)
         self.session = requests_go.async_session()

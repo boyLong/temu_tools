@@ -102,7 +102,7 @@ async def login(region: int = 211, currency: str = "USD", detail: bool = False, 
                 'accept-language': 'zh-CN,zh;q=0.9',
                 'cache-control': 'no-cache',
                 'content-type': 'application/json;charset=UTF-8',
-                'referer': "https://www.temu.com",
+                'referer': "https://www.google.com/",
                 'pragma': 'no-cache',
                 'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
                 'sec-ch-ua-mobile': '?0',
@@ -116,7 +116,7 @@ async def login(region: int = 211, currency: str = "USD", detail: bool = False, 
             tl = Temu(headers=headers,detail=detail, gif=gif)
             res = await tl.start()
             if res:
-                return {"code": 200, "headers": res[0], "href":res[1],
+                return {"code": 200, "headers": res[0], "href":res[1],'proxy': res[2],
                         "elapsed": time.time() - start_t
                         }
             else:
