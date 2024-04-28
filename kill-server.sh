@@ -1,20 +1,14 @@
-pro_id=$(ps -ef | grep captcha.api:app | grep -v grep | awk '{print $2}')
-# 判断进程id是否为空，若不为空，则杀掉进程
-if [[ $pro_id != "" ]]; then
-    echo "kill the captcha.api:app process_id is $pro_id"
-    kill -9 $pro_id
-fi
+# 定义需要检查的进程列表
+processes=("captcha.api:app" "encrypt/temu_api.js" "start_server.py")
 
-pro_id=$(ps -ef | grep encrypt/temu_api.js | grep -v grep | awk '{print $2}')
-# 判断进程id是否为空，若不为空，则杀掉进程
-if [[ $pro_id != "" ]]; then
-    echo "kill the <temu_api> process_id is $pro_id"
-    kill -9 $pro_id
-fi
-
-pro_id=$(ps -ef | grep start_server.py | grep -v grep | awk '{print $2}')
-# 判断进程id是否为空，若不为空，则杀掉进程
-if [[ $pro_id != "" ]]; then
-    echo "kill the <start_server> process_id is $pro_id"
-    kill -9 $pro_id
-fi
+# 循环检查并杀死进程
+for process in "${processes[@]}"; do
+    pro_ids=($(ps -ef | grep "$process" | grep -v grep | awk '{print $2}'))
+    # 判断进程id数组是否为空，若不为空，则逐个杀掉进程
+    if [ ${#pro_ids[@]} -gt 0 ]; then
+        for pro_id in "${pro_ids[@]}"; do
+            echo "kill the $process process_id is $pro_id"
+            kill -9 $pro_id
+        done
+    fi
+done

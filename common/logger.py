@@ -1,7 +1,7 @@
 from loguru import logger
 
 logger.add(
-    sink='temu.log',
+    sink='log/temu.log',
     level='INFO',
     encoding='utf-8',
     enqueue=True,
