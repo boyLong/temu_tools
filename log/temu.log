@@ -410,3 +410,4 @@
 2024-04-28 19:46:20 | INFO | temu | temu.py | 接口出现验证码,开始验证 token:NmZfD-p7kTsA6JWdhgWa3A5b2d930cdb74bf931
 2024-04-28 19:46:20 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
 2024-04-28 19:46:20 | INFO | request | request.py | get: https://www.temu.com/uk/bgn_verification.html?VerifyAuthToken=NmZfD-p7kTsA6JWdhgWa3A5b2d930cdb74bf931&from=https%3A%2F%2Fwww.temu.com%2F&type=iframe&iframeMsgId=3kcxsyrs4wmo32kscanic
+2024-04-28 21:53:31 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList

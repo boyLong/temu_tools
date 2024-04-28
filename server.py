@@ -2,6 +2,7 @@ import json
 
 from common.verify_captcha import VerifyCaptcha
 from common.encrypt_tools import get_random
+from common.device_generation import DeviceGeneration
 from fastapi import FastAPI
 from pydantic import BaseModel
 from TemuLogin import TemuLogin
@@ -94,7 +95,7 @@ async def login(cookie_str: str  = "timezone=Asia%2FShanghai; region=211; langua
 
 
 @app.get("/cookie")
-async def login(region: int = 211, currency: str = "USD", detail: bool = False, gif: bool = True):
+async def cookie(region: int = 211, currency: str = "USD", detail: bool = False, gif: bool = True):
     try:
         async def get_cookie():
             headers = {
@@ -128,3 +129,11 @@ async def login(region: int = 211, currency: str = "USD", detail: bool = False, 
         return res
     except Exception as e:
         return {"code": 500, "data": str(e)}
+
+
+@app.post("/a4")
+async def a4(header: HeaderItem):
+    print(header)
+    a = DeviceGeneration(header.headers)
+    d = await a.a4()
+    return d

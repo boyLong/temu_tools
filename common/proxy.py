@@ -21,7 +21,7 @@ def get_proxy(l=None):
 
     if l is None:
         if local_ip.startswith("192.168"):
-            l = 1
+            l = 3
         elif local_ip.startswith("10"):
             l = 2
         elif local_ip.startswith("172"):
@@ -35,7 +35,7 @@ def get_proxy(l=None):
         user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
         proxy = f'http://{user}:databurning@pr.roxlabs.cn:4600'
     elif l == 3:
-        proxy = f"http://127.0.0.1:8888"
+        proxy = f"http://127.0.0.1:7890"
     else:
         user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
         proxy = f'http://{user}:databurning@pr.roxlabs.cn:4600'
