@@ -4,6 +4,8 @@ import secrets
 import time
 import random
 import asyncio
+import re
+import json
 import hashlib
 import hmac
 from common.logger import logger
@@ -72,6 +74,7 @@ class TemuLogin:
 
         self.location = href
         self.device.reload(resp.text)
+        return resp.text
 
     async def get_nano(self):
         if self.session.get_cookie("_nano_fp"):
@@ -147,8 +150,6 @@ class TemuLogin:
         logger.info("更新时间")
         UpdateServerTime = int(time.time() * 1000)
         server_time = await self.session.get("https://www.temu.com/api/server/_stm")
-
-
         self.__server_time = {
             "ServerTime": server_time.json()["server_time"],
             "UpdateServerTime": UpdateServerTime,
@@ -157,21 +158,16 @@ class TemuLogin:
         self.session.up_server_time(self.__server_time)
         logger.info("更新完成")
     async def a4(self):
-        await self.server_time()
 
-        # await self.session.get("https://www.temu.com/api/phantom/dm/wl/cg")
-        # await self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3")
-        # await self.session.get("https://www.temu.com/api/phantom/xg/pfb/b")
-
+        a4 = await self.device.a4()
         await asyncio.gather(*[
+            self.server_time(),
             self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
             self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
             self.session.get("https://www.temu.com/api/phantom/xg/pfb/b"),
+            self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4),
+            self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
         ])
-
-        a4 = await self.device.a4()
-        await self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4)
-        await self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
 
     async def start(self):
         logger.info("访问首页")
@@ -200,73 +196,6 @@ class TemuLogin:
                 "page_el_sn": "200369",
                 "op": "impr",
             },
-            {
-                "page_el_sn": "203251",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "201249",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "200070",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "200070",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "200072",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "200067",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "200073",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "200074",
-                "op": "impr",
-            },
-            {
-                "page_el_sn": "200075",
-                "op": "impr",
-            },
-            {
-                "page_el_sn": "225673",
-                "op": "impr",
-            },
-            {
-                "page_el_sn": "225674",
-                "op": "impr",
-            },
-            {
-                "page_el_sn": "225672",
-                "op": "impr",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "203448",
-                "op": "impr",
-                "has_red_point": "1",
-            },
-            {
-                "login_scene": "8",
-                "page_el_sn": "213223",
-                "op": "impr",
-            }
-
 
         ]
         await self.session.get('https://www.temu.com/api/adx/cm/ttc?scene=1&type=0')
@@ -296,10 +225,6 @@ class TemuLogin:
             })
             self.session.update_cookie({
                 "verifyAuthToken": verify_auth_token
-            })
-
-            self.session.update_headers({
-
             })
             vc = VerifyCaptcha(self.session.get_headers(), self.session)
             res = await vc.start()
@@ -381,49 +306,36 @@ class TemuLogin:
             }
             await self.gif([login_env])
 
-
             await self.session.get("https://www.temu.com/api/adx/cm/ttc?scene=1&type=1")
             res = await self.account_risk_test()
             if res:
-                await redis_Handler.add(f"temu_account_{region}",  f"{login_name}--------{password}")
-
+                return {
+                    "headers": self.session.get_headers(),
+                    "account": login_name,
+                    "password": password,
+                    "proxy": self.session.proxies,
+                }
             else:
-                await redis_Handler.add(f"temu_account_low_{region}", f"{login_name}--------{password}")
-            return self.session.get_headers()
+                logger.info(f'{login_name}账号风控验证失败')
         else:
             logger.info(f'{login_name}登录失败')
+        raise Exception("登录失败")
 
     async def account_risk_test(self):
         logger.info(f'开始验证账号风控')
         url = f"https://www.temu.com/?refer_page_name=login&refer_page_id={self.page_id}&refer_page_sn=10013&_x_sessn_id={self._session_id}"
-        await self.index(url)
-        await self.a4()
-        event = [
-            {
-                "login_scene": "8",
-                "page_url": url,
-                "refer_url": "https://www.temu.com/login.html?login_scene=8",
-                "op": "epv",
-                "sub_op": "leave",
-                "enter_time": self.enter_time,
-                "close_time": int(time.time()*1000),
-            },
-            {
-                "page_url": url,
-                "refer_url": "https://www.temu.com/login.html?login_scene=8",
-                "op": "epv",
-                "sub_op": "leave",
-                "enter_time": self.enter_time,
-            }
-        ]
-        await self.gif(event)
+        self.session.update_headers({
+            "referer": url,
+        })
         url = 'https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all'
-        data = {"scene":"opt_list_all","list_id": get_id(6)}
+        data = {"scene": "opt_list_all", "list_id": get_id(6)}
 
-        resp = await self.session.post(url, anti={"event": True}, verify=self.verify,json=data)
+        resp = await self.session.post(url, anti={"event": True}, verify=self.verify, json=data)
         if resp.json()["success"]:
             logger.info(f'账号风控验证成功')
             return True
+        else:
+            raise Exception(f"风控验证失败,{resp.text}")
 
 if __name__ == '__main__':
     headers = {
@@ -439,14 +351,13 @@ if __name__ == '__main__':
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        "cookie": "timezone=Asia%2FShanghai; region=210; language=en; currency=GBP; webp=1"
+        "cookie": "timezone=Asia%2FShanghai; region=211; language=en; currency=USD; webp=1"
     }
 
 
 
     t = TemuLogin(headers=headers  )
 
-    import asyncio
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     loop.run_until_complete(t.start())

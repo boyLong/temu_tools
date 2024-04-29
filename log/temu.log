@@ -2806,3 +2806,662 @@
 2024-04-29 16:56:09 | INFO | request | request.py | get: https://www.temu.com/api/alexa/homepage/goods_list
 2024-04-29 16:56:15 | INFO | TemuPerfect | TemuPerfect.py | 校验商品接口
 2024-04-29 16:56:15 | INFO | request | request.py | get: https://www.temu.com/6pcs-lipstick-gift-set-6-kinds-of-fruit-flavored-lip-gloss-lipstick--lip-balm-party-supplies-gifts-men-and-womens-christmas-gifts-souvenir-gifts-long-term-moisturizing-and-nourishing-lip-mask-g-601099536006470.html?_oak_mp_inf=EMb6xaKm1ogBGiA1ZjhkMWU2MjhkZTU0NGQzYjczOWZjZGM5ZWZmYjhmMyDrw8bI8jE%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2Fmarket%2Ftask115%2F47585a693e0baf2ecda931846ae8c24a_1711008924115.jpg&spec_gallery_id=1&refer_page_sn=10005&refer_source=0&freesia_scene=1&_oak_freesia_scene=1&_oak_rec_ext_1=Mjk5&_oak_gallery_order=103469425%2C600656012%2C1240547784%2C1964281402%2C1923784417&refer_page_el_sn=200024&refer_page_name=home&refer_page_id=10005_1714380913828_llp4aip6yi&_x_sessn_id=8qcg6vu09h
+2024-04-29 17:42:14 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:51:38 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:52:59 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:53:11 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-gentagj3-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-04-29 18:53:11 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:53:18 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-3chh2rjg-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-04-29 18:53:18 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:53:25 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-1u0bvp6m-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-04-29 18:53:25 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:53:34 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-i3sokw73-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-04-29 18:53:34 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:54:02 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:54:35 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:54:41 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 18:54:46 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 19:16:25 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-6zbryvyh-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:16:25 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:16:25 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:16:28 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:16:28 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:16:28 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:16:28 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:16:28 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:16:28 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:16:28 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:16:28 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:16:31 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:16:31 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:16:34 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:16:34 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:34 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:34 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:34 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:34 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:34 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:37 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:16:37 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:16:37 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:37 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:40 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:16:42 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:OM6oO3ikyCqOGoxXTbodywe9fcda3eea4dac493
+2024-04-29 19:16:42 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:16:42 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=OM6oO3ikyCqOGoxXTbodywe9fcda3eea4dac493&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:16:44 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:44 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:16:48 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:16:50 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:16:50 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:16:52 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:16:52 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:16:59 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:17:00 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:17:00 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:17:02 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:17:02 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:17:04 | INFO | TemuLogin | TemuLogin.py | curii9n87yl@gmail.com账号可以注册
+2024-04-29 19:17:04 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:17:05 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:17:08 | INFO | TemuLogin | TemuLogin.py | curii9n87yl@gmail.com登录成功
+2024-04-29 19:17:08 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:17:08 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:17:10 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:17:12 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:17:12 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714389385148_p8u14q9sfk&refer_page_sn=10013&_x_sessn_id=mwm647hz9i
+2024-04-29 19:17:15 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:17:15 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:17:15 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:17:15 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:17:15 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:17:15 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:17:15 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:17:17 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:17:17 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:17:17 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:17:17 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:17:20 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:17:39 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-kstil693-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:17:39 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:17:39 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:17:43 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:17:43 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:17:43 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:17:43 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:17:43 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:17:43 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:17:43 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:17:43 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:17:45 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:17:45 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:17:48 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:18:59 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:18:59 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:18:59 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:18:59 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:18:59 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:18:59 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:19:01 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:19:05 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:19:05 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:19:05 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:19:08 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:19:11 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:ANQk-H4GdqvT0kOafRRuBAe9fae6414ea414aeb
+2024-04-29 19:19:11 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:19:11 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=ANQk-H4GdqvT0kOafRRuBAe9fae6414ea414aeb&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:19:13 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:19:13 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:19:16 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:19:18 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:19:18 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:19:21 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:19:21 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:19:29 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:19:31 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:19:31 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:19:33 | ERROR | verify_captcha | verify_captcha.py | 识别坐标错误,再次识别,剩余9
+2024-04-29 19:19:33 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:19:33 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:19:36 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:19:36 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:19:41 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:19:42 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:19:42 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:19:44 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:19:44 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:19:47 | INFO | TemuLogin | TemuLogin.py | bt9lqvz2civa@gmail.com账号可以注册
+2024-04-29 19:19:47 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:19:49 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:19:52 | INFO | TemuLogin | TemuLogin.py | bt9lqvz2civa@gmail.com登录成功
+2024-04-29 19:19:52 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:19:52 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:19:56 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:19:58 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:19:58 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714389459952_pjxjbeylgj&refer_page_sn=10013&_x_sessn_id=9wwm3q85ji
+2024-04-29 19:20:01 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:20:01 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:20:01 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:20:01 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:20:01 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:20:01 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:20:01 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:20:03 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:20:03 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:20:03 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:20:03 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:24:37 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-w6jq3wtt-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:24:37 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:24:37 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:24:41 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:24:41 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:24:41 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:24:41 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:24:41 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:24:41 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:24:41 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:24:41 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:24:43 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:24:43 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:24:45 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:24:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:47 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:24:47 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:24:47 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:47 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:49 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:24:51 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:UlFSsFyE_3b6EzN8n06SIA88e37abc9e5a3745a
+2024-04-29 19:24:51 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:24:51 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=UlFSsFyE_3b6EzN8n06SIA88e37abc9e5a3745a&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:24:53 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:53 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:24:55 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:24:58 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:24:58 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:25:00 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:25:00 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:25:04 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:25:05 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:25:05 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:25:07 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:25:07 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:25:09 | INFO | TemuLogin | TemuLogin.py | 6893a2ldd04vzb5yx5pn@gmail.com账号可以注册
+2024-04-29 19:25:09 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:25:11 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:25:13 | INFO | TemuLogin | TemuLogin.py | 6893a2ldd04vzb5yx5pn@gmail.com登录成功
+2024-04-29 19:25:13 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:25:13 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:25:14 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:25:16 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:25:16 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714389877786_codh2zjfl2&refer_page_sn=10013&_x_sessn_id=fweghsrpqg
+2024-04-29 19:25:19 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:25:19 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:25:19 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:25:19 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:25:19 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:25:19 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:25:19 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:25:21 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:25:21 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:25:21 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:25:21 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:25:29 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:26:55 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 19:30:18 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-ixjfvp5m-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:30:18 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:30:18 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:30:22 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:30:22 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:30:22 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:30:22 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:30:22 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:30:22 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:30:22 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:30:22 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:30:24 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:30:24 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:30:27 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:30:27 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:27 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:27 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:27 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:27 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:27 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:29 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:30:29 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:30:29 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:29 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:32 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:30:35 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:NqNh7Al1ZQOuFfVxex_IzQbaec36cb3025750ce
+2024-04-29 19:30:35 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:30:35 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=NqNh7Al1ZQOuFfVxex_IzQbaec36cb3025750ce&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:30:37 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:37 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:30:40 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:30:43 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:30:43 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:30:45 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:30:45 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:30:46 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:30:46 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:30:46 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:30:49 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:30:49 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:30:52 | INFO | TemuLogin | TemuLogin.py | z7y0max103ijp@gmail.com账号可以注册
+2024-04-29 19:30:52 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:30:54 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:30:57 | INFO | TemuLogin | TemuLogin.py | z7y0max103ijp@gmail.com登录成功
+2024-04-29 19:30:57 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:30:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:31:00 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:32:31 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:32:33 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714390218915_xy7fkaildx&refer_page_sn=10013&_x_sessn_id=1ivvftc06z
+2024-04-29 19:34:47 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-26jila3n-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:34:47 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:34:47 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:34:53 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:34:53 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:34:53 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:34:53 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:34:53 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:34:53 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:34:53 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:34:53 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:34:58 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:34:58 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:35:03 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:35:03 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:03 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:03 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:03 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:03 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:03 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:08 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:35:08 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:35:08 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:08 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:13 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:35:17 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:7rRap4LCgw0m4SmxUjOfmQ685ecb9047f730d60
+2024-04-29 19:35:17 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:35:17 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=7rRap4LCgw0m4SmxUjOfmQ685ecb9047f730d60&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:35:22 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:22 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:35:27 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:35:32 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:35:32 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:35:37 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:35:37 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:35:37 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-04-29 19:35:37 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:35:37 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:35:42 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:35:42 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:35:49 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:35:49 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:35:49 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:35:54 | ERROR | verify_captcha | verify_captcha.py | 识别坐标错误,再次识别,剩余9
+2024-04-29 19:35:54 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:35:54 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:35:59 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:35:59 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:36:04 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:36:04 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:36:04 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:36:11 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:36:11 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:36:15 | INFO | TemuLogin | TemuLogin.py | 3ody1vyu3johwf5d@gmail.com账号可以注册
+2024-04-29 19:36:15 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:36:20 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:36:25 | INFO | TemuLogin | TemuLogin.py | 3ody1vyu3johwf5d@gmail.com登录成功
+2024-04-29 19:36:25 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:36:25 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:36:30 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:36:36 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:36:39 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714390487960_hdyx4mci3y&refer_page_sn=10013&_x_sessn_id=dkadmlc4z0
+2024-04-29 19:36:46 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:36:46 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:36:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:36:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:36:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:36:46 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:36:46 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:36:51 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:36:59 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:36:59 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:36:59 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:37:06 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:38:16 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-plsk3x6e-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:38:16 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:38:16 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:38:23 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:38:23 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:38:23 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:38:27 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:38:27 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:38:27 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:38:27 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:38:32 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:38:36 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:38:40 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:38:45 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:45 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:50 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:38:50 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:38:50 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:50 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:38:55 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:38:59 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:GZHu5x-1bmgHU-k24VKIMg2bef7d8ba9b53ee50
+2024-04-29 19:38:59 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:38:59 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=GZHu5x-1bmgHU-k24VKIMg2bef7d8ba9b53ee50&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:39:04 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:39:04 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:39:08 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:39:12 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:39:12 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:39:17 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:39:17 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:39:17 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:39:18 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:39:18 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:39:22 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:39:22 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:39:27 | INFO | TemuLogin | TemuLogin.py | 1p1ptzsk0un2fnp@gmail.com账号可以注册
+2024-04-29 19:39:27 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:39:31 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:39:35 | INFO | TemuLogin | TemuLogin.py | 1p1ptzsk0un2fnp@gmail.com登录成功
+2024-04-29 19:39:35 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:39:35 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:39:40 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:39:44 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:39:44 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714390696662_sjzuqakxcq&refer_page_sn=10013&_x_sessn_id=g9rwh9dzpz
+2024-04-29 19:39:49 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:39:49 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:39:53 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:39:53 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:39:53 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:39:53 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:39:58 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:40:02 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:40:06 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:40:06 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:06 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:11 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-29 19:40:15 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:YFRks5HF8D5AMMwKbXzjMQ7adcca3d9c01f000d
+2024-04-29 19:40:15 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:40:15 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=YFRks5HF8D5AMMwKbXzjMQ7adcca3d9c01f000d&from=https%3A%2F%2Fwww.temu.com%2F%3Frefer_page_name%3Dlogin%26refer_page_id%3D10013_1714390696662_sjzuqakxcq%26refer_page_sn%3D10013%26_x_sessn_id%3Dg9rwh9dzpz
+2024-04-29 19:40:19 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:19 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:35 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-kg0cxn05-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:40:35 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:40:35 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:40:38 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:40:38 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:40:38 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:40:40 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:40:40 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:40:40 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:40:40 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:40:43 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:40:45 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:40:47 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:40:49 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:49 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:52 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:40:52 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:40:52 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:52 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:40:55 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:40:57 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:ylEdkY-kUiJ960zbXy4UzQ4bd1697724ebee7c8
+2024-04-29 19:40:57 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:40:57 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=ylEdkY-kUiJ960zbXy4UzQ4bd1697724ebee7c8&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:41:00 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:41:00 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:41:02 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:41:04 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:41:04 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:41:07 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:41:07 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:41:07 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:41:08 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:41:08 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:41:10 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:41:10 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:41:12 | INFO | TemuLogin | TemuLogin.py | xzrzq5v32v3nx8gx7d@gmail.com账号可以注册
+2024-04-29 19:41:12 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:41:14 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:41:17 | INFO | TemuLogin | TemuLogin.py | xzrzq5v32v3nx8gx7d@gmail.com登录成功
+2024-04-29 19:41:17 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:41:17 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:41:19 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:41:25 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:41:25 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714390835860_4gzu7cnz2g&refer_page_sn=10013&_x_sessn_id=bc1x577x26
+2024-04-29 19:42:05 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-mv16qe7s-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:42:05 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:42:05 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:42:07 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-7kvav5pi-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:42:07 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:42:07 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:42:10 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:42:10 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:42:10 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:42:14 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-fhyz0h8q-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:42:15 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 19:42:15 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:42:18 | INFO | TemuLogin | TemuLogin.py | 访问a4
+2024-04-29 19:42:18 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:42:18 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:42:20 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:42:20 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:42:20 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:42:20 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:42:23 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:42:25 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:42:28 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:42:30 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:30 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:33 | INFO | TemuLogin | TemuLogin.py | 开始注册
+2024-04-29 19:42:33 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:42:33 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:33 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:35 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:42:38 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:dLgomOcPyGKZ_EP_csT4iQc95be6329084c4b14
+2024-04-29 19:42:38 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:42:38 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=dLgomOcPyGKZ_EP_csT4iQc95be6329084c4b14&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:42:40 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:40 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:42:43 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:42:45 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:42:45 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:42:49 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:42:49 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:42:49 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:42:51 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:42:51 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:42:53 | ERROR | verify_captcha | verify_captcha.py | 识别坐标错误,再次识别,剩余9
+2024-04-29 19:42:53 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:42:53 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:42:56 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:42:56 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:42:56 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:42:57 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:42:57 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:43:00 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:43:00 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:43:02 | INFO | TemuLogin | TemuLogin.py | rmqjcofi7a@gmail.com账号可以注册
+2024-04-29 19:43:02 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 19:43:04 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 19:43:07 | INFO | TemuLogin | TemuLogin.py | rmqjcofi7a@gmail.com登录成功
+2024-04-29 19:43:07 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:43:07 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:43:09 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 19:44:52 | INFO | TemuLogin | TemuLogin.py | 开始验证账号风控
+2024-04-29 19:44:53 | INFO | request | request.py | get: https://www.temu.com/?refer_page_name=login&refer_page_id=10013_1714390935000_4qvxrnv8rr&refer_page_sn=10013&_x_sessn_id=6j463ebnxu
+2024-04-29 19:45:12 | INFO | TemuLogin | TemuLogin.py | 更新时间
+2024-04-29 19:45:12 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:45:15 | INFO | TemuLogin | TemuLogin.py | 更新完成
+2024-04-29 19:45:15 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:45:15 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:45:15 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:45:17 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:45:19 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:45:32 | INFO | TemuLogin | TemuLogin.py | gif日志提交
+2024-04-29 19:45:32 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:45:32 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:45:36 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-29 19:45:39 | INFO | TemuLogin | TemuLogin.py | 接口出现验证码,开始验证 token:WvDxavb3vvEfsNPpPbiwZw9a6a263697aad557e
+2024-04-29 19:45:39 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:45:39 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=WvDxavb3vvEfsNPpPbiwZw9a6a263697aad557e&from=https%3A%2F%2Fwww.temu.com%2F%3Frefer_page_name%3Dlogin%26refer_page_id%3D10013_1714390935000_4qvxrnv8rr%26refer_page_sn%3D10013%26_x_sessn_id%3D6j463ebnxu
+2024-04-29 19:45:42 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:45:42 | INFO | request | request.py | post: https://eu.thtk.temu.com/c/th.gif
+2024-04-29 19:45:48 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:45:50 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:45:50 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:45:53 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:45:53 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:45:58 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:45:59 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:45:59 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:46:01 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:46:01 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-29 19:46:12 | INFO | TemuLogin | TemuLogin.py | 账号风控验证成功
+2024-04-29 19:47:22 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 19:50:17 | INFO | request | request.py | post: https://www.temu.com/api/bg/circle/c/mall/newGoodsList
+2024-04-29 19:58:52 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-aniquc1h-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 19:58:52 | INFO | temu_test | temu_test.py | 访问首页
+2024-04-29 19:58:52 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 19:58:58 | INFO | temu_test | temu_test.py | 访问a4
+2024-04-29 19:58:58 | INFO | temu_test | temu_test.py | 更新时间
+2024-04-29 19:58:58 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 19:58:58 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 19:58:58 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 19:58:58 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 19:58:58 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 19:58:58 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 19:59:03 | INFO | temu_test | temu_test.py | 更新完成
+2024-04-29 19:59:04 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 19:59:11 | INFO | temu_test | temu_test.py | gif日志提交
+2024-04-29 19:59:11 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:11 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:11 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:11 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:11 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:11 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:17 | INFO | temu_test | temu_test.py | 开始注册
+2024-04-29 19:59:17 | INFO | temu_test | temu_test.py | gif日志提交
+2024-04-29 19:59:17 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:17 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:21 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 19:59:26 | INFO | temu_test | temu_test.py | 接口出现验证码,开始验证 token:97SClVoGIguESm126WkmyAfa3c9767ef4da467f
+2024-04-29 19:59:26 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 19:59:26 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=97SClVoGIguESm126WkmyAfa3c9767ef4da467f&from=https%3A%2F%2Fwww.temu.com%2Flogin.html%3Flogin_scene%3D8
+2024-04-29 19:59:30 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:30 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 19:59:36 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 19:59:40 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 19:59:40 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 19:59:47 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 19:59:47 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 19:59:47 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 19:59:48 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 19:59:48 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 19:59:56 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 19:59:56 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login_name/is_registered
+2024-04-29 20:00:01 | INFO | temu_test | temu_test.py | 3p2mpb9uk7g86j@gmail.com账号可以注册
+2024-04-29 20:00:01 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/pub_key/request
+2024-04-29 20:00:06 | INFO | request | request.py | post: https://www.temu.com/api/bg/sigerus/auth/login?is_back=1
+2024-04-29 20:00:11 | INFO | temu_test | temu_test.py | 3p2mpb9uk7g86j@gmail.com登录成功
+2024-04-29 20:00:11 | INFO | temu_test | temu_test.py | gif日志提交
+2024-04-29 20:00:11 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 20:00:17 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=1
+2024-04-29 20:00:21 | INFO | temu_test | temu_test.py | 开始验证账号风控
+2024-04-29 20:00:21 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-29 20:00:26 | INFO | temu_test | temu_test.py | 接口出现验证码,开始验证 token:Tu3_cC7j5G5AWUbBfM-XcQ0bc07cec6e969f5d7
+2024-04-29 20:00:26 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 20:00:26 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=Tu3_cC7j5G5AWUbBfM-XcQ0bc07cec6e969f5d7&from=https%3A%2F%2Fwww.temu.com%2F%3Frefer_page_name%3Dlogin%26refer_page_id%3D10013_1714391932683_iwhxf5a7vv%26refer_page_sn%3D10013%26_x_sessn_id%3Du9oy7muyj0
+2024-04-29 20:00:30 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 20:00:30 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 20:00:38 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 20:00:43 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 20:00:43 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 20:00:49 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 20:00:49 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 20:00:49 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-04-29 20:00:49 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 20:00:49 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 20:00:54 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 20:00:54 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 20:00:55 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-04-29 20:00:55 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 20:00:55 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 20:00:59 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 20:00:59 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 20:01:04 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-04-29 20:01:04 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 20:01:04 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 20:01:10 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 20:01:10 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 20:01:10 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 20:01:11 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 20:01:11 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 20:01:15 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 20:01:15 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all
+2024-04-29 20:01:23 | INFO | temu_test | temu_test.py | 账号风控验证成功
+2024-04-29 20:05:25 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-8pjtp4lb-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 20:05:25 | INFO | TemuLogin | TemuLogin.py | 访问首页
+2024-04-29 20:05:25 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8

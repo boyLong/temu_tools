@@ -9,14 +9,13 @@ from TemuLogin import TemuLogin
 from temu import Temu
 import time
 from TemuList import TemuList
-from common.proxy import get_proxy
 app = FastAPI()
 from TemuPerfect import TemuPerfect
 from temu_simple import TemuSimple
 
+
 class HeaderItem(BaseModel):
     headers: dict
-
 
 @app.post("/captcha")
 async def identity(item: HeaderItem):
@@ -29,7 +28,6 @@ async def identity(item: HeaderItem):
         return {"code": 200, "data": res}
     except Exception as e:
         return {"code": 500, "data": str(e)}
-
 
 
 @app.get("/ck")
@@ -63,8 +61,8 @@ async def ck(cookie_str: str ="timezone=Asia%2FShanghai; region=210; language=en
         return {"code": 500, "data": str(e)}
 
 
-@app.get("/login_ck")
-async def login(cookie_str: str  = "timezone=Asia%2FShanghai; region=211; language=en; currency=USD; webp=1"):
+@app.get("/login")
+async def login(region: int = 211, currency: str = "USD"):
     try:
         async def get_cookie():
             headers = {
@@ -80,7 +78,7 @@ async def login(cookie_str: str  = "timezone=Asia%2FShanghai; region=211; langua
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                "cookie": cookie_str
+                "cookie": f"timezone=Asia%2FShanghai; region={region}; language=en; currency={currency}; webp=1"
             }
 
             tl = TemuLogin(headers=headers)
@@ -93,7 +91,6 @@ async def login(cookie_str: str  = "timezone=Asia%2FShanghai; region=211; langua
         return res
     except Exception as e:
         return {"code": 500, "data": str(e)}
-
 
 @app.get("/cookie")
 async def cookie(region: int = 211, currency: str = "USD", detail: bool = False, gif: bool = True):

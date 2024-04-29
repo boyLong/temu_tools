@@ -66,6 +66,7 @@ class TemuPerfect:
         self.login_name = ""
         self.password = ''
 
+
     async def index(self, href):
         resp = await self.session.get(href)
 
@@ -237,7 +238,7 @@ class TemuPerfect:
                     }
                 )
         else:
-            logger.info("raw_data为空逻辑")
+            logger.info("raw_data为空逻辑走注册")
             if self.need_login:
                 res = await self.register()
                 if res:
