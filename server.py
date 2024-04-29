@@ -121,6 +121,8 @@ async def cookie(region: int = 211, currency: str = "USD", detail: bool = False,
                         "elapsed": time.time() - start_t
                         }
             else:
+                import traceback
+                traceback.print_exc()
                 return {"code": 500, "data": "",
                         "elapsed": time.time() - start_t
 

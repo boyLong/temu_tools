@@ -21,7 +21,7 @@ def get_proxy(l=None):
 
     if l is None:
         if local_ip.startswith("192.168"):
-            l = 3
+            l = 1
         elif local_ip.startswith("10"):
             l = 2
         elif local_ip.startswith("172"):
@@ -40,4 +40,5 @@ def get_proxy(l=None):
         user = f"user-databurning-sessid-{get_random(8)}-sesstime-20-keep-true"
         proxy = f'http://{user}:databurning@pr.roxlabs.cn:4600'
     logger.info("Proxy is " + proxy)
+
     return {"http": proxy, "https": proxy,"ftp": proxy}

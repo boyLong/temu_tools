@@ -466,7 +466,6 @@ class VerifyCaptcha(object):
 
     async def start(self):
         logger.info("验证码识别开始")
-        print()
         await self.session.get(self.headers.get("referer"))
         await self.get_gif()
         self.init_info = await self.get_init()
