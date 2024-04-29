@@ -2769,3 +2769,40 @@
 2024-04-29 16:54:43 | INFO | request | request.py | get: https://www.temu.com/api/alexa/homepage/goods_list
 2024-04-29 16:54:46 | INFO | TemuPerfect | TemuPerfect.py | 校验商品接口
 2024-04-29 16:54:46 | INFO | request | request.py | get: https://www.temu.com/portable-massage-table-professional-massage-bed-wide-35-height-adjustment-lash-bed-spa-bed-facial-bed-tattoo-table-with-accessories-carrying-bag-2-section-wooden-g-601099562684235.html?_oak_mp_inf=EMueoq%2Bm1ogBGiBlNjNkNjE4YzhmNGY0N2M5ODE4NjkwZmZjN2NmYzNmOCC2msHI8jE%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F9ec219b4-6562-416f-8fd9-f728f8833ae4.jpg&spec_gallery_id=2113846091&refer_page_sn=10005&refer_source=0&freesia_scene=1&_oak_freesia_scene=1&_oak_rec_ext_1=NTk5OQ&refer_page_el_sn=200024&refer_page_name=home&refer_page_id=10005_1714380847239_rc03ivhyi8&_x_sessn_id=lvy6yew27t
+2024-04-29 16:55:13 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-3ziapoun-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-04-29 16:55:13 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-29 16:55:20 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 16:55:20 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 16:55:20 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 16:55:20 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 16:55:20 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 16:55:20 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 16:55:25 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:25 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:25 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:25 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:29 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:29 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:29 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:29 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:34 | INFO | TemuPerfect | TemuPerfect.py | 开始验证
+2024-04-29 16:55:34 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 16:55:38 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt?scene=opt_floating_layer_rec
+2024-04-29 16:55:42 | INFO | TemuPerfect | TemuPerfect.py | 接口出现验证码,开始验证 token:qE6blipRo3Lys_BE7kRpYwbacfbada867acbd45
+2024-04-29 16:55:42 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-04-29 16:55:42 | INFO | request | request.py | get: https://www.temu.com/uk/bgn_verification.html?VerifyAuthToken=qE6blipRo3Lys_BE7kRpYwbacfbada867acbd45&from=https%3A%2F%2Fwww.temu.com%2F&type=iframe&iframeMsgId=y326kwl69bts7a25y9oa4
+2024-04-29 16:55:47 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:47 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 16:55:51 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-04-29 16:55:55 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-04-29 16:55:55 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-04-29 16:56:00 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-04-29 16:56:00 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-04-29 16:56:00 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-04-29 16:56:01 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-04-29 16:56:01 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-04-29 16:56:05 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-04-29 16:56:05 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt?scene=opt_floating_layer_rec
+2024-04-29 16:56:09 | INFO | request | request.py | get: https://www.temu.com/api/alexa/homepage/goods_list
+2024-04-29 16:56:15 | INFO | TemuPerfect | TemuPerfect.py | 校验商品接口
+2024-04-29 16:56:15 | INFO | request | request.py | get: https://www.temu.com/6pcs-lipstick-gift-set-6-kinds-of-fruit-flavored-lip-gloss-lipstick--lip-balm-party-supplies-gifts-men-and-womens-christmas-gifts-souvenir-gifts-long-term-moisturizing-and-nourishing-lip-mask-g-601099536006470.html?_oak_mp_inf=EMb6xaKm1ogBGiA1ZjhkMWU2MjhkZTU0NGQzYjczOWZjZGM5ZWZmYjhmMyDrw8bI8jE%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2Fmarket%2Ftask115%2F47585a693e0baf2ecda931846ae8c24a_1711008924115.jpg&spec_gallery_id=1&refer_page_sn=10005&refer_source=0&freesia_scene=1&_oak_freesia_scene=1&_oak_rec_ext_1=Mjk5&_oak_gallery_order=103469425%2C600656012%2C1240547784%2C1964281402%2C1923784417&refer_page_el_sn=200024&refer_page_name=home&refer_page_id=10005_1714380913828_llp4aip6yi&_x_sessn_id=8qcg6vu09h

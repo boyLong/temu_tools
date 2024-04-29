@@ -2,10 +2,8 @@ import time
 import random
 import requests
 import re
-import httpx
 from common.config import server_config
 from requests_go import async_session
-import aiohttp
 client_tools = async_session()
 import ctypes
 import secrets
