@@ -24,6 +24,8 @@ def get_proxy(l=None):
             l = 1
         elif local_ip.startswith("10"):
             l = 2
+        elif local_ip == '172.22.0.17':
+            l = 2
         elif local_ip.startswith("172"):
             l = 1
         else:
