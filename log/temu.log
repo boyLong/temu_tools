@@ -3465,3 +3465,34 @@
 2024-04-29 20:05:25 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-8pjtp4lb-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
 2024-04-29 20:05:25 | INFO | TemuLogin | TemuLogin.py | 访问首页
 2024-04-29 20:05:25 | INFO | request | request.py | get: https://www.temu.com/login.html?login_scene=8
+2024-04-29 20:28:31 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-5309pxhc-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 20:28:47 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-vhokzybn-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 20:28:47 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-29 20:28:51 | INFO | TemuDevice | TemuDevice.py | 更新时间
+2024-04-29 20:28:51 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 20:28:51 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 20:28:51 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 20:28:51 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 20:28:51 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 20:28:52 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 20:28:54 | INFO | TemuDevice | TemuDevice.py | 更新完成
+2024-04-29 20:28:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 20:28:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 20:28:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 20:28:57 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-04-29 20:29:01 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 20:29:04 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt?scene=opt_floating_layer_rec
+2024-04-29 20:30:04 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-04imt6bb-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 20:30:04 | INFO | request | request.py | get: https://www.temu.com/
+2024-04-29 20:30:14 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: net/http: request canceled (Client.Timeout or context cancellation while reading body)"}
+2024-04-29 20:30:14 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-i81059p9-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-04-29 20:30:18 | INFO | TemuDevice | TemuDevice.py | 更新时间
+2024-04-29 20:30:18 | INFO | request | request.py | get: https://www.temu.com/api/server/_stm
+2024-04-29 20:30:18 | INFO | request | request.py | get: https://www.temu.com/api/phantom/dm/wl/cg
+2024-04-29 20:30:18 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/a3
+2024-04-29 20:30:18 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/b
+2024-04-29 20:30:18 | INFO | request | request.py | post: https://www.temu.com/api/phantom/xg/pfb/a4
+2024-04-29 20:30:18 | INFO | request | request.py | get: https://www.temu.com/api/phantom/xg/pfb/l1
+2024-04-29 20:30:21 | INFO | TemuDevice | TemuDevice.py | 更新完成
+2024-04-29 20:30:22 | INFO | request | request.py | get: https://www.temu.com/api/adx/cm/ttc?scene=1&type=0
+2024-04-29 20:30:25 | INFO | request | request.py | post: https://www.temu.com/api/poppy/v1/opt?scene=opt_floating_layer_rec
