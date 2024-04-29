@@ -80,13 +80,19 @@ async def login(region: int = 211, currency: str = "USD"):
                 'sec-fetch-site': 'same-origin',
                 "cookie": f"timezone=Asia%2FShanghai; region={region}; language=en; currency={currency}; webp=1"
             }
-
+            start_t = time.time()
             tl = TemuLogin(headers=headers)
             res = await tl.start()
             if res:
-                return {"code": 200, "data": res}
+                return {"code": 200, "headers": res["headers"], "account": res["account"], 'proxy': res["proxy"],
+                        "password": res["password"],
+                        "elapsed": time.time() - start_t
+                        }
             else:
-                return {"code": 500, "data": ""}
+                return {"code": 500, "data": "",
+                        "elapsed": time.time() - start_t
+
+                        }
         res = await get_cookie()
         return res
     except Exception as e:
