@@ -41,7 +41,7 @@ def get_id(e=21):
     return "".join(secrets.choice(chars) for _ in range(e))
 
 
-class Temu:
+class TemuPerfect:
     def __init__(
             self,
             href="https://www.temu.com/",

@@ -41,7 +41,7 @@ def get_id(e=21):
     return "".join(secrets.choice(chars) for _ in range(e))
 
 
-class Temu:
+class TemuSimple:
     def __init__(
             self,
             href="https://www.temu.com/",
@@ -284,7 +284,6 @@ class Temu:
                             "account": self.login_name,
                             "password": self.password,
                             "proxy": self.session.proxies,
-                            "href": self.__location
                         }
                     else:
                         raise Exception('注册失败')
@@ -303,7 +302,6 @@ class Temu:
             "account": self.login_name,
             "password": get_password(),
             "proxy": self.session.proxies,
-            "href": self.__location
         }
 
 

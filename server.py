@@ -11,7 +11,8 @@ import time
 from TemuList import TemuList
 from common.proxy import get_proxy
 app = FastAPI()
-
+from TemuPerfect import TemuPerfect
+from temu_simple import TemuSimple
 
 class HeaderItem(BaseModel):
     headers: dict
@@ -123,6 +124,49 @@ async def cookie(region: int = 211, currency: str = "USD", detail: bool = False,
             else:
                 import traceback
                 traceback.print_exc()
+                return {"code": 500, "data": "",
+                        "elapsed": time.time() - start_t
+
+                        }
+        res = await get_cookie()
+        return res
+    except Exception as e:
+        return {"code": 500, "data": str(e)}
+
+
+@app.get("/cookie_new")
+async def cookie_new(region: int = 211, currency: str = "USD", detail: bool = False, gif: bool = True,
+                     need_login: bool = False, simple=False):
+    try:
+        async def get_cookie():
+            headers = {
+                'accept': 'application/json, text/plain, */*',
+                'accept-language': 'zh-CN,zh;q=0.9',
+                'cache-control': 'no-cache',
+                'content-type': 'application/json;charset=UTF-8',
+                'referer': "https://www.google.com/",
+                'pragma': 'no-cache',
+                'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': '"Windows"',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                "cookie": f"timezone=Asia%2FShanghai; region={region}; language=en; currency={currency}; webp=1"
+            }
+            start_t = time.time()
+            if simple:
+                tl = TemuSimple(headers=headers, detail=detail,login=need_login,gif=gif)
+            else:
+                tl = TemuPerfect(headers=headers, detail=detail,login=need_login,gif=gif)
+            res = await tl.start()
+
+            if res:
+                return {"code": 200, "headers": res["headers"], "account":res["account"],'proxy': res["proxy"],
+                        "password": res["password"],
+                        "elapsed": time.time() - start_t
+                        }
+            else:
                 return {"code": 500, "data": "",
                         "elapsed": time.time() - start_t
 

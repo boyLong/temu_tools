@@ -11,5 +11,5 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 if __name__ == '__main__':
     subprocess.Popen("node encrypt/temu_api.js", shell=True)
-    subprocess.Popen(f"uvicorn captcha.api:app --port {server_config['captcha_port']} ", shell=True)
-    uvicorn.run(app='start_server:app', host="0.0.0.0", port=server_config['server_port'])
+    subprocess.Popen(f"uvicorn captcha.api:app --port {server_config['captcha_port']} --workers=8", shell=True)
+    uvicorn.run(app='start_server:app', host="0.0.0.0", port=server_config['server_port'], workers=4)
