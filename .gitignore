@@ -1,0 +1,4 @@
+img/
+log/
+*.pyc
+nohup.out
