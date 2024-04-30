@@ -75,7 +75,7 @@ async def test():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
         "Accept-Encoding": "gzip, deflate", "accept": "application/json, text/plain, */*", "Connection": "keep-alive",
         "accept-language": "zh-CN,zh;q=0.9", "cache-control": "no-cache",
-        "content-type": "application/json;charset=UTF-8", "referer": "https://www.temu.com/cost2aysho1p-m-634418213768139.html?login_scene=8",
+        "content-type": "application/json;charset=UTF-8", "referer": "?login_scene=8",
         "pragma": "no-cache",
         "sec-ch-ua": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
         "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"Windows\"", "sec-fetch-dest": "empty",
@@ -83,7 +83,26 @@ async def test():
         "verifyauthtoken": "I-f5l-kOUMvlBa0gQtPa2A88f068b0212dbc884",
         "Cookie": "timezone=Asia%2FShanghai; region=211; language=en; currency=USD; webp=1; _nano_fp=Xpman0TYXqdaXpTYlT_DZ3B6_UrZhtai_MNkLahJ; verifyAuthToken=I-f5l-kOUMvlBa0gQtPa2A88f068b0212dbc884; api_uid=Cm14m2YwVPZHWwBeSFHYAg==; __cf_bm=9OyJ70A6z59RZfAv_alISwShBKVL7pua9hHhw6LeZIA-1714443510-1.0.1.1-MLd_cYgkOQQGsJkmBbBeAY6zKPR2pzLiKXbknMltLJMwLmwOjMOH30l5LhjEOf7bAj.hqP5q5CLrdCn4j9ftCg; _bee=0loYmDUzI2lwVDQKOul2Z8efmrcgyapk; njrpl=0loYmDUzI2lwVDQKOul2Z8efmrcgyapk; dilx=RV9s4UZBgtikTj44tcSHE; hfsc=L3yLfI006jv50JDEfg==; _ttc=3.tsIDuEuAzm0Z.1745979517; _device_tag=CgI2WRIIWG9MU3RkbnkaMMHaLW+xIp8Jwj/ph4kNtZakoyom06wXnIGBgJpEBgNAk64ZYogVSw6JgFF0lRzKnjAC; AccessToken=4MZLP2FQ6O6PDHQG2AYG3J7QJUOM2WD3WQPNHUHQO2HISHXDUXGA0110d333b019; user_uin=BAMBG45KSNC5MDVAA6XLTUW2DZFZIXPZZ3G7NPFJ; isLogin=1714443556229"}
 
-    ar = AsyncRequest(headers=headers,proxy=True)
+    headers ={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
+        "Accept-Encoding": "gzip, deflate", "accept": "application/json, text/plain, */*", "Connection": "keep-alive",
+        "accept-language": "zh-CN,zh;q=0.9", "cache-control": "no-cache",
+        "content-type": "application/json;charset=UTF-8", "referer": "https://www.temu.com/costwayshop-m-634418213768139.html?login.html?login_scene=8",
+        "pragma": "no-cache",
+        "sec-ch-ua": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+        "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"Windows\"", "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors", "sec-fetch-site": "same-origin",
+        "verifyauthtoken": "pV_8YlvPSBw9c_1Pl0mhIQ2b612da39d7d19a47",
+        "Cookie": "timezone=Asia%2FShanghai; region=211; language=en; currency=USD; webp=1; _nano_fp=Xpman0TYnpUqn0dxX9_EKAnKHr_Np0_LjioZvIqg; verifyAuthToken=pV_8YlvPSBw9c_1Pl0mhIQ2b612da39d7d19a47; api_uid=Cm1olmYwXm0SmwBaRs00Ag==; __cf_bm=DrZ1O9XrTkpM7uHY35ira_FfA2ZFVPo2DztQC6QJvgU-1714445934-1.0.1.1-ydh.SkRE3yNRzux9cxeR4t4ewlZahfa14S_E0BCqMtF2QN.JX.U3xUVYC8OLw17f6e8LPFCgz.KiG5FyrFd4cA; _bee=iiTtRKyyXjERjZmsfEa5tOIXd7oLoapW; njrpl=iiTtRKyyXjERjZmsfEa5tOIXd7oLoapW; dilx=urL7lJctdQCvaKw5EZbg3; hfsc=L3yLfI007Df715LLeg==; _ttc=3.XEw5PknbtLAL.1745981937; _device_tag=CgI2WRIIWG9MU3RkbnkaMDgJIopVNcp6F0a1sBhO/IFLt5MVGcEar/YTlVbnR72ck64ZYogVSw6JgFF0lRzKnjAC; AccessToken=DZBZXMHB4RF222TC6CP436EXX27SITJRUCSPXS4QRO7RLWGBG3NQ0110d3f3b544; user_uin=BDVWTNU3FSPDQHTLEX4PDYSHPIHTKEAIE3KO2CCW; isLogin=1714445946563"}
+
+
+
+
+    ''
+
+    ar = AsyncRequest(headers=headers,proxy=False)
+
+
     ar.anti = AsyncAnti(headers=ar.get_headers(),
                                       lt_c=[71, 97, 12, 171],
                                       gt_c=[217, 54, 250, 195],
