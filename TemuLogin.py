@@ -323,9 +323,9 @@ class TemuLogin:
 
     async def account_risk_test(self):
         logger.info(f'开始验证账号风控')
-        url = f"https://www.temu.com/?refer_page_name=login&refer_page_id={self.page_id}&refer_page_sn=10013&_x_sessn_id={self._session_id}"
+        self.__location =  f"https://www.temu.com/?refer_page_name=login&refer_page_id={self.page_id}&refer_page_sn=10013&_x_sessn_id={self._session_id}"
         self.session.update_headers({
-            "referer": url,
+            "referer": self.__location,
         })
         url = 'https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all'
         data = {"scene": "opt_list_all", "list_id": get_id(6)}

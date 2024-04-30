@@ -201,12 +201,22 @@ class TemuDevice:
                                              "optType": 1, "offset": 0, "pageSize": 5}
                                        )
         if resp.json().get("error_code") == 54001:
+            self.session.update_headers({
+                "verifyauthtoken": resp.json()["verify_auth_token"]
+            })
+            self.session.update_cookie({
+                "verifyAuthToken": resp.json()["verify_auth_token"]
+            })
 
+            print({
+                "headers": self.session.get_headers(),
+                "verify_auth_token": resp.json()["verify_auth_token"]
+            })
             return {
                 "headers": self.session.get_headers(),
-                "verify_auth_token":resp.json()["verify_auth_token"]
+                "verify_auth_token": resp.json()["verify_auth_token"]
             }
-        print(resp.text)
+
 
 if __name__ == '__main__':
     a = TemuDevice({

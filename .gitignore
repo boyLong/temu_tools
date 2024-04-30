@@ -2,3 +2,5 @@ img/
 log/
 *.pyc
 nohup.out
+.idea/
+*.html

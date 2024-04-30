@@ -430,7 +430,6 @@ class TemuPerfect:
             "components_version": "0.8.0",
             "login_scene": 2
         }
-
         resp = await self.session.post(url, anti={"event": True}, verify=self.verify, json=data)
         if not resp.json()["success"]:
             raise Exception(f"注册被风控 {resp.text}")
@@ -584,8 +583,8 @@ if __name__ == '__main__':
         "cookie": "timezone=Asia%2FShanghai; currency=USD; language=en; region=211; webp=1"
     }
 
-    t = Temu(href="https://www.temu.com/", headers=headers,
-             detail=True,login=True
+    t = TemuPerfect(href="https://www.temu.com/", headers=headers,
+             detail=False,login=True
                    )
 
     async def test():
