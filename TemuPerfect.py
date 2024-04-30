@@ -52,7 +52,7 @@ class TemuPerfect:
 
     ):
         self.anti = None
-        self.session = AsyncRequest(proxy=False, headers=headers)
+        self.session = AsyncRequest(proxy=True, headers=headers)
         self.device = DeviceGeneration(self.session.get_headers())
         self._session_id = get_id(10)
         self.page_id = f"10005_{int(time.time() * 1000)}_{get_id(10)}"
