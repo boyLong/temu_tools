@@ -41,7 +41,7 @@ def get_id(e=21):
     return "".join(secrets.choice(chars) for _ in range(e))
 
 
-class TemuLogin:
+class TemuHomeLogin:
     def __init__(
         self,
         headers=None,
@@ -171,47 +171,82 @@ class TemuLogin:
 
     async def start(self):
         logger.info("访问首页")
-        await self.index(href="https://www.temu.com/login.html?login_scene=8")
+        text = await self.index(href=self.location)
+
+        try:
+            raw_data = re.findall("window\.rawData=(.*?\});", text)[0]
+            raw_data = json.loads(raw_data)
+            # pageListId = raw_data['store']['pageListId']
+            # self.home_page_list_id = raw_data['store']['pageListId']
+        except:
+            href = ("https://www.temu.com/login.html?from=https%3A%2F%2Fwww.temu.com%2F&login_scene="
+                    f"2&refer_page_name=home&refer_page_id={self.page_id}&"
+                    f"refer_page_sn=10005&_x_sessn_id={self._session_id}")
+            self.location = href
+            self.session.update_headers({
+                'referer': self.location,
+            })
+            logger.error("设备权重低,直接去登录")
+            return self.register()
         self.enter_time = int(time.time()*1000)
         logger.info("访问a4")
         await self.a4()
         event_list = [
             {
-                "page_url": "https://www.temu.com/login.html?login_scene=8",
-                "refer_url": "",
+                "page_url": "https://www.temu.com/",
+                "refer_url": "https://www.google.com/",
                 "op": "pv",
                 "event": "page_show",
             },
             {
+                "hit": "0",
                 "page_el_sn": "225383",
                 "is_show": "0",
                 "ndisp_rsn": "1",
                 "op": "impr",
             },
             {
+                "hit": "0",
+                "page_el_sn": "228053",
+                "promo_atmos": "0",
+                "op": "impr",
+            },
+            {
+                "hit": "0",
                 "page_el_sn": "200370",
                 "op": "impr",
-            },
-            {
-                "page_el_sn": "200369",
-                "op": "impr",
-            },
-
+            }
         ]
-        await self.session.get('https://www.temu.com/api/adx/cm/ttc?scene=1&type=0')
+        for i in raw_data["store"]["layoutData"]["headerData"]["titleBarList"]:
+            event_list.append(
+                {
+                    "page_el_sn": i["pageElSn"],
+                    "p_rec":i["pRec"],
+                    "source": i["landingSource"],
+                    "tab_id": i["id"],
+                    "op": "impr",
+                }
+            )
         await self.gif(event_list)
-        logger.info(f'开始注册')
-        await self.gif([
-            {
-                "login_scene": "8",
-                "page_el_sn": "200070",
-                "op": "click",
-            }, {
-                "login_scene": "8",
-                "page_el_sn": "200070",
-                "op": "click",
-        }])
-
+        logger.info("访问首页完成,开始检测是否出滑块")
+        await self.session.get('https://www.temu.com/api/adx/cm/ttc?scene=1&type=0')
+        resp = await self.session.post("https://www.temu.com/api/poppy/v1/opt?scene=opt_floating_layer_rec",anti={"event": False},
+                                        verify=self.verify,
+                                        json = {"scene":"opt_floating_layer_rec",
+                                               "listId":get_id(6),
+                                               "pageListId":raw_data['store']['layoutData']["commonData"]["pageListId"],
+                                               "optId":-13,
+                                               "optType":1,"offset":0,"pageSize":5})
+        if resp.status_code != 200 or not resp.json().get("success"):
+            # return await self.register()
+            href = ("https://www.temu.com/login.html?from=https%3A%2F%2Fwww.temu.com%2F&login_scene="
+                    f"2&refer_page_name=home&refer_page_id={self.page_id}&"
+                    f"refer_page_sn=10005&_x_sessn_id={self._session_id}")
+            self.location = href
+            self.session.update_headers({
+                'referer': self.location,
+            })
+            logger.info("需要直接跳登录")
         return await self.register()
 
     async def verify(self, response):
@@ -309,6 +344,7 @@ class TemuLogin:
             await self.session.get("https://www.temu.com/api/adx/cm/ttc?scene=1&type=1")
             res = await self.account_risk_test()
             if res:
+
                 return {
                     "headers": self.session.get_headers(),
                     "account": login_name,
@@ -327,13 +363,13 @@ class TemuLogin:
         self.session.update_headers({
             "referer": self.location,
         })
+
         url = 'https://www.temu.com/api/poppy/v1/opt_list?scene=opt_list_all'
         data = {"scene": "opt_list_all", "list_id": get_id(6)}
 
         resp = await self.session.post(url, anti={"event": True}, verify=self.verify, json=data)
         if resp.json()["success"]:
             logger.info(f'账号风控验证成功')
-            print(self.session.get_headers())
             return True
         else:
             raise Exception(f"风控验证失败,{resp.text}")
@@ -357,7 +393,7 @@ if __name__ == '__main__':
 
 
 
-    t = TemuLogin(headers=headers  )
+    t = TemuHomeLogin(headers=headers  )
 
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)

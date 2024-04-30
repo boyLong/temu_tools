@@ -161,26 +161,26 @@ function anti(client,client2,track,location,screen,ServerTime,UpdateServerTime,U
     Ot["data"] = [],
     Ot["init"] = function() {
       this[I] = [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0
-        ];
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                null,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+            ];
     }
     ,
     Ot["packN"] = function() {

@@ -21,6 +21,7 @@ from common.track import GTrace
 from common.encrypt_tools import AsyncAnti,captcha_encrypt,identity,hash_o
 from common.logger import logger
 from common.config import get_gif_url
+from common.pd_captcha import pd_captcha
 import io
 
 verify_count = {
@@ -607,11 +608,178 @@ class VerifyCaptcha(object):
             logger.info(f"识别完成")
             res = await self.verify_click(c["data"])
             return res
+
+        elif data["type"] == 41:
+            logger.info("拼图滑块开始识别")
+            self.decode_img(data["text"][0])
+            image_data = {
+                "imageSrc": data["pictures"][0],
+                "positions": data["semantics"][0],
+                "partialEncryption": True,
+            }
+            image = self.encrypt_23(image_data).replace("data:image/png;base64,", '')
+            image = base64.b64decode(image)
+            image_stream = io.BytesIO(image)
+            verify_code = pd_captcha(image_stream)
+
+            return await self.verify_splice(verify_code)
         else:
             with open("新的滑块",'a') as w:
                 w.write(json.dumps(data)+"\n")
             raise Exception("不知道的滑块")
 
+    async def verify_splice(self,verify_code):
+        if verify_code[0]==0:
+            end_x = random.randint(0,80)
+            end_y = random.randint(-80,-20)
+        elif verify_code[0]==1:
+            end_x = random.randint(86,150)
+            end_y = random.randint(-80,-20)
+        elif verify_code[0]==2:
+            end_x = random.randint(160,230)
+            end_y =  random.randint(-80,-20)
+        elif verify_code[0]==3:
+            end_x = random.randint(0,80)
+            end_y =  random.randint(-120,-80)
+        elif verify_code[0]==4:
+            end_x = random.randint(86, 150)
+            end_y =  random.randint(-120,-80)
+        else:
+            end_x = random.randint(160,230)
+            end_y = random.randint(-120,-80)
+
+        if verify_code[1]==1:
+            u_x = random.randint(86,150)
+            u_y = random.randint(-80,-20)
+        elif verify_code[0]==2:
+            u_x = random.randint(160,230)
+            u_y =  random.randint(-80,-20)
+        elif verify_code[0]==3:
+            u_x = random.randint(0,80)
+            u_y =  random.randint(-120,-80)
+        elif verify_code[0]==4:
+            u_x = random.randint(86, 150)
+            u_y =  random.randint(-120,-80)
+        elif verify_code[0] == 5:
+            u_x = random.randint(160,230)
+            u_y = random.randint(-120,-80)
+        else:
+            u_x = random.randint(160, 230)
+            u_y = random.randint(-120, -80)
+        data_points = bt.trackArray(
+            [random.randint(-650, -400), random.randint(-300, -100)],
+            [end_x, end_y],
+            numberList=random.randint(40, 50),
+            le=4,
+            type=3,
+            bias=0.5,
+            deviation=30,
+            cbb=1,
+            yhh=2,
+        )
+        data_points = [[int(x), int(y)] for x, y in data_points["trackArray"]]
+        mel = []
+        for i in data_points:
+            await asyncio.sleep(random.randint(15, 25) / 1000)
+            mel.append(
+                [
+                    i[0],
+                    i[1],
+                    int(time.time() * 1000),
+                ]
+            )
+        await asyncio.sleep(25 / 1000)
+        del_arr = [
+            [
+                data_points[-1][0],
+                data_points[-1][1],
+            ]
+        ]
+        uel_arr = [
+            [
+                u_x,
+                u_y,
+            ]
+        ]
+        await asyncio.sleep(25 / 1000)
+
+        # 上面随机轨迹切换滑动轨迹
+        data_points = bt.trackArray(
+            [end_x, end_y],
+            [u_x,
+                u_y,],
+            numberList=random.randint(40, 50),
+            le=4,
+            type=3,
+            bias=0.5,
+            deviation=30,
+            cbb=1,
+            yhh=2,
+        )
+        data_points = [[int(x), int(y)] for x, y in data_points["trackArray"]]
+        for i in data_points:
+            await asyncio.sleep(random.randint(15, 25) / 1000)
+            mel[0].append(
+                [
+                    i[0],
+                    i[1],
+                    int(time.time() * 1000),
+                ]
+            )
+        mell=[]
+        mell.append(mel)
+        await asyncio.sleep(random.randint(150, 250) / 1000)
+        screen = {"w": 1980, "h": 1080}
+        data = {
+            "v": "a",
+            "ts": self.init_info["server_time"],
+            "t1": self.t1,
+            "t2": int(time.time() * 1000),
+            "tp": 1,
+            "ua": self.headers.get("user-agent") or self.headers.get("User-Agent"),
+            "rf": self.headers.get("Referer") or self.headers.get("referer"),
+            "platform": 1,
+            "hl": "000000000001010",
+            "sc": screen,
+            "ihs": 1,
+            "imageSize": {"width": 250, "height": 125},
+            "uel": uel_arr,
+            "mel": mel,
+            "del": del_arr,
+            "mell": mell,
+        }
+        logger.info("轨迹生成完成")
+        captcha_collect = await captcha_encrypt(data, self.init_info)
+
+        captcha_collect = captcha_collect
+        url = "https://www.temu.com/api/phantom/user_verify"
+        data = {
+            "verify_auth_token": self.VerifyAuthToken,
+            "salt": self.init_info["salt"],
+            "captcha_collect": captcha_collect["data"],
+            "reverse": False,
+            "verify_code": json.dumps(verify_code,separators=(',', ':')),
+        }
+        response = await self.session.post(
+            url,
+            json=data,
+            anti={
+                "event": True,
+                "track": mel
+            }
+
+        )
+        res = response.json()
+        if res["code"] == 0:
+            verify_count["success"] += 1
+            return True
+        else:
+            verify_count["error"] += 1
+            logger.error(f"识别坐标错误,再次识别,剩余{res['leftover']}")
+            if res["leftover"]:
+                return False
+            else:
+                raise Exception("验证码次数全部用完")
     async def verify(self, s, verify_code, sign):
         data_points = bt.trackArray(
             [random.randint(-650, -400), random.randint(-300, -100)],

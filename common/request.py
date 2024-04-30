@@ -1,11 +1,14 @@
 import asyncio
 import random
+import time
 import requests_go
 from common.proxy import get_proxy
 from common.config import ja3_configs
 from common.logger import logger
 import stamina
 import json
+from common.encrypt_tools import hash_o
+from common.config import host
 from requests_go.tls_client.exceptions import TLSClientExeption,RequestException
 from requests.exceptions import (
     ConnectionError,
@@ -44,11 +47,15 @@ class AsyncRequest:
         self.timeout = timeout
         self.if_ja3 = if_ja3
         self.__ja3_config = random.choice(ja3_configs)
+        # self.__ja3_config = ja3_configs[-1]
         self.tls_config = requests_go.tls_config.to_tls_config(self.__ja3_config)
         self.tls_config.ja3 = requests_go.tls_config.JA3Random(self.tls_config.ja3)
         self.session = requests_go.async_session()
         self.user_agent = self.__ja3_config.get("user_agent")
         self.anti = None
+        self.pagePath = "/"
+        self.location = "https://www.temu.com"
+        self.page_id = ''
         if proxy:
             self.proxies = get_proxy()
         else:
@@ -63,6 +70,74 @@ class AsyncRequest:
             self.session.headers.update(headers)
         else:
             self.user_agent = self.__ja3_config["user_agent"]
+
+    async def pmm_api(self, api, request_time, method, code,res_time,req,resp):
+        timestamp = int(time.time() * 1000)
+        rand_num = random.randint(100000, 900000)
+
+        data = {
+            "version": 0,
+            "report_time_ms": timestamp,
+            "rand_num": rand_num,
+            "crc32": hash_o(f"{timestamp}-{rand_num}"),
+            "biz_side": "consumer-platform-fe",
+            "app": "100592",
+            "common_tags": {
+                "uid": "0",
+                "osV": "unknown_",
+                "pid": self.get_cookie("_bee"),
+                "runningAppId": "100592",
+                "runningPlatform": "-1",
+                "p": "-1",
+                "pagePath": self.pagePath
+            },
+            "datas": [
+                {
+                    "category": 1,
+                    "type": 100,
+                    "id_raw_value": api.split("?")[0],
+                    "timestamp": request_time,
+                    "tags": {
+                        "network": "3",
+                        "code": code,
+                        "method": method,
+                        "region": host[str(self.get_cookie("region"))].upper(),
+                        "language": "en",
+                        "language_locale": "unknown",
+                        "currency": self.get_cookie("currency"),
+                        "timezone": "Asia/Shanghai"
+                    },
+                    "lvalues": {
+                        "rspT": {
+                            "values": [
+                                res_time
+                            ]
+                        },
+                        "reqP": {
+                            "values": [
+                                len(req)
+                            ]
+                        },
+                        "rspP": {
+                            "values": [
+                                len(resp)
+                            ]
+                        }
+                    },
+                    "extras": {
+                        "srcPageId": self.page_id,
+                        "user_agent": self.user_agent,
+                        "app_version": "0",
+                        "pageUrl": self.location,
+                        "api_uid": self.get_cookie("api_uid"),
+                    },
+                    "api_ratio": 1
+                }
+            ]
+        }
+        url = 'https://us.pftk.temu.com/pmm/api/pmm/api'
+
+        await self.session.post(url, json=data)
 
     def up_server_time(self, server_time=None):
         self.anti.up_server_time(server_time)
@@ -100,7 +175,19 @@ class AsyncRequest:
         retry_count = 1
         while retry_count < 5:
             try:
-                resp = await self.session.get(verify=False,timeout=self.timeout, *args,**kwargs)
+                api = kwargs.pop("api", None)
+                if api:
+                    request_time = int(time.time() * 1000)
+                    if kwargs.get("params"):
+                        req = {"params": kwargs["params"]}
+                    else:
+                        req = {}
+                    resp = await self.session.get(verify=False,timeout=self.timeout, *args,**kwargs)
+                    await self.pmm_api(url, request_time, "GET", resp.status_code,
+                                       int(time.time()*1000)-request_time
+                                       ,json.dumps(req,separators=(',', ':')), resp.text)
+                else:
+                    resp = await self.session.get(verify=False, timeout=self.timeout, *args, **kwargs)
                 break
             except Exception as e:
                 logger.error(f"get error: {e}")
@@ -143,7 +230,23 @@ class AsyncRequest:
         retry_count = 1
         while retry_count < 5:
             try:
-                resp = await self.session.post(verify=False,timeout=self.timeout, *args,**kwargs)
+                api = kwargs.pop("api", None)
+                if api:
+                    request_time = int(time.time() * 1000)
+                    req = {
+                        "params": {
+                            "is_back": None,
+                            "locale_override": None
+                        },
+                        "data": json.dumps(kwargs.get("data") or kwargs.get("json"), separators=(',', ':'))
+
+                    }
+                    resp = await self.session.post(verify=False,timeout=self.timeout, *args, **kwargs)
+                    await self.pmm_api(url, request_time, "POST", resp.status_code,
+                                       int(time.time() * 1000) - request_time
+                                       , json.dumps(req, separators=(',', ':')), resp.text)
+                else:
+                    resp = await self.session.post(verify=False, timeout=self.timeout, *args, **kwargs)
                 break
             except Exception as e:
                 self.proxies = get_proxy()

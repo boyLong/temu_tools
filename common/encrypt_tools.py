@@ -624,28 +624,30 @@ def hash_o(e, t=0):
 
 
 if __name__ == '__main__':
-    a = AsyncAnti({
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Accept-Language": "zh-CN,zh;q=0.9",
-        #"Anti-Content": "0aqAfqnyX-Hg8gd9Q4ep3V2dn_GAssBxnZ4fciXuMoB-H1dEyvfPkyCEdqRnnQX3POYg3fby2Tg2zOjtKP2wmdZsvgOI9Fh7kxGtbtKPt84n3vA14LbstOo17i9AEWWb886nbi-BQw8q_TJZFH0XonOwTUUZoJJTBEhCqmAqOasN0xE9IR0eN6rb2Sa27ZkWN8R2yUxDiZAW1F1C1U9Dobulaj8NeUebaXqmb_WEOR2VU-5L4DEqeuT2eYMHI0SbsUhBVK61rCDk9GNYWzVQR9or5DIB1_eSixuvfIx5410v_cK2QY2Jdn5b6Ah6y89JrV2jQMKLV9IC-R3E7w1xZWKs55f5k4wBdWwlGZqMVTWqNY6RzXGWTd8Ev-1mrJ0FmjMrwDwXUEKjwyMdExKPMPTXLneiK_-kxcS_yM_0i4XskQdz4jVPinhM8JKxgHTzX2Xt0sZXyZmBfByyFbZwPhEIE4gXwkxYkxlF1TspenM54CfzXYvmIivQr4CY0mc-r2QiQMxYqiZHNWS7_uLwmSHi6ZupHuG8-zKDU8auNn_fkUMYdz-GYSkp9RKMIEbJ6EOjPpvvPxMpzsSZq2ZlLbpKl2xjTF35LczkgZSnwPMRbtI379ro7kSwLCfnHdyrjCHkBI_4scfng-HVmkgT77Zg4dbd9yV1XTvT3jutu_y1Sz-jkJopr-jwmlDljGR_4aEKicmQIy5pidimdjvuxUdbyWSQ6-qYwYUWJseK3rGDcGDaIgKJFLq5z8VGTJRVoe9K6Wv6DDrLAf0heWXWaF90tcdthqIU",
-        "Content-Type": "application/json;charset=UTF-8",
-        # "Cookie":'api_uid=CnDcb2XzCmx5KAEfRejwAg==; region=211; language=en; currency=USD;  timezone=Asia%2FShanghai; webp=1; _bee=XlM78xljkgQl0oWzDSY2EldlSeqAJapo; njrpl=XlM78xljkgQl0oWzDSY2EldlSeqAJapo; dilx=EYTbrLtdGR_Gno5OeRLit;',
-        # "Cookie": f'api_uid={api_uid}; timezone=Asia%2FShanghai; shipping_city=211; webp=1; region=211; language=en; currency=USD;_bee={cookie_bee}; njrpl={cookie_bee}; dilx={cookie_dilx}; hfsc={cookie_hfsc}',
-        "Origin": "https://www.temu.com",
-        "Pragma": "no-cache",
-        #"Referer": f'https://www.temu.com/channel/best-sellers.html?filter_items=1%3A1&scene=home_title_bar_recommend&refer_page_el_sn=201341&refer_page_name=home&refer_page_id=10005_{int(time.time() * 1000)}_{randam_10()}&refer_page_sn=10005&_x_sessn_id={randam_10()}',
-        #"Referer":"https://www.temu.com",
-        "Sec-Ch-Ua": "v=\"123\", \"Not_A;Brand\";v=\"24\", \"Google Chrome\";v=\"123\"",
-        "Sec-Ch-Ua-Mobile": "?0",
-        "Sec-Ch-Ua-Platform": "\"Windows\"",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-origin",
-        "user-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
-    })
-    import asyncio
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    loop.run_until_complete(a.get_nano())
+    # a = AsyncAnti({
+    #     "Accept": "application/json, text/plain, */*",
+    #     "Accept-Encoding": "gzip, deflate, br",
+    #     "Accept-Language": "zh-CN,zh;q=0.9",
+    #     #"Anti-Content": "0aqAfqnyX-Hg8gd9Q4ep3V2dn_GAssBxnZ4fciXuMoB-H1dEyvfPkyCEdqRnnQX3POYg3fby2Tg2zOjtKP2wmdZsvgOI9Fh7kxGtbtKPt84n3vA14LbstOo17i9AEWWb886nbi-BQw8q_TJZFH0XonOwTUUZoJJTBEhCqmAqOasN0xE9IR0eN6rb2Sa27ZkWN8R2yUxDiZAW1F1C1U9Dobulaj8NeUebaXqmb_WEOR2VU-5L4DEqeuT2eYMHI0SbsUhBVK61rCDk9GNYWzVQR9or5DIB1_eSixuvfIx5410v_cK2QY2Jdn5b6Ah6y89JrV2jQMKLV9IC-R3E7w1xZWKs55f5k4wBdWwlGZqMVTWqNY6RzXGWTd8Ev-1mrJ0FmjMrwDwXUEKjwyMdExKPMPTXLneiK_-kxcS_yM_0i4XskQdz4jVPinhM8JKxgHTzX2Xt0sZXyZmBfByyFbZwPhEIE4gXwkxYkxlF1TspenM54CfzXYvmIivQr4CY0mc-r2QiQMxYqiZHNWS7_uLwmSHi6ZupHuG8-zKDU8auNn_fkUMYdz-GYSkp9RKMIEbJ6EOjPpvvPxMpzsSZq2ZlLbpKl2xjTF35LczkgZSnwPMRbtI379ro7kSwLCfnHdyrjCHkBI_4scfng-HVmkgT77Zg4dbd9yV1XTvT3jutu_y1Sz-jkJopr-jwmlDljGR_4aEKicmQIy5pidimdjvuxUdbyWSQ6-qYwYUWJseK3rGDcGDaIgKJFLq5z8VGTJRVoe9K6Wv6DDrLAf0heWXWaF90tcdthqIU",
+    #     "Content-Type": "application/json;charset=UTF-8",
+    #     # "Cookie":'api_uid=CnDcb2XzCmx5KAEfRejwAg==; region=211; language=en; currency=USD;  timezone=Asia%2FShanghai; webp=1; _bee=XlM78xljkgQl0oWzDSY2EldlSeqAJapo; njrpl=XlM78xljkgQl0oWzDSY2EldlSeqAJapo; dilx=EYTbrLtdGR_Gno5OeRLit;',
+    #     # "Cookie": f'api_uid={api_uid}; timezone=Asia%2FShanghai; shipping_city=211; webp=1; region=211; language=en; currency=USD;_bee={cookie_bee}; njrpl={cookie_bee}; dilx={cookie_dilx}; hfsc={cookie_hfsc}',
+    #     "Origin": "https://www.temu.com",
+    #     "Pragma": "no-cache",
+    #     #"Referer": f'https://www.temu.com/channel/best-sellers.html?filter_items=1%3A1&scene=home_title_bar_recommend&refer_page_el_sn=201341&refer_page_name=home&refer_page_id=10005_{int(time.time() * 1000)}_{randam_10()}&refer_page_sn=10005&_x_sessn_id={randam_10()}',
+    #     #"Referer":"https://www.temu.com",
+    #     "Sec-Ch-Ua": "v=\"123\", \"Not_A;Brand\";v=\"24\", \"Google Chrome\";v=\"123\"",
+    #     "Sec-Ch-Ua-Mobile": "?0",
+    #     "Sec-Ch-Ua-Platform": "\"Windows\"",
+    #     "Sec-Fetch-Dest": "empty",
+    #     "Sec-Fetch-Mode": "cors",
+    #     "Sec-Fetch-Site": "same-origin",
+    #     "user-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
+    # })
+    # import asyncio
+    # loop = asyncio.new_event_loop()
+    # asyncio.set_event_loop(loop)
+    # loop.run_until_complete(a.get_nano())
 
+    a = hash_o(f"1714461285650-435660")
+    print(a)

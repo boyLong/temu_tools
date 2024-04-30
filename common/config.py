@@ -1252,7 +1252,8 @@ ja3_configs = [
           "window": 83
         }
       }
-    }
+    },
+
 ]
 
 
@@ -1699,6 +1700,10 @@ def get_gif_url(r):
     h = gV.get(h,{}).get("ldp") or gV.get(h,{}).get("dr") or "us"
     return "https://"+h+".thtk.temu.com/c/th.gif"
 
+def get_api_url(r):
+    h = host[str(r)]
+    h = gV.get(h,{}).get("ldp") or gV.get(h,{}).get("dr") or "us"
+    return "https://"+h+".pftk.temu.com/pmm/api/pmm/api"
 def get_dr(r):
     h = host[str(r)]
 
@@ -1717,4 +1722,4 @@ cookie_len = 30
 if __name__ == '__main__':
 
     print(get_dr(210))
-    print(get_gif_url(210))
+    print(get_api_url(211))

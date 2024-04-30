@@ -52,7 +52,7 @@ class TemuPerfect:
 
     ):
         self.anti = None
-        self.session = AsyncRequest(proxy=True, headers=headers)
+        self.session = AsyncRequest(proxy=False, headers=headers)
         self.device = DeviceGeneration(self.session.get_headers())
         self._session_id = get_id(10)
         self.page_id = f"10005_{int(time.time() * 1000)}_{get_id(10)}"
@@ -163,7 +163,7 @@ class TemuPerfect:
 
     async def server_time(self):
         UpdateServerTime = int(time.time() * 1000)
-        server_time = await self.session.get("https://www.temu.com/api/server/_stm")
+        server_time = await self.session.get("https://www.temu.com/api/server/_stm",api=True)
 
         self.__server_time = {
             "ServerTime": server_time.json()["server_time"],
@@ -179,7 +179,7 @@ class TemuPerfect:
             self.session.get("https://www.temu.com/api/phantom/dm/wl/cg"),
             self.session.get("https://www.temu.com/api/phantom/xg/pfb/a3"),
             self.session.get("https://www.temu.com/api/phantom/xg/pfb/b"),
-            self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4),
+            self.session.post("https://www.temu.com/api/phantom/xg/pfb/a4", json=a4,api=True),
             self.session.get("https://www.temu.com/api/phantom/xg/pfb/l1")
             ],
         )
@@ -572,7 +572,7 @@ if __name__ == '__main__':
         'accept-language': 'zh-CN,zh;q=0.9',
         'cache-control': 'no-cache',
         'content-type': 'application/json;charset=UTF-8',
-        'referer': "https://www.google.com/",
+        # 'referer': "https://www.google.com/",
         'pragma': 'no-cache',
         'sec-ch-ua': '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
         'sec-ch-ua-mobile': '?0',
