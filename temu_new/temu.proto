@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+message appInfo {
+  bytes titanid = 1;
+  bytes ua = 3;
+  uint32 os = 4;
+  string uid = 5;
+  uint32 repackage = 11;
+  string accesstoken = 12;
+  bytes customPayload = 13;
+  uint32  authType = 17;
+  uint32  sceneType = 19;
+}
+
+message TitanSessionRequest {
+    bytes encryptedAppInfo = 7;
+    uint32 requestType = 10;
+    uint32 protocolVersion = 11;
+    bool isPushConn = 12;
+
+}
+
+message MulticastGroupKeyInfo {
+    uint32 appId = 1;
+    uint32 bizType = 2;
+    string groupId = 3;
+}
+message TitanUpstream {
+    uint32 appId = 1;
+    string command = 2 ;
+    uint32  protocol = 3;
+    uint32  compress = 4;
+    string host = 6;
+    bytes appinfo = 7;
+    bytes sessionResumptionReq = 8;
+    bytes body = 9;
+    uint64 upstreamSeq = 11;
+    uint64 conId = 12;
+    uint64 ctxId = 13;
+    MulticastGroupKeyInfo keyInfo = 14;
+
+}
+
+message TitanDownstream {
+    string command = 1;
+    uint32 protocol = 2;
+    uint32 errorCode = 3;
+    uint32 bizCode = 4;
+    string bizErrorMsg = 5;
+    uint32 compress = 6;
+    bytes extension = 9;
+    bytes body = 10;
+    uint64 downstreamSeq = 11;
+    uint64 conId = 12;
+    uint64 ctxId = 13;
+}
+
+message Sync {
+    uint64 uidOffsetMap = 1;
+    uint64 titanidOffsetMap = 2;
+    bool syncAll = 3;
+    uint32 accept = 4;
+}

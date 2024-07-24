@@ -1,0 +1,406 @@
+2024-06-26 15:30:29 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-8yc0etln-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:30:30 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:30:30 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:30:33 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:30:33 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:30:37 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:30:40 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:30:40 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:30:44 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:30:44 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:30:48 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-06-26 15:30:48 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:30:48 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:30:48 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:30:52 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:30:52 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:30:54 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-06-26 15:30:54 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:30:54 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:30:54 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:30:58 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:30:58 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:30:58 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-06-26 15:30:58 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:30:58 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:30:58 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:31:02 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:31:02 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:31:31 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-lvnbatfp-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:31:31 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:31:31 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:31:35 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:31:35 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:31:38 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:31:42 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:31:42 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:31:46 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:31:46 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:31:46 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-06-26 15:31:46 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:31:46 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:31:46 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:31:51 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:31:51 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:31:51 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-06-26 15:31:51 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:31:51 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:31:51 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:31:55 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:31:55 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:31:55 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-06-26 15:31:55 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:31:55 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:31:55 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:32:00 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-aqlhntwr-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:32:00 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:32:00 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:32:05 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:32:05 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:32:09 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:32:11 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:32:14 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:32:37 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-5vb5t5y4-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:32:37 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:32:37 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:32:40 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unexpected EOF"}
+2024-06-26 15:32:40 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-yu5toeus-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:32:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:32:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:32:49 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:32:51 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:32:54 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:33:03 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-zgmta9od-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:33:03 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:33:03 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:33:06 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:33:06 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:33:09 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:33:11 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:33:11 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:33:17 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-594b05va-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:33:21 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:33:21 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:34:20 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)),重新去获取验证吗
+2024-06-26 15:34:20 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:34:20 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:34:21 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:34:21 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-aozx8og7-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:21 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-q9iii3t1-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:21 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-7xtfj6dk-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:21 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-jtcimzqe-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:22 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:34:22 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-yw9vm1h0-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:22 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-cts03p4g-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:22 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-wtzk61gx-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:22 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-cfdkio4b-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:23 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:34:26 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-f2w7zuv4-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:29 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-eg8w9n1c-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:33 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-f2l6da3l-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:36 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-5ll3ac4d-sesstime-20-keep-true:databurning@43.128.74.58:30111
+2024-06-26 15:34:36 | ERROR | verify_captcha | verify_captcha.py | 验证识别失败了。。。。post failed: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:34:39 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-mjwf7zdl-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 15:34:39 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:34:39 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:34:42 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:34:42 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:34:46 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:34:49 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:34:49 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:34:52 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:34:52 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:35:28 | ERROR | verify_captcha | verify_captcha.py | 验证吗识别报错,Expecting value: line 1 column 1 (char 0),重新去获取验证吗
+2024-06-26 15:35:28 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:35:28 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:35:28 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:35:31 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:35:31 | ERROR | verify_captcha | verify_captcha.py | 验证识别失败了。。。。不知道的滑块
+2024-06-26 15:35:38 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-jtap4m66-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 15:35:38 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:35:38 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=FkV2AjCgA2Ejm0NnyV8j4Aba28cb44a6de9cbbe&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:35:41 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:35:41 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:35:44 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:36:13 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-2t30d79v-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 15:36:13 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:36:13 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=vW6n1ed9Twg7adebf48f19bdf113&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:36:17 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:36:17 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:36:20 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:36:41 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-7t3xotxw-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 15:36:41 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 15:36:41 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=ua3Bq_hWDnJtkN67nsifCA6968b893d92b2e0da&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 15:36:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:36:45 | INFO | request | request.py | post: https://us.thtk.temu.com/c/th.gif
+2024-06-26 15:36:48 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 15:36:52 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:36:52 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:36:56 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:36:56 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:36:56 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-06-26 15:36:57 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-06-26 15:36:57 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-06-26 15:37:01 | ERROR | verify_captcha | verify_captcha.py | 识别坐标错误,再次识别,剩余9
+2024-06-26 15:37:01 | ERROR | verify_captcha | verify_captcha.py | 错误图片报错失败
+2024-06-26 15:37:01 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 15:37:01 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 15:37:05 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 15:37:05 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 15:37:09 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-06-26 15:37:10 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-06-26 15:37:10 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-06-26 15:37:13 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-06-26 16:45:28 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-oncpd4ij-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:28 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:45:28 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:45:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:28 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-qa21d2km-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:29 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:29 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-rvcdtmsi-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:30 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:30 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-ho3t1dx6-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:31 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:31 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-mk2mwy8q-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:31 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:45:32 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:32 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-osykr4sd-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:33 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:33 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-1hbdclya-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:34 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:34 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-lw1c5y6w-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:35 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:35 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-q5sltkuy-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:36 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:45:37 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:37 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-qiif5ux1-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:38 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:38 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-x6ipf7l7-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:39 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:39 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-ozjp5f2q-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:39 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:39 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-ge1zwlk2-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:50 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-jfkirsw8-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:50 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:45:50 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:45:51 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:51 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-486s9e3p-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:52 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:45:52 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-nyuvkv99-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:45:57 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-7kdqjdnh-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:46:21 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-zuzjxdr5-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:46:21 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:46:21 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:46:22 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:46:22 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-1cu8oow8-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:46:23 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:46:23 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-v36o6kym-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:46:24 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:46:24 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-sydxko4r-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:46:40 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:46:40 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:46:40 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": EOF"}
+2024-06-26 16:46:40 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-za6tfhxe-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:46:40 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:46:40 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-4efbvp8o-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:46:41 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:46:41 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-h1jmjaun-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:37 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:47:38 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:47:38 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": EOF"}
+2024-06-26 16:47:38 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-7ego3wnh-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:39 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:39 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-6230c8u1-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:39 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:39 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-m77avld2-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:40 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:40 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-h7rioo01-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:41 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:47:41 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:41 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-mlxrmi5b-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:42 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:42 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-899kwfjz-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:43 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:43 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-s24p5x36-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:44 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:44 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-5svf9dnv-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:45 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:47:46 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:46 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-0roke3yg-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:46 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:46 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-9tfvbdsr-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:47 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:47 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-ba1lf87l-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:47:48 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:47:48 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-n0h2gf5f-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 16:49:03 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:49:03 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:03 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:03 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:04 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:49:04 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:04 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:04 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:04 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:10 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:49:10 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:49:10 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:10 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:10 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:10 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:11 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:49:11 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:11 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:11 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:49:11 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:02 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:50:02 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:50:03 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 16:50:03 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 16:50:27 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:50:27 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:50:27 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:27 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:27 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:27 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:50:28 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:54 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 16:51:58 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:51:58 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:58 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:58 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:58 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:59 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:51:59 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:59 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:59 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:51:59 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:52:00 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 16:52:00 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:52:00 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:52:00 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:52:00 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 16:52:15 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 17:01:18 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 17:01:18 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 17:01:18 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 17:01:18 | ERROR | request | request.py | get error: [Errno requests_go error:] {"err": "request->response, err := GetSession(requestParams.Id).Request(requestParams.Method, requestParams.Url, req) failed: Get "https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html": unsupported Curve in KeyShareExtension: CurveID(0).To mimic it, fill the Data(key) field manually"}
+2024-06-26 17:01:37 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 17:01:38 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=och7dhbMh8xpexqpwDtHFQfbac77682b2190c1a&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 17:01:40 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:01:40 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:01:41 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 17:02:03 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 17:02:03 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=PNNrxotuCkttlEEgA_nTPw08aed6fb935f31e32&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 17:02:04 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:02:04 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:02:05 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 17:02:06 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 17:02:06 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 17:02:07 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 17:02:07 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 17:02:16 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 17:02:18 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=PNNrxotuCkttlEEgA_nTPw08aed6fb935f31e32&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 17:02:19 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:02:19 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:02:20 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 17:02:21 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 17:02:21 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 17:02:21 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-wl8uczkg-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 17:02:55 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-fmtp1l5d-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 17:03:05 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-hhrmxh8z-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 17:03:07 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-a69kqbvh-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 17:03:07 | ERROR | verify_captcha | verify_captcha.py | 验证识别失败了。。。。post failed: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 17:03:23 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 17:03:23 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=PNNrxotuCkttlEEgA_nTPw08aed6fb935f31e32&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 17:03:24 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:03:24 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:03:25 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 17:03:26 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 17:03:26 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 17:03:27 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 17:03:27 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 17:03:29 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-06-26 17:06:42 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-06-26 17:07:03 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-06-26 17:10:30 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 17:10:30 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=PNNrxotuCkttlEEgA_nTPw08aed6fb935f31e32&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 17:10:31 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:10:31 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:10:33 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 17:10:54 | INFO | verify_captcha | verify_captcha.py | 验证码识别开始
+2024-06-26 17:10:54 | INFO | request | request.py | get: https://www.temu.com/bgn_verification.html?VerifyAuthToken=sfsDAZbv90G5RTb5hYKK6g6b3263152af33fb9e&from=https%3A%2F%2Fwww.temu.com%2Fus-zh-Hans%2Fttianbaihuo-m-35185803094.html
+2024-06-26 17:10:55 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:10:55 | INFO | request | request.py | post: https://jp.thtk.temu.com/c/th.gif
+2024-06-26 17:10:56 | INFO | request | request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-06-26 17:10:57 | INFO | verify_captcha | verify_captcha.py | 开始获取验证吗
+2024-06-26 17:10:57 | INFO | request | request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-06-26 17:10:58 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-wkot64mi-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-06-26 17:11:01 | INFO | verify_captcha | verify_captcha.py | 验证吗获取完成
+2024-06-26 17:11:01 | INFO | verify_captcha | verify_captcha.py | 点选验证码开始识别
+2024-06-26 17:11:02 | INFO | verify_captcha | verify_captcha.py | 识别完成
+2024-06-26 17:11:02 | INFO | verify_captcha | verify_captcha.py | 轨迹构造完成,开始提交
+2024-06-26 17:11:02 | INFO | request | request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-06-26 17:11:06 | INFO | verify_captcha | verify_captcha.py | 验证识别通过
+2024-06-26 17:22:54 | INFO | proxy | proxy.py | Proxy is http://user-databurning-sessid-gc84mz7t-sesstime-20-keep-true:databurning@pr.roxlabs.cn:4600
+2024-07-05 17:31:21 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:22 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:23 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:24 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:25 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:47 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:49 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:51 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:53 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:31:55 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后
+2024-07-05 17:32:59 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第1次查询
+2024-07-05 17:33:01 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第2次查询
+2024-07-05 17:33:03 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第3次查询
+2024-07-05 17:33:05 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第4次查询
+2024-07-05 17:33:07 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第5次查询
+2024-07-05 17:33:50 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第1次查询
+2024-07-05 17:33:53 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第2次查询
+2024-07-05 17:33:56 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第3次查询
+2024-07-05 17:33:59 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第4次查询
+2024-07-05 17:34:02 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第5次查询
+2024-07-05 17:34:05 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第6次查询
+2024-07-05 17:34:08 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第7次查询
+2024-07-05 17:34:11 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第8次查询
+2024-07-05 17:34:14 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第9次查询
+2024-07-05 17:34:17 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第10次查询
+2024-07-09 14:10:20 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第1次查询
+2024-07-09 14:10:35 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第1次查询
+2024-07-09 14:11:50 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第1次查询
+2024-07-09 14:14:05 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第1次查询
+2024-07-09 14:14:08 | INFO | account_manage | account_manage.py | 正在获取验证码..请稍后...第2次查询
+2024-07-11 15:08:44 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-11 15:08:44 | WARNING | logger | logger.py | 本次查询耗时 0.000(s), 查询失败原因 get_email() missing 2 required positional arguments: 'password' and 'timestamp'
+2024-07-11 15:08:47 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第2次查询
+2024-07-11 15:08:47 | WARNING | logger | logger.py | 本次查询耗时 3.000(s), 查询失败原因 get_email() missing 2 required positional arguments: 'password' and 'timestamp'
+2024-07-11 15:08:56 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-11 15:09:00 | WARNING | logger | logger.py | 本次查询耗时 3.328(s), 查询失败原因 ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-07-11 15:09:13 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-11 15:09:16 | WARNING | logger | logger.py | 本次查询耗时 3.218(s), 查询失败原因 ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-07-20 01:17:47 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-20 01:18:06 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-20 01:21:03 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-20 01:23:45 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-20 01:23:49 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-20 01:27:02 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询
+2024-07-20 01:27:05 | INFO | logger | logger.py | 正在获取邮箱验证码..请稍后...第1次查询

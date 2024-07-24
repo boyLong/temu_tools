@@ -1,0 +1,148 @@
+2024-07-03 15:44:39 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 0.000(s), this was the 1st time calling it.
+2024-07-03 15:44:39 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 0.016(s), this was the 2nd time calling it.
+2024-07-03 15:44:39 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:44:39 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 0.016(s), this was the 3rd time calling it.
+2024-07-03 15:45:49 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:45:50 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:50 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:50 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:50 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:50 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:50 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 5.469(s), this was the 1st time calling it.
+2024-07-03 15:45:50 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:45:51 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:51 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:51 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:51 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:51 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:45:51 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 6.437(s), this was the 2nd time calling it.
+2024-07-03 15:45:51 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:46:27 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:46:27 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:46:27 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:46:27 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:46:27 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:46:27 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 42.406(s), this was the 3rd time calling it.
+2024-07-03 15:46:38 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:46:38 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:51:07 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:51:07 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:52:04 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:52:04 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 15:57:27 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 15:57:27 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:00:16 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:00:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:00:42 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:03 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:04:03 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:05 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:07 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:09 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:12 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:04:12 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:14 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:37 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:04:37 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:39 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:47 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:04:47 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:49 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:51 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:53 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:04:55 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:05:01 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:05:01 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:05:03 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:05:05 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:05:07 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:05:09 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:05:11 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 10.219(s), this was the 1st time calling it.
+2024-07-03 16:08:21 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:08:21 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:08:21 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:08:21 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:08:21 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:08:21 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:08:21 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 0.062(s), this was the 1st time calling it.
+2024-07-03 16:08:37 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:08:37 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:08:38 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:08:38 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:08:42 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 4.781(s), this was the 1st time calling it.
+2024-07-03 16:09:21 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:09:21 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:09:22 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:09:22 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:09:25 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 3.938(s), this was the 1st time calling it.
+2024-07-03 16:20:46 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:20:46 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:22:05 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:22:05 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:22:06 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:22:06 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:22:09 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 3.969(s), this was the 1st time calling it.
+2024-07-03 16:22:32 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:22:32 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:22:38 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:22:50 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:22:50 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:24:09 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:24:09 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:24:11 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:24:11 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:24:16 | INFO | click_captch | click_captch.py | 轨迹构造完成,开始提交
+2024-07-03 16:24:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:24:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:24:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:24:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:24:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:24:16 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 6.719(s), this was the 1st time calling it.
+2024-07-03 16:25:00 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:25:00 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:25:01 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:25:01 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:25:04 | INFO | click_captch | click_captch.py | 轨迹构造完成,开始提交
+2024-07-03 16:25:04 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:25:04 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:25:04 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:25:04 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:25:04 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:25:04 | Level 20 | after | after.py | Finished call to '__main__.VerifyCaptcha.start' after 滑块失败重试, 3.719(s), this was the 1st time calling it.
+2024-07-03 16:25:07 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:25:07 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:25:16 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:25:16 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:25:19 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:25:24 | INFO | click_captch | click_captch.py | 轨迹构造完成,开始提交
+2024-07-03 16:25:24 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:29:27 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:29:27 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:29:30 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:29:30 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:30:47 | INFO | verify | verify.py | 验证码识别开始
+2024-07-03 16:30:47 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/vc_pre_ck
+2024-07-03 16:30:48 | INFO | verify | verify.py | 开始获取验证吗
+2024-07-03 16:30:48 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:30:49 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/obtain_captcha
+2024-07-03 16:30:53 | INFO | click_captch | click_captch.py | 轨迹构造完成,开始提交
+2024-07-03 16:30:53 | INFO | Request | Request.py | post: https://www.temu.com/api/phantom/user_verify
+2024-07-03 16:30:54 | INFO | verify | verify.py | 验证识别通过
