@@ -15,7 +15,6 @@ class DoubleCaptcha(BaseCaptcha):
 
     def parse(self, data):
         text = base64.b64decode(self.decode_img(data["semantics"][0]))
-        print(text.decode())
         with open("text.txt", 'a') as w:
             w.write(text.decode()+'\n')
         text_count = base64.b64decode(self.decode_img(data["semantics"][1]))
@@ -127,7 +126,6 @@ class DoubleCaptcha(BaseCaptcha):
             "reverse": False,
             "verify_code": json.dumps(verify_code,separators=(',', ':')),
         }
-        print(verify_code)
         response = await self.session.post(
             url,
             json=data,
@@ -139,7 +137,6 @@ class DoubleCaptcha(BaseCaptcha):
             }
         )
         res = response.json()
-        print(res)
         if res["code"] == 0:
             return True
         else:

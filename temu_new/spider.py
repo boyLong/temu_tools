@@ -106,7 +106,6 @@ class Spider(object):
         )
         url = 'https://www.temu.com/api/alexa/homepage/goods_list'
         resp = await self.session.get(url, params=params)
-        print(resp.text)
 
     async def start(self):
         await self.a4()

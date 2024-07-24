@@ -126,15 +126,11 @@ class TemuWs:
     def on_message(self, ws, message):
         message = self.parse_array_buffer(message)
 
-        print(message)
         TitanDownstream = temu_pb2.TitanDownstream()
-        if self.ctx < 103:
+        if self.ctx < 102:
             payload = TitanDownstream.FromString(message['payload'])
-            print(payload)
-
             payload = getSync()
             message = self.create_array_buffer(payload)
-
             ws.send(message)
         else:
             self.ws.close()

@@ -15,7 +15,6 @@ class PDCaptcha(BaseCaptcha):
     def parse(self, data):
 
         size = base64.b64decode(self.decode_img(data["text"][0])).decode()
-
         image_data = {
             "imageSrc": data["pictures"][0],
             "positions": data["semantics"][0],

@@ -275,7 +275,6 @@ class ShopLoginSpider(Spider):
 
                     return True
         elif res_data.get("error_code") == 1000000:
-
             return True
         else:
             print(res_data)
@@ -351,9 +350,9 @@ class ShopLoginSpider(Spider):
                                          json=data, check=self.check_verify,
                                          anti={"event": False, 'key':"shop"},
                                         )
-        print(response.text)
-        print(self.session.get_cookie_full())
-        print(json.dumps(dict(self.session.get_headers()), indent=2))
+        # print(response.text)
+        # print(self.session.get_cookie_full())
+        # print(json.dumps(dict(self.session.get_headers()), indent=2))
         # await redis_client.sadd("temu_account", f"{self.username}---{self.password}")
         return dict(self.session.get_headers())
 

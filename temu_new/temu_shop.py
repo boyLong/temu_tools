@@ -113,7 +113,6 @@ class ShopSpider(Spider):
                                          anti={"event": False, 'key':"shop"},
                                         )
 
-        # print(response.text)
         print(json.dumps(dict(self.session.get_headers()), indent=2))
         # print(self.session.get_cookie())
         print(self.session.get_cookie_full())
