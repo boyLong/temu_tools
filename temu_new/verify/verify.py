@@ -131,6 +131,9 @@ class VerifyCaptcha(object):
             logger.info("双图验证码开始滑动")
             dc = DoubleCaptcha(init_info,self.VerifyAuthToken, session=self.session)
             res = await dc.verify(captcha)
+        elif captcha['type'] == 25:
+            logger.info("滑动椭圆验证码开始滑动")
+            return False
         else:
             raise Exception(f"验证码返回不对.{captcha}")
         if res:
