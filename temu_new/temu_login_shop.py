@@ -2,7 +2,7 @@ import json
 import re
 import time
 import asyncio
-from asyncio import WindowsSelectorEventLoopPolicy
+# from asyncio import WindowsSelectorEventLoopPolicy
 # asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 from common.encrypt_tools import get_random,password_encrypt,AsyncAnti,get_email
 from common.logger import logger
